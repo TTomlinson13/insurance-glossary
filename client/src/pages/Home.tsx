@@ -7,8 +7,10 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Search, BookOpen, Shield, TrendingUp } from "lucide-react";
+import { Search, BookOpen, Shield, TrendingUp, ExternalLink } from "lucide-react";
 import { glossaryTerms, categoryColors, categoryIcons, type GlossaryTerm } from "@/data/glossary";
+import { generateSlug } from "@/lib/utils-slug";
+import { Link } from "wouter";
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -149,10 +151,10 @@ export default function Home() {
                   
                   <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {groupedTerms[letter].map((term) => (
-                      <Card 
-                        key={term.term} 
-                        className="card-organic hover:scale-[1.02] transition-transform duration-400"
-                      >
+                      <Link key={term.term} href={`/term/${generateSlug(term.term)}`}>
+                        <Card 
+                          className="card-organic hover:scale-[1.02] transition-transform duration-400 cursor-pointer h-full"
+                        >
                         <CardHeader>
                           <div className="flex items-start justify-between gap-2 mb-2">
                             <CardTitle className="text-2xl">{term.term}</CardTitle>
@@ -191,7 +193,8 @@ export default function Home() {
                             </div>
                           )}
                         </CardContent>
-                      </Card>
+                        </Card>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -213,12 +216,16 @@ export default function Home() {
               Now that you understand the terminology, compare insurance quotes and find the best coverage for your needs.
             </p>
             <div className="flex flex-wrap gap-4 justify-center pt-4">
-              <Button size="lg" className="rounded-full px-8 ui-text">
-                Compare Quotes
-              </Button>
-              <Button size="lg" variant="outline" className="rounded-full px-8 ui-text">
-                Learn More
-              </Button>
+              <Link href="/compare">
+                <Button size="lg" className="rounded-full px-8 ui-text">
+                  Compare Quotes
+                </Button>
+              </Link>
+              <Link href="/">
+                <Button size="lg" variant="outline" className="rounded-full px-8 ui-text">
+                  Browse Glossary
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -253,7 +260,7 @@ export default function Home() {
               <h3 className="font-semibold mb-4 ui-text">Resources</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li><a href="#" className="hover:text-primary transition-colors">Insurance Guides</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Compare Quotes</a></li>
+                <li><Link href="/compare" className="hover:text-primary transition-colors">Compare Quotes</Link></li>
                 <li><a href="#" className="hover:text-primary transition-colors">FAQ</a></li>
                 <li><a href="#" className="hover:text-primary transition-colors">Contact Us</a></li>
               </ul>
