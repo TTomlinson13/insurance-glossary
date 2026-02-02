@@ -485,6 +485,222 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: "Coverage that protects a business against income loss when operations are disrupted due to damage at a supplier's, customer's, or other dependent business location.",
     category: "Business",
     relatedTerms: ["Business Interruption Insurance", "Supply Chain Insurance", "Business Income Coverage"]
+  },
+  {
+    term: "Restaurant Insurance",
+    definition: "Specialized insurance package for restaurants and food service businesses, typically including general liability, property coverage, liquor liability, and food contamination coverage.",
+    category: "Business",
+    relatedTerms: ["Liquor Liability Insurance", "Commercial General Liability", "Business Owners Policy"]
+  },
+  {
+    term: "Contractor Insurance",
+    definition: "Comprehensive coverage for construction contractors including general liability, workers' compensation, tools and equipment coverage, and professional liability for design-build projects.",
+    category: "Business",
+    relatedTerms: ["Builders Risk Insurance", "Commercial General Liability", "Workers' Compensation Insurance"]
+  },
+  {
+    term: "Technology Errors and Omissions",
+    definition: "Specialized professional liability insurance for technology companies, covering claims arising from software failures, data loss, system downtime, or failure to deliver promised services.",
+    category: "Business",
+    relatedTerms: ["Professional Liability Insurance", "Cyber Liability Insurance", "Errors and Omissions Insurance"]
+  },
+  {
+    term: "Retail Insurance",
+    definition: "Insurance coverage designed for retail businesses, including property coverage for inventory and fixtures, general liability, business interruption, and employee dishonesty coverage.",
+    category: "Business",
+    relatedTerms: ["Commercial Property Insurance", "Business Owners Policy", "Crime Insurance"]
+  },
+  {
+    term: "Medical Malpractice Insurance",
+    definition: "Professional liability coverage for healthcare providers protecting against claims of medical negligence, errors in diagnosis or treatment, and failure to obtain informed consent.",
+    category: "Business",
+    relatedTerms: ["Malpractice Insurance", "Professional Liability Insurance", "Healthcare Insurance"]
+  },
+  {
+    term: "Legal Malpractice Insurance",
+    definition: "Professional liability insurance for attorneys and law firms covering claims of negligence, missed deadlines, conflicts of interest, or errors in legal advice.",
+    category: "Business",
+    relatedTerms: ["Malpractice Insurance", "Professional Liability Insurance", "Errors and Omissions Insurance"]
+  },
+  {
+    term: "Salon and Spa Insurance",
+    definition: "Specialized coverage for beauty and wellness businesses including general liability, professional liability for services, property coverage, and product liability.",
+    category: "Business",
+    relatedTerms: ["Professional Liability Insurance", "Commercial General Liability", "Product Liability Insurance"]
+  },
+  {
+    term: "Real Estate Errors and Omissions",
+    definition: "Professional liability insurance for real estate agents and brokers covering claims of negligence, misrepresentation, failure to disclose, or errors in transactions.",
+    category: "Business",
+    relatedTerms: ["Professional Liability Insurance", "Errors and Omissions Insurance", "Real Estate Insurance"]
+  },
+  {
+    term: "Trucking Insurance",
+    definition: "Specialized commercial auto insurance for trucking companies including liability coverage, physical damage, cargo insurance, and non-trucking liability for owner-operators.",
+    category: "Business",
+    relatedTerms: ["Commercial Auto Insurance", "Cargo Insurance", "Motor Truck Cargo"]
+  },
+  {
+    term: "Janitorial Insurance",
+    definition: "Coverage for cleaning and janitorial services including general liability, workers' compensation, commercial auto for service vehicles, and bonding for employee honesty.",
+    category: "Business",
+    relatedTerms: ["Commercial General Liability", "Workers' Compensation Insurance", "Fidelity Bond"]
+  },
+  {
+    term: "Landscaping Insurance",
+    definition: "Insurance for landscaping businesses covering general liability, workers' compensation, commercial auto, inland marine for equipment, and pollution liability for pesticide use.",
+    category: "Business",
+    relatedTerms: ["Commercial General Liability", "Inland Marine Insurance", "Pollution Liability Insurance"]
+  },
+  {
+    term: "Hospitality Insurance",
+    definition: "Comprehensive coverage for hotels, motels, and lodging businesses including property, general liability, liquor liability, employment practices liability, and business interruption.",
+    category: "Business",
+    relatedTerms: ["Commercial Property Insurance", "Liquor Liability Insurance", "Business Interruption Insurance"]
+  },
+  {
+    term: "Daycare Insurance",
+    definition: "Specialized coverage for childcare facilities including general liability, abuse and molestation coverage, property insurance, and professional liability for educational services.",
+    category: "Business",
+    relatedTerms: ["Commercial General Liability", "Professional Liability Insurance", "Abuse and Molestation Coverage"]
+  },
+  {
+    term: "Fitness Center Insurance",
+    definition: "Coverage for gyms and fitness facilities including general liability, professional liability for trainers, property coverage for equipment, and sexual abuse and molestation coverage.",
+    category: "Business",
+    relatedTerms: ["Commercial General Liability", "Professional Liability Insurance", "Equipment Coverage"]
+  },
+  {
+    term: "Event Insurance",
+    definition: "Short-term coverage for special events including general liability, liquor liability, event cancellation, and property coverage for rented equipment and venues.",
+    category: "Business",
+    relatedTerms: ["Commercial General Liability", "Liquor Liability Insurance", "Cancellation Insurance"]
+  },
+  {
+    term: "Reinsurance",
+    definition: "Insurance purchased by insurance companies to transfer portions of their risk portfolios to other insurers, reducing the likelihood of large payouts from claims.",
+    category: "Industry",
+    relatedTerms: ["Risk Transfer", "Ceding Company", "Retrocession"]
+  },
+  {
+    term: "Loss Ratio",
+    definition: "The ratio of losses paid plus loss reserves to premiums earned, used by insurers to measure underwriting profitability and pricing adequacy.",
+    category: "Industry",
+    relatedTerms: ["Combined Ratio", "Underwriting", "Premium"]
+  },
+  {
+    term: "Combined Ratio",
+    definition: "The sum of the loss ratio and expense ratio, measuring an insurer's overall underwriting profitability. A ratio below 100% indicates underwriting profit.",
+    category: "Industry",
+    relatedTerms: ["Loss Ratio", "Expense Ratio", "Underwriting"]
+  },
+  {
+    term: "Captive Insurance",
+    definition: "An insurance company created and owned by a business or group of businesses to insure their own risks, providing more control over coverage and potential cost savings.",
+    category: "Industry",
+    relatedTerms: ["Self-Insurance", "Risk Retention", "Alternative Risk Transfer"]
+  },
+  {
+    term: "Surplus Lines Insurance",
+    definition: "Insurance coverage from non-admitted insurers for risks that standard insurance companies won't cover, often for unusual or high-risk exposures.",
+    category: "Industry",
+    relatedTerms: ["Non-Admitted Insurer", "Excess and Surplus", "Specialty Insurance"]
+  },
+  {
+    term: "Loss Reserve",
+    definition: "Funds set aside by an insurance company to pay future claims that have been reported but not yet settled (case reserves) or that have occurred but not been reported (IBNR).",
+    category: "Industry",
+    relatedTerms: ["IBNR", "Case Reserve", "Claims"]
+  },
+  {
+    term: "IBNR",
+    definition: "Incurred But Not Reported - reserves set aside for insurance claims that have occurred but have not yet been reported to the insurer.",
+    category: "Industry",
+    relatedTerms: ["Loss Reserve", "Claims", "Actuarial"]
+  },
+  {
+    term: "Admitted Insurer",
+    definition: "An insurance company licensed and approved by a state's insurance department to do business in that state, subject to state regulation and guaranty fund protection.",
+    category: "Industry",
+    relatedTerms: ["Non-Admitted Insurer", "State Insurance Department", "Surplus Lines Insurance"]
+  },
+  {
+    term: "Non-Admitted Insurer",
+    definition: "An insurance company not licensed in a particular state but allowed to provide surplus lines coverage for risks that admitted insurers won't cover.",
+    category: "Industry",
+    relatedTerms: ["Admitted Insurer", "Surplus Lines Insurance", "Excess and Surplus"]
+  },
+  {
+    term: "Binder",
+    definition: "A temporary insurance contract that provides coverage until a formal policy is issued, typically valid for 30 to 90 days.",
+    category: "Industry",
+    relatedTerms: ["Policy", "Coverage", "Temporary Insurance"]
+  },
+  {
+    term: "Certificate of Insurance",
+    definition: "A document issued by an insurer or agent that verifies the existence of insurance coverage and summarizes key policy information for third parties.",
+    category: "Industry",
+    relatedTerms: ["Policy", "Proof of Insurance", "Additional Insured"]
+  },
+  {
+    term: "Additional Insured",
+    definition: "A person or entity added to an insurance policy who receives coverage under that policy, commonly required in contracts and leases.",
+    category: "Industry",
+    relatedTerms: ["Certificate of Insurance", "Endorsement", "Named Insured"]
+  },
+  {
+    term: "Named Insured",
+    definition: "The person or entity specifically identified in an insurance policy as the insured, having full rights and responsibilities under the policy.",
+    category: "Industry",
+    relatedTerms: ["Additional Insured", "Insured", "Policyholder"]
+  },
+  {
+    term: "Aggregate Limit",
+    definition: "The maximum amount an insurance policy will pay for all covered losses during a policy period, regardless of the number of claims.",
+    category: "Industry",
+    relatedTerms: ["Policy Limit", "Per Occurrence Limit", "Liability Limit"]
+  },
+  {
+    term: "Per Occurrence Limit",
+    definition: "The maximum amount an insurance policy will pay for a single claim or occurrence, separate from the aggregate limit.",
+    category: "Industry",
+    relatedTerms: ["Aggregate Limit", "Policy Limit", "Liability Limit"]
+  },
+  {
+    term: "Retention",
+    definition: "The amount of risk or loss that an insured retains before insurance coverage applies, similar to a deductible but typically used in commercial insurance.",
+    category: "Industry",
+    relatedTerms: ["Deductible", "Self-Insured Retention", "Risk Retention"]
+  },
+  {
+    term: "Self-Insured Retention",
+    definition: "A specified dollar amount that the insured must pay on a claim before the insurance policy responds, commonly used in liability policies.",
+    category: "Industry",
+    relatedTerms: ["Retention", "Deductible", "Self-Insurance"]
+  },
+  {
+    term: "Occurrence Policy",
+    definition: "An insurance policy that covers claims for incidents that occur during the policy period, regardless of when the claim is filed.",
+    category: "Industry",
+    relatedTerms: ["Claims-Made Policy", "Coverage Trigger", "Policy Period"]
+  },
+  {
+    term: "Claims-Made Policy",
+    definition: "An insurance policy that covers claims only if both the incident and the claim occur during the policy period or extended reporting period.",
+    category: "Industry",
+    relatedTerms: ["Occurrence Policy", "Tail Coverage", "Retroactive Date"]
+  },
+  {
+    term: "Tail Coverage",
+    definition: "Extended reporting period coverage purchased for claims-made policies, allowing claims to be reported after the policy expires for incidents that occurred during the policy period.",
+    category: "Industry",
+    relatedTerms: ["Claims-Made Policy", "Extended Reporting Period", "Professional Liability Insurance"]
+  },
+  {
+    term: "Retroactive Date",
+    definition: "The date in a claims-made policy before which incidents are not covered, even if the claim is made during the policy period.",
+    category: "Industry",
+    relatedTerms: ["Claims-Made Policy", "Prior Acts Coverage", "Coverage Trigger"]
   }
 ];
 

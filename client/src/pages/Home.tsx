@@ -253,6 +253,7 @@ export default function Home() {
                 <li><a href="#" className="hover:text-primary transition-colors">Health Insurance</a></li>
                 <li><a href="#" className="hover:text-primary transition-colors">Life Insurance</a></li>
                 <li><a href="#" className="hover:text-primary transition-colors">Property Insurance</a></li>
+                <li><Link href="/business-insurance" className="hover:text-primary transition-colors">Business Insurance</Link></li>
               </ul>
             </div>
             

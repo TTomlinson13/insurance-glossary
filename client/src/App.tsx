@@ -7,6 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import TermPage from "./pages/TermPage";
 import ComparePage from "./pages/ComparePage";
+import BusinessInsurancePage from "./pages/BusinessInsurancePage";
 
 function Router() {
   return (
@@ -14,6 +15,7 @@ function Router() {
       <Route path={"/"} component={Home} />
       <Route path={"/term/:slug"} component={TermPage} />
       <Route path={"/compare"} component={ComparePage} />
+      <Route path={"/business-insurance"} component={BusinessInsurancePage} />
       <Route path="/404" component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
