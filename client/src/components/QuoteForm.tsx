@@ -135,7 +135,7 @@ export default function QuoteForm({ category = "General" }: QuoteFormProps) {
                 <SelectItem value="Life">Life Insurance</SelectItem>
                 <SelectItem value="Property">Home/Property Insurance</SelectItem>
                 <SelectItem value="Renters">Renters Insurance</SelectItem>
-                <SelectItem value="Business">Business Insurance</SelectItem>
+                <SelectItem value="Business">Business/Commercial Insurance</SelectItem>
               </SelectContent>
             </Select>
           </div>

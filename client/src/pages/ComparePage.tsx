@@ -41,6 +41,13 @@ export default function ComparePage() {
       description: "Secure your home and belongings with homeowners insurance",
       avgSavings: "$850/year",
       topProviders: ["State Farm", "Allstate", "Liberty Mutual", "Farmers"]
+    },
+    {
+      type: "Business",
+      icon: "🏢",
+      description: "Protect your business with comprehensive commercial insurance",
+      avgSavings: "$1,200/year",
+      topProviders: ["The Hartford", "Travelers", "Hiscox", "CNA"]
     }
   ];
 

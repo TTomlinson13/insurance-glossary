@@ -16,7 +16,7 @@ export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
 
-  const categories = ["All", "Auto", "Health", "Life", "Property", "General", "Claims", "Industry"];
+  const categories = ["All", "Auto", "Health", "Life", "Property", "Business", "General", "Claims", "Industry"];
 
   const filteredTerms = useMemo(() => {
     return glossaryTerms.filter((term) => {
@@ -92,7 +92,7 @@ export default function Home() {
                 <div className="text-sm text-muted-foreground ui-text">Insurance Terms</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-semibold text-primary">7</div>
+                <div className="text-3xl font-semibold text-primary">8</div>
                 <div className="text-sm text-muted-foreground ui-text">Categories</div>
               </div>
               <div className="text-center">
