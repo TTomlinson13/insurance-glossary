@@ -1,4 +1,4 @@
-/* Design: Organic Modernism - Individual term page with SEO optimization
+/* Individual term page with SEO-friendly URLs
  * Dedicated URL structure for each term, related terms, breadcrumbs, quote CTA
  */
 
@@ -24,6 +24,37 @@ export default function TermPage() {
       if (foundTerm) {
         setTerm(foundTerm);
         
+        // Add Schema.org structured data for SEO
+        const structuredData = {
+          "@context": "https://schema.org",
+          "@type": "DefinedTerm",
+          "name": foundTerm.term,
+          "description": foundTerm.definition,
+          "inDefinedTermSet": {
+            "@type": "DefinedTermSet",
+            "name": "Insurance Glossary",
+            "description": "Comprehensive insurance terminology guide"
+          },
+          "termCode": foundTerm.category
+        };
+        
+        // Update or create script tag for structured data
+        let script = document.getElementById('term-structured-data') as HTMLScriptElement | null;
+        if (!script) {
+          script = document.createElement('script');
+          script.id = 'term-structured-data';
+          script.type = 'application/ld+json';
+          document.head.appendChild(script);
+        }
+        script.textContent = JSON.stringify(structuredData);
+        
+        // Update page title and meta description
+        document.title = `${foundTerm.term} - Insurance Glossary`;
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+          metaDesc.setAttribute('content', foundTerm.definition);
+        }
+        
         // Find related terms data
         if (foundTerm.relatedTerms) {
           const related = foundTerm.relatedTerms
@@ -35,6 +66,16 @@ export default function TermPage() {
         setTerm(null);
       }
     }
+    
+    // Cleanup structured data when component unmounts
+    return () => {
+      const script = document.getElementById('term-structured-data');
+      if (script) {
+        script.remove();
+      }
+      // Reset title
+      document.title = 'Insurance Glossary - Your Complete Guide to Insurance Terms';
+    };
   }, [params?.slug]);
 
   if (!term) {
@@ -121,105 +162,40 @@ export default function TermPage() {
                   {relatedTermsData.length > 0 && (
                     <div className="pt-6 border-t border-border/50">
                       <h2 className="text-xl font-semibold mb-4">Related Terms</h2>
-                      <div className="grid sm:grid-cols-2 gap-4">
+                      <div className="grid gap-4 md:grid-cols-2">
                         {relatedTermsData.map((relatedTerm) => (
-                          <Link 
-                            key={relatedTerm.term} 
-                            href={`/term/${generateSlug(relatedTerm.term)}`}
-                          >
-                            <Card className="hover:shadow-lg transition-all duration-300 cursor-pointer h-full">
+                          <Link key={relatedTerm.term} href={`/term/${generateSlug(relatedTerm.term)}`}>
+                            <Card className="hover:shadow-lg transition-shadow duration-300 cursor-pointer h-full">
                               <CardHeader>
-                                <CardTitle className="text-lg flex items-center justify-between">
+                                <CardTitle className="text-lg flex items-center gap-2">
                                   {relatedTerm.term}
-                                  <ExternalLink className="w-4 h-4 text-muted-foreground" />
+                                  <ExternalLink className="w-4 h-4" />
                                 </CardTitle>
+                              </CardHeader>
+                              <CardContent>
                                 <CardDescription className="line-clamp-2">
                                   {relatedTerm.definition}
                                 </CardDescription>
-                              </CardHeader>
+                              </CardContent>
                             </Card>
                           </Link>
                         ))}
                       </div>
                     </div>
                   )}
-
-                  {/* More from Category */}
-                  <div className="pt-6 border-t border-border/50">
-                    <h2 className="text-xl font-semibold mb-4">More {term.category} Insurance Terms</h2>
-                    <div className="flex flex-wrap gap-2">
-                      {glossaryTerms
-                        .filter(t => t.category === term.category && t.term !== term.term)
-                        .slice(0, 8)
-                        .map(t => (
-                          <Link key={t.term} href={`/term/${generateSlug(t.term)}`}>
-                            <Badge 
-                              variant="outline" 
-                              className="cursor-pointer hover:bg-primary hover:text-primary-foreground transition-colors"
-                            >
-                              {t.term}
-                            </Badge>
-                          </Link>
-                        ))}
-                    </div>
-                  </div>
                 </CardContent>
               </Card>
             </div>
 
-            {/* Sidebar - Quote Form */}
-            <div className="lg:col-span-1">
-              <div className="sticky top-24">
-                <QuoteForm category={term.category} />
-              </div>
+            {/* Sidebar */}
+            <div className="space-y-6">
+              <QuoteForm category={term.category} />
             </div>
           </div>
         </div>
       </div>
 
-      {/* Footer */}
-      <footer className="py-12 border-t border-border/50 bg-muted/30">
-        <div className="container">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="md:col-span-2">
-              <div className="flex items-center gap-2 mb-4">
-                <BookOpen className="w-6 h-6 text-primary" />
-                <span className="text-xl font-semibold">Insurance Glossary</span>
-              </div>
-              <p className="text-muted-foreground mb-4">
-                Your comprehensive guide to understanding insurance terminology. 
-                Making insurance accessible for everyone.
-              </p>
-            </div>
-            
-            <div>
-              <h3 className="font-semibold mb-4 ui-text">Categories</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><Link href="/" className="hover:text-primary transition-colors">Auto Insurance</Link></li>
-                <li><Link href="/" className="hover:text-primary transition-colors">Health Insurance</Link></li>
-                <li><Link href="/" className="hover:text-primary transition-colors">Life Insurance</Link></li>
-                <li><Link href="/" className="hover:text-primary transition-colors">Property Insurance</Link></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="font-semibold mb-4 ui-text">Resources</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><Link href="/" className="hover:text-primary transition-colors">All Terms</Link></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Compare Quotes</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">FAQ</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Contact Us</a></li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="mt-12 pt-8 border-t border-border/50 text-center text-sm text-muted-foreground">
-            <p>© 2026 Insurance Glossary. All rights reserved. | Educational purposes only - not insurance advice.</p>
-          </div>
-        </div>
-      </footer>
-
-      {/* AI Chatbot */}
+      {/* Chatbot */}
       <InsuranceChatbot />
     </div>
   );
