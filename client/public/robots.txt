@@ -1,4 +1,26 @@
+# Insurance Glossary - Robots.txt
+# This file guides search engine crawlers on how to index our site
+
+# Allow all crawlers to access all content
 User-agent: *
 Allow: /
 
+# Disallow crawling of API endpoints (not useful for search results)
+Disallow: /api/
+
+# Sitemap location for faster indexing
 Sitemap: https://insurance-glossary.manus.space/sitemap.xml
+
+# Specific rules for major search engines
+
+# Google
+User-agent: Googlebot
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# Allow image indexing for better image search visibility
+User-agent: Googlebot-Image
+Allow: /images/

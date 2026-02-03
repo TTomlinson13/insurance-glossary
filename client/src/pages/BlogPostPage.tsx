@@ -26,19 +26,45 @@ export default function BlogPostPage() {
         metaDesc.setAttribute('content', post.excerpt);
       }
       
-      // Add Schema.org Article structured data
-      const structuredData = {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": post.title,
-        "description": post.excerpt,
-        "author": {
-          "@type": "Organization",
-          "name": post.author
+      // Add Schema.org Article and Breadcrumb structured data
+      const structuredData = [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": post.title,
+          "description": post.excerpt,
+          "author": {
+            "@type": "Organization",
+            "name": post.author
+          },
+          "datePublished": post.publishedDate,
+          "keywords": post.seoKeywords.join(", ")
         },
-        "datePublished": post.publishedDate,
-        "keywords": post.seoKeywords.join(", ")
-      };
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://insurance-glossary.manus.space/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://insurance-glossary.manus.space/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": post.title,
+              "item": `https://insurance-glossary.manus.space/blog/${post.slug}`
+            }
+          ]
+        }
+      ];
       
       let script = document.getElementById('article-structured-data') as HTMLScriptElement | null;
       if (!script) {

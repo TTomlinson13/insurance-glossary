@@ -10,6 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, BookOpen, ExternalLink } from "lucide-react";
 import { glossaryTerms, categoryColors, type GlossaryTerm } from "@/data/glossary";
+import { termFAQs } from "@/data/faq-terms";
 import { findTermBySlug, generateSlug } from "@/lib/utils-slug";
 
 export default function TermPage() {
@@ -24,18 +25,61 @@ export default function TermPage() {
         setTerm(foundTerm);
         
         // Add Schema.org structured data for SEO
-        const structuredData = {
-          "@context": "https://schema.org",
-          "@type": "DefinedTerm",
-          "name": foundTerm.term,
-          "description": foundTerm.definition,
-          "inDefinedTermSet": {
-            "@type": "DefinedTermSet",
-            "name": "Insurance Glossary",
-            "description": "Comprehensive insurance terminology guide"
+        const structuredData: any[] = [
+          {
+            "@context": "https://schema.org",
+            "@type": "DefinedTerm",
+            "name": foundTerm.term,
+            "description": foundTerm.definition,
+            "inDefinedTermSet": {
+              "@type": "DefinedTermSet",
+              "name": "Insurance Glossary",
+              "description": "Comprehensive insurance terminology guide"
+            },
+            "termCode": foundTerm.category
           },
-          "termCode": foundTerm.category
-        };
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://insurance-glossary.manus.space/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Glossary",
+                "item": "https://insurance-glossary.manus.space/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": foundTerm.term,
+                "item": `https://insurance-glossary.manus.space/term/${params.slug}`
+              }
+            ]
+          }
+        ];
+        
+        // Add FAQ structured data for top terms (helps capture "People Also Ask" boxes)
+        const termFAQ = termFAQs.find(faq => faq.term === foundTerm.term);
+        if (termFAQ) {
+          structuredData.push({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": termFAQ.questions.map(q => ({
+              "@type": "Question",
+              "name": q.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": q.answer
+              }
+            }))
+          });
+        }
         
         // Update or create script tag for structured data
         let script = document.getElementById('term-structured-data') as HTMLScriptElement | null;
