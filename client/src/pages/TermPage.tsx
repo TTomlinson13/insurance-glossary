@@ -98,13 +98,52 @@ export default function TermPage() {
           metaDesc.setAttribute('content', foundTerm.definition);
         }
         
-        // Find related terms data
-        if (foundTerm.relatedTerms) {
-          const related = foundTerm.relatedTerms
-            .map(relatedName => glossaryTerms.find(t => t.term === relatedName))
-            .filter((t): t is GlossaryTerm => t !== undefined);
-          setRelatedTermsData(related);
-        }
+        // Update Open Graph meta tags for social sharing
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute('content', `${foundTerm.term} - Insurance Glossary`);
+        
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute('content', foundTerm.definition);
+        
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute('content', `https://insurance-glossary.manus.space/term/${params.slug}`);
+        
+        // Update Twitter Card meta tags
+        const twitterTitle = document.querySelector('meta[property="twitter:title"]');
+        if (twitterTitle) twitterTitle.setAttribute('content', `${foundTerm.term} - Insurance Glossary`);
+        
+        const twitterDesc = document.querySelector('meta[property="twitter:description"]');
+        if (twitterDesc) twitterDesc.setAttribute('content', foundTerm.definition);
+        
+        const twitterUrl = document.querySelector('meta[property="twitter:url"]');
+        if (twitterUrl) twitterUrl.setAttribute('content', `https://insurance-glossary.manus.space/term/${params.slug}`);
+        
+        // Find related terms data - combine manual + automatic suggestions
+        const manualRelated = foundTerm.relatedTerms
+          ? foundTerm.relatedTerms
+              .map(relatedName => glossaryTerms.find(t => t.term === relatedName))
+              .filter((t): t is GlossaryTerm => t !== undefined)
+          : [];
+        
+        // Automatic suggestions: same category + keyword overlap
+        const automaticSuggestions = glossaryTerms
+          .filter((t) => {
+            if (t.term === foundTerm.term) return false; // Exclude current term
+            if (manualRelated.some(rt => rt.term === t.term)) return false; // Exclude manual related terms
+            
+            // Same category gets priority
+            if (t.category === foundTerm.category) return true;
+            
+            // Keyword overlap: check if terms share significant words
+            const currentWords = foundTerm.term.toLowerCase().split(/\s+/).filter(w => w.length > 3);
+            const otherWords = t.term.toLowerCase().split(/\s+/).filter(w => w.length > 3);
+            const hasKeywordOverlap = currentWords.some(w => otherWords.includes(w));
+            
+            return hasKeywordOverlap;
+          })
+          .slice(0, 4); // Limit to 4 automatic suggestions
+        
+        setRelatedTermsData([...manualRelated, ...automaticSuggestions]);
       } else {
         setTerm(null);
       }

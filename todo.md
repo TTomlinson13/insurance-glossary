@@ -140,3 +140,15 @@
 - [x] Add breadcrumb navigation with Schema.org markup to term pages
 - [x] Add breadcrumb navigation with Schema.org markup to blog pages
 - [x] Implement FAQ structured data for top 20 glossary terms
+
+## Social Media & UX Enhancements
+- [x] Add Open Graph meta tags to index.html (updated with current stats)
+- [x] Add Twitter Card meta tags to index.html (updated with current stats)
+- [x] Add dynamic OG/Twitter tags to TermPage
+- [x] Add dynamic OG/Twitter tags to BlogPostPage
+- [x] Create HMO vs PPO comparison page (/compare/hmo-vs-ppo)
+- [x] Create Term vs Whole Life comparison page (/compare/term-vs-whole-life)
+- [x] Create Liability Limits comparison page (/compare/liability-limits)
+- [x] Add comparison table structured data to all comparison pages
+- [x] Implement automatic related term suggestions on TermPage (same category + keyword overlap)
+- [x] Add internal linking based on categories and keywords (up to 4 automatic suggestions per term)

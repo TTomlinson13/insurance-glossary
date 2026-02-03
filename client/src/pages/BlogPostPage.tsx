@@ -26,6 +26,26 @@ export default function BlogPostPage() {
         metaDesc.setAttribute('content', post.excerpt);
       }
       
+      // Update Open Graph meta tags for social sharing
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle) ogTitle.setAttribute('content', `${post.title} - Insurance Glossary`);
+      
+      const ogDesc = document.querySelector('meta[property="og:description"]');
+      if (ogDesc) ogDesc.setAttribute('content', post.excerpt);
+      
+      const ogUrl = document.querySelector('meta[property="og:url"]');
+      if (ogUrl) ogUrl.setAttribute('content', `https://insurance-glossary.manus.space/blog/${post.slug}`);
+      
+      // Update Twitter Card meta tags
+      const twitterTitle = document.querySelector('meta[property="twitter:title"]');
+      if (twitterTitle) twitterTitle.setAttribute('content', `${post.title} - Insurance Glossary`);
+      
+      const twitterDesc = document.querySelector('meta[property="twitter:description"]');
+      if (twitterDesc) twitterDesc.setAttribute('content', post.excerpt);
+      
+      const twitterUrl = document.querySelector('meta[property="twitter:url"]');
+      if (twitterUrl) twitterUrl.setAttribute('content', `https://insurance-glossary.manus.space/blog/${post.slug}`);
+      
       // Add Schema.org Article and Breadcrumb structured data
       const structuredData = [
         {

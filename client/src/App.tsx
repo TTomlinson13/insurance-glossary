@@ -16,6 +16,9 @@ import FloridaInsurancePage from "./pages/FloridaInsurancePage";
 import CaliforniaInsurancePage from "./pages/CaliforniaInsurancePage";
 import TexasInsurancePage from "./pages/TexasInsurancePage";
 import CalculatorsPage from "./pages/CalculatorsPage";
+import HmoVsPpoPage from "./pages/HmoVsPpoPage";
+import TermVsWholeLifePage from "./pages/TermVsWholeLifePage";
+import LiabilityLimitsPage from "./pages/LiabilityLimitsPage";
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
@@ -28,6 +31,9 @@ function Router() {
       <Route path={"/california-insurance"} component={CaliforniaInsurancePage} />
       <Route path={"/texas-insurance"} component={TexasInsurancePage} />
       <Route path={"/calculators"} component={CalculatorsPage} />
+      <Route path={"/compare/hmo-vs-ppo"} component={HmoVsPpoPage} />
+      <Route path={"/compare/term-vs-whole-life"} component={TermVsWholeLifePage} />
+      <Route path={"/compare/liability-limits"} component={LiabilityLimitsPage} />
         <Route path="/admin" component={AdminDashboard} />
       <Route path="/admin/blog-generator" component={AdminBlogGenerator} />
       <Route path={"/blog"} component={BlogPage} />
