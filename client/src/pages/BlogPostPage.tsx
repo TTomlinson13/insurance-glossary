@@ -1,79 +1,70 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useRoute, Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, BookOpen, Clock, Calendar, Tag } from "lucide-react";
-import { blogPosts, type BlogPost } from "@/data/blog";
+import { trpc } from "@/lib/trpc";
 import { generateSlug } from "@/lib/utils-slug";
 import InsuranceChatbot from "@/components/InsuranceChatbot";
 import { Streamdown } from "streamdown";
 
 export default function BlogPostPage() {
   const [, params] = useRoute("/blog/:slug");
-  const [post, setPost] = useState<BlogPost | null>(null);
+  const { data: post, isLoading } = trpc.blog.getBySlug.useQuery(
+    { slug: params?.slug || "" },
+    { enabled: !!params?.slug }
+  );
 
   useEffect(() => {
-    if (params?.slug) {
-      const foundPost = blogPosts.find(p => p.slug === params.slug);
-      if (foundPost) {
-        setPost(foundPost);
-        
-        // Update page title and meta
-        document.title = `${foundPost.title} - Insurance Glossary Blog`;
-        const metaDesc = document.querySelector('meta[name="description"]');
-        if (metaDesc) {
-          metaDesc.setAttribute('content', foundPost.excerpt);
-        }
-        
-        // Add Schema.org Article structured data
-        const structuredData = {
-          "@context": "https://schema.org",
-          "@type": "Article",
-          "headline": foundPost.title,
-          "description": foundPost.excerpt,
-          "author": {
-            "@type": "Organization",
-            "name": foundPost.author
-          },
-          "datePublished": foundPost.publishedDate,
-          "keywords": foundPost.seoKeywords.join(", ")
-        };
-        
-        let script = document.getElementById('article-structured-data') as HTMLScriptElement | null;
-        if (!script) {
-          script = document.createElement('script');
-          script.id = 'article-structured-data';
-          script.type = 'application/ld+json';
-          document.head.appendChild(script);
-        }
-        script.textContent = JSON.stringify(structuredData);
-      } else {
-        setPost(null);
+    if (post) {
+      // Update page title and meta
+      document.title = `${post.title} - Insurance Glossary Blog`;
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) {
+        metaDesc.setAttribute('content', post.excerpt);
       }
+      
+      // Add Schema.org Article structured data
+      const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": post.title,
+        "description": post.excerpt,
+        "author": {
+          "@type": "Organization",
+          "name": post.author
+        },
+        "datePublished": post.publishedDate,
+        "keywords": post.seoKeywords.join(", ")
+      };
+      
+      let script = document.getElementById('article-structured-data') as HTMLScriptElement | null;
+      if (!script) {
+        script = document.createElement('script');
+        script.id = 'article-structured-data';
+        script.type = 'application/ld+json';
+        document.head.appendChild(script);
+      }
+      script.textContent = JSON.stringify(structuredData);
     }
-    
-    return () => {
-      const script = document.getElementById('article-structured-data');
-      if (script) {
-        script.remove();
-      }
-      document.title = 'Insurance Glossary - Your Complete Guide to Insurance Terms';
-    };
-  }, [params?.slug]);
+  }, [post]);
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-muted-foreground">Loading...</div>
+      </div>
+    );
+  }
 
   if (!post) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center space-y-4">
-          <div className="text-6xl mb-4">📝</div>
-          <h1 className="text-3xl font-semibold">Post Not Found</h1>
-          <p className="text-muted-foreground">The blog post you're looking for doesn't exist.</p>
+          <h1 className="text-3xl font-semibold">Blog Post Not Found</h1>
           <Link href="/blog">
-            <Button className="rounded-full ui-text">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Blog
-            </Button>
+            <Button>← Back to Blog</Button>
           </Link>
         </div>
       </div>
@@ -100,99 +91,82 @@ export default function BlogPostPage() {
         </div>
       </header>
 
-      {/* Breadcrumbs */}
-      <div className="py-4 border-b border-border/50">
-        <div className="container">
-          <nav className="flex items-center gap-2 text-sm text-muted-foreground">
-            <Link href="/" className="hover:text-primary transition-colors">Home</Link>
-            <span>/</span>
-            <Link href="/blog" className="hover:text-primary transition-colors">Blog</Link>
-            <span>/</span>
-            <span className="text-foreground">{post.title}</span>
-          </nav>
-        </div>
-      </div>
-
       {/* Article */}
-      <article className="py-12">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            {/* Article Header */}
-            <div className="mb-8">
-              <div className="flex items-center gap-3 mb-4">
-                <Badge variant="outline">{post.category}</Badge>
-                <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                  <Clock className="w-3 h-3" />
-                  {post.readTime}
-                </div>
-                <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                  <Calendar className="w-3 h-3" />
-                  {new Date(post.publishedDate).toLocaleDateString('en-US', { 
-                    month: 'long', 
-                    day: 'numeric', 
-                    year: 'numeric' 
-                  })}
-                </div>
+      <article className="py-16">
+        <div className="container max-w-4xl">
+          {/* Article Header */}
+          <div className="mb-12 space-y-6">
+            <div className="flex flex-wrap items-center gap-3">
+              <Badge variant="outline" className="text-sm">{post.category}</Badge>
+              <div className="flex items-center gap-1 text-sm text-muted-foreground">
+                <Clock className="w-4 h-4" />
+                {post.readTime}
               </div>
-              
-              <h1 className="text-4xl md:text-5xl font-semibold mb-4 leading-tight">
-                {post.title}
-              </h1>
-              
-              <p className="text-xl text-muted-foreground mb-4">
-                {post.excerpt}
-              </p>
-              
-              <div className="text-sm text-muted-foreground">
-                By {post.author}
+              <div className="flex items-center gap-1 text-sm text-muted-foreground">
+                <Calendar className="w-4 h-4" />
+                {new Date(post.publishedDate).toLocaleDateString('en-US', { 
+                  month: 'long', 
+                  day: 'numeric', 
+                  year: 'numeric' 
+                })}
               </div>
             </div>
+            
+            <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
+              {post.title}
+            </h1>
+            
+            <p className="text-xl text-muted-foreground">
+              {post.excerpt}
+            </p>
+            
+            <div className="text-sm text-muted-foreground">
+              By {post.author}
+            </div>
+          </div>
 
-            {/* Article Content */}
-            <Card className="card-organic mb-8">
-              <CardContent className="prose prose-lg max-w-none pt-8">
+          {/* Article Content */}
+          <Card className="card-organic">
+            <CardContent className="pt-8">
+              <div className="prose prose-lg max-w-none">
                 <Streamdown>{post.content}</Streamdown>
-              </CardContent>
-            </Card>
+              </div>
+            </CardContent>
+          </Card>
 
-            {/* Related Terms */}
-            {post.relatedTerms.length > 0 && (
-              <Card className="card-organic">
-                <CardContent className="pt-6">
-                  <div className="flex items-center gap-2 mb-4">
-                    <Tag className="w-5 h-5 text-primary" />
-                    <h2 className="text-xl font-semibold">Related Glossary Terms</h2>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {post.relatedTerms.map((term) => (
-                      <Link key={term} href={`/term/${generateSlug(term)}`}>
-                        <Badge 
-                          variant="outline" 
-                          className="cursor-pointer hover:bg-primary hover:text-primary-foreground transition-colors text-sm py-1 px-3"
-                        >
-                          {term}
-                        </Badge>
-                      </Link>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            )}
-
-            {/* CTA */}
-            <div className="mt-12 p-8 rounded-2xl bg-gradient-to-br from-primary/10 via-accent/5 to-secondary text-center">
-              <h3 className="text-2xl font-semibold mb-3">
-                Need Insurance Quotes?
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                Compare quotes from top insurance providers and find the best coverage for your needs
-              </p>
-              <Link href="/compare">
-                <Button size="lg" className="rounded-full px-8 ui-text">
-                  Get Quotes
-                </Button>
-              </Link>
+          {/* Related Terms */}
+          {post.relatedTerms && post.relatedTerms.length > 0 && (
+            <div className="mt-12 p-6 rounded-2xl bg-accent/20 border border-border/50">
+              <div className="flex items-center gap-2 mb-4">
+                <Tag className="w-5 h-5 text-primary" />
+                <h3 className="text-xl font-semibold">Related Insurance Terms</h3>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {post.relatedTerms.map((term: string) => (
+                  <Link key={term} href={`/term/${generateSlug(term)}`}>
+                    <Badge 
+                      variant="outline" 
+                      className="cursor-pointer hover:bg-primary hover:text-primary-foreground transition-colors"
+                    >
+                      {term}
+                    </Badge>
+                  </Link>
+                ))}
+              </div>
             </div>
+          )}
+
+          {/* CTA */}
+          <div className="mt-16 p-8 rounded-2xl bg-gradient-to-br from-primary/10 via-accent/5 to-secondary text-center space-y-4">
+            <h3 className="text-2xl font-semibold">Explore More Insurance Terms</h3>
+            <p className="text-muted-foreground">
+              Browse our comprehensive glossary to understand insurance better
+            </p>
+            <Link href="/">
+              <Button size="lg" className="rounded-full px-8 ui-text">
+                View Glossary
+              </Button>
+            </Link>
           </div>
         </div>
       </article>

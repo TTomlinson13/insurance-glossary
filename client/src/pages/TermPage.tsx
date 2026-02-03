@@ -1,5 +1,5 @@
 /* Individual term page with SEO-friendly URLs
- * Dedicated URL structure for each term, related terms, breadcrumbs, quote CTA
+ * Dedicated URL structure for each term, related terms, and breadcrumbs
  */
 
 import { useEffect, useState } from "react";
@@ -11,7 +11,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, BookOpen, ExternalLink } from "lucide-react";
 import { glossaryTerms, categoryColors, type GlossaryTerm } from "@/data/glossary";
 import { findTermBySlug, generateSlug } from "@/lib/utils-slug";
-import QuoteForm from "@/components/QuoteForm";
 
 export default function TermPage() {
   const [, params] = useRoute("/term/:slug");
@@ -187,9 +186,30 @@ export default function TermPage() {
               </Card>
             </div>
 
-            {/* Sidebar */}
+            {/* Sidebar - Related Terms */}
             <div className="space-y-6">
-              <QuoteForm category={term.category} />
+              <Card className="card-organic">
+                <CardHeader>
+                  <CardTitle>Explore More</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  <Link href="/blog">
+                    <Button variant="outline" className="w-full rounded-full ui-text">
+                      Read Our Blog
+                    </Button>
+                  </Link>
+                  <Link href="/business-insurance">
+                    <Button variant="outline" className="w-full rounded-full ui-text">
+                      Business Insurance Guide
+                    </Button>
+                  </Link>
+                  <Link href="/">
+                    <Button variant="outline" className="w-full rounded-full ui-text">
+                      Browse All Terms
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>

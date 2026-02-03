@@ -3,10 +3,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { BookOpen, Clock, Calendar, ArrowRight } from "lucide-react";
-import { blogPosts } from "@/data/blog";
+import { trpc } from "@/lib/trpc";
 import InsuranceChatbot from "@/components/InsuranceChatbot";
 
 export default function BlogPage() {
+  const { data: blogPosts, isLoading } = trpc.blog.list.useQuery();
+
   return (
     <div className="min-h-screen">
       {/* Header */}
@@ -41,43 +43,55 @@ export default function BlogPage() {
       {/* Blog Posts */}
       <section className="py-16">
         <div className="container">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {blogPosts.map((post) => (
-              <Link key={post.slug} href={`/blog/${post.slug}`}>
-                <Card className="card-organic hover:scale-[1.02] transition-transform duration-300 cursor-pointer h-full flex flex-col">
-                  <CardHeader>
-                    <div className="flex items-center gap-2 mb-3">
-                      <Badge variant="outline">{post.category}</Badge>
-                      <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                        <Clock className="w-3 h-3" />
-                        {post.readTime}
+          {isLoading ? (
+            <div className="text-center py-12 text-muted-foreground">
+              Loading blog posts...
+            </div>
+          ) : !blogPosts || blogPosts.length === 0 ? (
+            <div className="text-center py-12">
+              <div className="text-muted-foreground mb-4">
+                No blog posts yet. Check back soon for insurance insights and guides!
+              </div>
+            </div>
+          ) : (
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {blogPosts.map((post) => (
+                <Link key={post.slug} href={`/blog/${post.slug}`}>
+                  <Card className="card-organic hover:scale-[1.02] transition-transform duration-300 cursor-pointer h-full flex flex-col">
+                    <CardHeader>
+                      <div className="flex items-center gap-2 mb-3">
+                        <Badge variant="outline">{post.category}</Badge>
+                        <div className="flex items-center gap-1 text-sm text-muted-foreground">
+                          <Clock className="w-3 h-3" />
+                          {post.readTime}
+                        </div>
                       </div>
-                    </div>
-                    <CardTitle className="text-2xl leading-tight">{post.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex-1 flex flex-col">
-                    <CardDescription className="text-base mb-4 flex-1">
-                      {post.excerpt}
-                    </CardDescription>
-                    <div className="flex items-center justify-between pt-4 border-t border-border/50">
-                      <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                        <Calendar className="w-3 h-3" />
-                        {new Date(post.publishedDate).toLocaleDateString('en-US', { 
-                          month: 'short', 
-                          day: 'numeric', 
-                          year: 'numeric' 
-                        })}
+                      <CardTitle className="text-2xl leading-tight">{post.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="flex-1 flex flex-col">
+                      <CardDescription className="text-base mb-4 flex-1">
+                        {post.excerpt}
+                      </CardDescription>
+                      <div className="flex items-center justify-between pt-4 border-t border-border/50">
+                        <div className="flex items-center gap-1 text-sm text-muted-foreground">
+                          <Calendar className="w-3 h-3" />
+                          {new Date(post.publishedDate).toLocaleDateString('en-US', { 
+                            month: 'short', 
+                            day: 'numeric', 
+                            year: 'numeric' 
+                          })}
+                        </div>
+                        <div className="flex items-center gap-1 text-sm text-primary font-medium">
+                          Read More
+                          <ArrowRight className="w-4 h-4" />
+                        </div>
                       </div>
-                      <div className="flex items-center gap-1 text-sm text-primary font-medium">
-                        Read More
-                        <ArrowRight className="w-4 h-4" />
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
-            ))}
-          </div>
+                    </CardContent>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 

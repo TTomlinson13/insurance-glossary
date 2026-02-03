@@ -6,7 +6,6 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { glossaryTerms } from "@/data/glossary";
 import { generateSlug } from "@/lib/utils-slug";
-import QuoteForm from "@/components/QuoteForm";
 
 /**
  * Design Philosophy: Organic Modernism with Financial Sophistication
@@ -110,8 +109,8 @@ export default function BusinessInsurancePage() {
               <Link href="/">
                 <Button variant="ghost" className="rounded-full ui-text">Home</Button>
               </Link>
-              <Link href="/compare">
-                <Button variant="outline" className="rounded-full ui-text">Compare Quotes</Button>
+              <Link href="/blog">
+                <Button variant="outline" className="rounded-full ui-text">Blog</Button>
               </Link>
             </nav>
           </div>
@@ -132,18 +131,18 @@ export default function BusinessInsurancePage() {
             </h1>
             
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive guide to commercial insurance. Understand coverage options, compare quotes, and find the perfect protection for your business.
+              Comprehensive guide to commercial insurance. Understand coverage options and terminology to make informed decisions about protecting your business.
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center pt-4">
-              <Link href="#quote">
+              <Link href="#terms">
                 <Button size="lg" className="rounded-full px-8 ui-text">
-                  Get Free Quotes
+                  Browse Terms
                 </Button>
               </Link>
-              <Link href="#terms">
+              <Link href="/blog">
                 <Button size="lg" variant="outline" className="rounded-full px-8 ui-text">
-                  Browse Terms
+                  Read Blog
                 </Button>
               </Link>
             </div>
@@ -219,50 +218,6 @@ export default function BusinessInsurancePage() {
                 </Card>
               </Link>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Quote Form Section */}
-      <section id="quote" className="py-16">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8 items-start">
-              <div className="space-y-6">
-                <h2 className="text-3xl font-bold">Get Free Business Insurance Quotes</h2>
-                <p className="text-lg text-muted-foreground">
-                  Compare quotes from top commercial insurance providers and save up to 40% on your business insurance.
-                </p>
-                
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <div>
-                      <div className="font-medium ui-text">Fast & Free Comparison</div>
-                      <div className="text-sm text-muted-foreground">Get multiple quotes in minutes</div>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <div>
-                      <div className="font-medium ui-text">Top-Rated Providers</div>
-                      <div className="text-sm text-muted-foreground">Compare coverage from trusted insurers</div>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <div>
-                      <div className="font-medium ui-text">Expert Support</div>
-                      <div className="text-sm text-muted-foreground">Get help choosing the right coverage</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <QuoteForm category="Business" />
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -364,7 +319,7 @@ export default function BusinessInsurancePage() {
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li><Link href="/" className="hover:text-primary transition-colors">Home</Link></li>
                 <li><Link href="/business-insurance" className="hover:text-primary transition-colors">Business Insurance</Link></li>
-                <li><Link href="/compare" className="hover:text-primary transition-colors">Compare Quotes</Link></li>
+                <li><Link href="/blog" className="hover:text-primary transition-colors">Blog</Link></li>
               </ul>
             </div>
             
@@ -382,7 +337,7 @@ export default function BusinessInsurancePage() {
               <h3 className="font-semibold mb-4 ui-text">Resources</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li><a href="#" className="hover:text-primary transition-colors">Insurance Guides</a></li>
-                <li><Link href="/compare" className="hover:text-primary transition-colors">Compare Quotes</Link></li>
+                <li><Link href="/blog" className="hover:text-primary transition-colors">Blog</Link></li>
                 <li><a href="#" className="hover:text-primary transition-colors">FAQ</a></li>
                 <li><a href="#" className="hover:text-primary transition-colors">Contact Us</a></li>
               </ul>

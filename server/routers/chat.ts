@@ -1,6 +1,7 @@
 import { z } from "zod";
 import { publicProcedure, router } from "../_core/trpc";
 import { invokeLLM } from "../_core/llm";
+import { notifyOwner } from "../_core/notification";
 import { 
   createConversation, 
   getConversation, 
@@ -195,6 +196,24 @@ export const chatRouter = router({
           leadData: leadData as any,
           convertedToLead: 1,
         });
+      }
+
+      // Send email notification for high-value leads
+      const isHighValue = 
+        leadData.insuranceType.toLowerCase().includes("business") ||
+        leadData.insuranceType.toLowerCase().includes("commercial") ||
+        (conversationId && conversationSummary.length > 50); // Engaged conversation
+
+      if (isHighValue) {
+        try {
+          await notifyOwner({
+            title: `🎯 High-Value Lead: ${leadData.insuranceType}`,
+            content: `New lead captured from ${conversationId ? "chatbot" : "quote form"}:\n\nName: ${leadData.name}\nEmail: ${leadData.email}\nPhone: ${leadData.phone || "N/A"}\nZIP: ${leadData.zipCode || "N/A"}\nInsurance Type: ${leadData.insuranceType}\nCurrently Insured: ${leadData.currentlyInsured || "N/A"}\n\nNotes: ${conversationSummary}`,
+          });
+        } catch (error) {
+          console.error("Failed to send notification:", error);
+          // Don't fail the lead capture if notification fails
+        }
       }
 
       return { success: true, leadId };

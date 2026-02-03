@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { 
   Users, TrendingUp, MessageSquare, FileText, 
-  Filter, Download, ChevronLeft, ChevronRight 
+  Filter, Download, ChevronLeft, ChevronRight, Sparkles 
 } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { getLoginUrl } from "@/const";
@@ -319,10 +319,26 @@ export default function AdminDashboard() {
                     <ChevronRight className="w-4 h-4" />
                   </Button>
                 </div>
-              </div>
-            )}
+              </div>            )}
           </CardContent>
         </Card>
+
+        {/* AI Blog Generator Link */}
+        <div className="mt-8">
+          <Link href="/admin/blog-generator">
+            <Card className="cursor-pointer hover:bg-accent/50 transition-colors">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Sparkles className="w-5 h-5 text-primary" />
+                  AI Blog Generator
+                </CardTitle>
+                <CardDescription>
+                  Generate SEO-optimized insurance articles using AI
+                </CardDescription>
+              </CardHeader>
+            </Card>
+          </Link>
+        </div>
       </div>
     </div>
   );

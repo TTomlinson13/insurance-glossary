@@ -216,20 +216,20 @@ export default function Home() {
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <Shield className="w-16 h-16 mx-auto text-primary" />
             <h2 className="text-4xl md:text-5xl font-semibold">
-              Ready to Find the Right Insurance?
+              Continue Your Insurance Education
             </h2>
             <p className="text-xl text-muted-foreground">
-              Now that you understand the terminology, compare insurance quotes and find the best coverage for your needs.
+              Explore our blog for in-depth guides and expert insights on insurance topics.
             </p>
             <div className="flex flex-wrap gap-4 justify-center pt-4">
-              <Link href="/compare">
+              <Link href="/blog">
                 <Button size="lg" className="rounded-full px-8 ui-text">
-                  Compare Quotes
+                  Read Our Blog
                 </Button>
               </Link>
-              <Link href="/">
+              <Link href="/business-insurance">
                 <Button size="lg" variant="outline" className="rounded-full px-8 ui-text">
-                  Browse Glossary
+                  Business Insurance Guide
                 </Button>
               </Link>
             </div>
@@ -267,7 +267,7 @@ export default function Home() {
               <h3 className="font-semibold mb-4 ui-text">Resources</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li><Link href="/blog" className="hover:text-primary transition-colors">Blog</Link></li>
-                <li><Link href="/compare" className="hover:text-primary transition-colors">Compare Quotes</Link></li>
+                <li><Link href="/business-insurance" className="hover:text-primary transition-colors">Business Insurance</Link></li>
                 <li><a href="#" className="hover:text-primary transition-colors">FAQ</a></li>
                 <li><a href="#" className="hover:text-primary transition-colors">Contact Us</a></li>
               </ul>
