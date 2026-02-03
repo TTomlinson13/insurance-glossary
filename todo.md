@@ -24,3 +24,7 @@
 
 ## New Changes
 - [x] Update chatbot to not push quote connections
+
+## SEO Improvements
+- [x] Add meta keywords to homepage
+- [x] Add alt text to all images on homepage

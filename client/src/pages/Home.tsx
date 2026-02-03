@@ -127,7 +127,7 @@ export default function Home() {
                 }
               >
                 {category !== "All" && categoryIcons[category] && (
-                  <img src={categoryIcons[category]} alt="" className="w-4 h-4 mr-2" />
+                  <img src={categoryIcons[category]} alt={`${category} insurance icon`} className="w-4 h-4 mr-2" />
                 )}
                 {category}
               </Button>
