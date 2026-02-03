@@ -88,32 +88,32 @@ Your Insurance Glossary will automatically track:
 
 Consider adding custom event tracking for:
 
-1. **Quote form submissions**:
-```javascript
-gtag('event', 'quote_form_submit', {
-  'insurance_type': 'Auto',
-  'source': 'form'
-});
-```
-
-2. **Chatbot interactions**:
+1. **Chatbot interactions**:
 ```javascript
 gtag('event', 'chatbot_message', {
   'message_count': 5
 });
 ```
 
-3. **Term searches**:
+2. **Term searches**:
 ```javascript
 gtag('event', 'search', {
   'search_term': 'deductible'
 });
 ```
 
-4. **Blog post reads** (track scroll depth):
+3. **Blog post reads** (track scroll depth):
 ```javascript
 gtag('event', 'scroll', {
   'percent_scrolled': 75
+});
+```
+
+4. **External link clicks**:
+```javascript
+gtag('event', 'click', {
+  'link_text': 'Learn More',
+  'link_url': 'https://example.com'
 });
 ```
 
@@ -135,10 +135,10 @@ gtag('event', 'scroll', {
 
 ### 4. Conversion Tracking
 Set up conversions for:
-- Quote form completions
-- Email signups
-- Phone number clicks
-- Chatbot lead captures
+- Chatbot interactions
+- External link clicks
+- Blog post engagement
+- Term page views
 
 ## SEO Integration
 

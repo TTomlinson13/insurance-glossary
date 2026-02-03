@@ -720,6 +720,1076 @@ export const glossaryTerms: GlossaryTerm[] = [
     category: "Industry",
     relatedTerms: ["Claims-Made Policy", "Prior Acts Coverage", "Coverage Trigger"]
   }
+,
+  {
+    term: "ACORD 25 Form",
+    definition: "An industry standard form used to create a certificate of insurance (COI). This form provides proof of insurance coverage and is commonly required by clients, contractors, or landlords.",
+    category: "Industry",
+    relatedTerms: ["Certificate of Insurance","Endorsement","Policy"]
+  },
+  {
+    term: "Aggregate Limit",
+    definition: "The maximum amount an insurer will pay for covered losses over a specified period of time, typically the policy term. Once this limit is reached, no additional claims will be paid during that period.",
+    category: "General",
+    relatedTerms: ["Policy Limit","Per Occurrence Limit","Coverage"]
+  },
+  {
+    term: "Appraisal",
+    definition: "An assessment of a property's value by an independent professional, often required for insurance purposes to determine appropriate coverage limits or claim settlements.",
+    category: "Property",
+    relatedTerms: ["Actual Cash Value","Replacement Cost","Valuation"]
+  },
+  {
+    term: "Arbitration",
+    definition: "An alternative to going to court where a neutral third-party is used to settle a dispute between an insurer and a policyholder, typically regarding claim settlements or coverage interpretations.",
+    category: "Claims",
+    relatedTerms: ["Dispute Resolution","Claim","Settlement"]
+  },
+  {
+    term: "Builder's Risk Insurance",
+    definition: "A specialized type of property insurance designed to cover materials, fixtures, and equipment used in the building or renovation of a structure in case of loss or damage during construction.",
+    category: "Business",
+    relatedTerms: ["Commercial Property Insurance","Construction Insurance","Property Insurance"]
+  },
+  {
+    term: "Business Interruption Insurance",
+    definition: "Also known as Business Income Insurance, this coverage helps cover a business's income and operational expenses when operations must be suspended due to a covered loss, such as after a fire or property damage.",
+    category: "Business",
+    relatedTerms: ["Commercial Property Insurance","Business Owner's Policy","Loss of Income"]
+  },
+  {
+    term: "Business Personal Property",
+    definition: "Coverage for the cost to repair or replace business property such as computers, furniture, and inventories if they're lost, damaged, or stolen. Generally does not cover property stolen by an employee.",
+    category: "Business",
+    relatedTerms: ["Commercial Property Insurance","Business Owner's Policy","Contents Insurance"]
+  },
+  {
+    term: "Certificate Holder",
+    definition: "A person or entity who has a certificate of insurance (COI) in their possession, which could be the policyholder or someone who requested proof of insurance. Being a certificate holder does not necessarily mean coverage under the policy.",
+    category: "Industry",
+    relatedTerms: ["Certificate of Insurance","Additional Insured","Named Insured"]
+  },
+  {
+    term: "Claimant",
+    definition: "The person or business that makes a claim to the insured person or their insurance company, seeking compensation for damages or losses.",
+    category: "Claims",
+    relatedTerms: ["Claim","Third Party","Settlement"]
+  },
+  {
+    term: "Claims-Made Policy",
+    definition: "A type of insurance policy that covers claims that are made against the insured during the policy period, regardless of when the incident occurred. Claims made after the policy ends would not be covered unless tail coverage is purchased.",
+    category: "General",
+    relatedTerms: ["Occurrence Policy","Tail Coverage","Professional Liability Insurance"]
+  },
+  {
+    term: "Class of Business",
+    definition: "The type of industry a business falls into, such as 'construction' or 'professional services.' Used by insurers to determine risk levels and set coverage limits and premium costs.",
+    category: "Industry",
+    relatedTerms: ["Underwriting","Risk Classification","Premium"]
+  },
+  {
+    term: "Inland Marine Insurance",
+    definition: "Coverage that helps protect tools and equipment if they get damaged or stolen while in transit or temporarily stored at a location other than the main business premises.",
+    category: "Business",
+    relatedTerms: ["Commercial Property Insurance","Equipment Coverage","Tools Coverage"]
+  },
+  {
+    term: "Loss Payable Provision",
+    definition: "An endorsement where an insurer makes claim payments to a third party instead of the named insured, often included when multiple parties have a financial interest in the insured property.",
+    category: "Industry",
+    relatedTerms: ["Loss Payee","Named Insured","Endorsement"]
+  },
+  {
+    term: "Loss Payee",
+    definition: "The person or entity entitled to payment when an insurance claim is settled, which may be the policyholder or another party with a financial interest in the insured property.",
+    category: "Industry",
+    relatedTerms: ["Loss Payable Provision","Beneficiary","Named Insured"]
+  },
+  {
+    term: "Primary and Noncontributory",
+    definition: "'Primary' means the insurance policy responds to a covered claim first before another policy. 'Non-contributory' means the policy must respond without requesting the other policy contribute to paying the claim.",
+    category: "Industry",
+    relatedTerms: ["Additional Insured","Endorsement","Coverage"]
+  },
+  {
+    term: "Products-Completed Operations Aggregate",
+    definition: "The maximum amount of coverage offered under a general liability insurance policy for claims and lawsuits related to injury, illness, or property damage caused by delivered products or completed services.",
+    category: "Business",
+    relatedTerms: ["General Liability Insurance","Aggregate Limit","Product Liability"]
+  },
+  {
+    term: "Rider",
+    definition: "Also known as an endorsement, this is an insurance policy form that changes or adds to the provisions included in the base policy, modifying coverage terms or adding additional coverage.",
+    category: "General",
+    relatedTerms: ["Endorsement","Policy","Coverage"]
+  },
+  {
+    term: "Bodily Injury",
+    definition: "Physical injury, sickness, or disease sustained by a person, typically covered under liability insurance policies when the insured is legally responsible for causing the injury.",
+    category: "General",
+    relatedTerms: ["Liability","General Liability Insurance","Personal Injury"]
+  },
+  {
+    term: "Gap Insurance",
+    definition: "Auto insurance coverage that pays the difference between what you owe on your car loan or lease and the vehicle's actual cash value if it's totaled or stolen.",
+    category: "Auto",
+    relatedTerms: ["Actual Cash Value","Total Loss","Loan Payoff"]
+  },
+  {
+    term: "HMO",
+    definition: "Health Maintenance Organization - a type of health insurance plan that requires members to use network providers and obtain referrals from a primary care physician to see specialists.",
+    category: "Health",
+    relatedTerms: ["PPO","Health Insurance","Network Provider"]
+  },
+  {
+    term: "PPO",
+    definition: "Preferred Provider Organization - a type of health insurance plan that offers more flexibility than an HMO, allowing members to see out-of-network providers at a higher cost without referrals.",
+    category: "Health",
+    relatedTerms: ["HMO","Health Insurance","Network Provider"]
+  },
+  {
+    term: "EPO",
+    definition: "Exclusive Provider Organization - a health insurance plan that covers services only if you use doctors, specialists, or hospitals in the plan's network, except in emergencies.",
+    category: "Health",
+    relatedTerms: ["HMO","PPO","Health Insurance"]
+  },
+  {
+    term: "POS Plan",
+    definition: "Point of Service Plan - a health insurance plan that combines features of HMO and PPO plans, requiring a primary care physician but allowing out-of-network care at higher costs.",
+    category: "Health",
+    relatedTerms: ["HMO","PPO","Health Insurance"]
+  },
+  {
+    term: "High Deductible Health Plan",
+    definition: "A health insurance plan with lower premiums and higher deductibles than traditional plans, often paired with a Health Savings Account (HSA) for tax-advantaged savings.",
+    category: "Health",
+    relatedTerms: ["Deductible","Health Savings Account","Premium"]
+  },
+  {
+    term: "Health Savings Account",
+    definition: "A tax-advantaged savings account available to individuals enrolled in high-deductible health plans, allowing pre-tax contributions for qualified medical expenses.",
+    category: "Health",
+    relatedTerms: ["High Deductible Health Plan","Medical Expenses","Tax Deduction"]
+  },
+  {
+    term: "Flexible Spending Account",
+    definition: "An employer-sponsored account that allows employees to set aside pre-tax dollars for eligible healthcare or dependent care expenses, with use-it-or-lose-it provisions.",
+    category: "Health",
+    relatedTerms: ["Health Savings Account","Medical Expenses","Tax Benefit"]
+  },
+  {
+    term: "Term Life Insurance",
+    definition: "Life insurance coverage for a specific period (term), typically 10, 20, or 30 years, that pays a death benefit if the insured dies during the term but has no cash value.",
+    category: "Life",
+    relatedTerms: ["Whole Life Insurance","Death Benefit","Premium"]
+  },
+  {
+    term: "Whole Life Insurance",
+    definition: "Permanent life insurance that provides coverage for the insured's entire lifetime, builds cash value over time, and typically has level premiums that don't increase with age.",
+    category: "Life",
+    relatedTerms: ["Term Life Insurance","Cash Value","Universal Life Insurance"]
+  },
+  {
+    term: "Universal Life Insurance",
+    definition: "A type of permanent life insurance with flexible premiums and death benefits, plus a cash value component that earns interest based on market rates.",
+    category: "Life",
+    relatedTerms: ["Whole Life Insurance","Cash Value","Variable Life Insurance"]
+  },
+  {
+    term: "Variable Life Insurance",
+    definition: "Permanent life insurance that allows policyholders to invest the cash value in various investment options, with death benefits and cash value fluctuating based on investment performance.",
+    category: "Life",
+    relatedTerms: ["Universal Life Insurance","Cash Value","Investment"]
+  },
+  {
+    term: "Cash Value",
+    definition: "The savings component of permanent life insurance policies that accumulates over time and can be borrowed against or withdrawn by the policyholder.",
+    category: "Life",
+    relatedTerms: ["Whole Life Insurance","Universal Life Insurance","Loan"]
+  },
+  {
+    term: "Death Benefit",
+    definition: "The amount of money paid to beneficiaries upon the death of the insured person under a life insurance policy.",
+    category: "Life",
+    relatedTerms: ["Beneficiary","Life Insurance","Policy"]
+  },
+  {
+    term: "Living Benefit",
+    definition: "A life insurance policy feature that allows the policyholder to access a portion of the death benefit while still alive, typically in cases of terminal illness or chronic conditions.",
+    category: "Life",
+    relatedTerms: ["Death Benefit","Accelerated Death Benefit","Terminal Illness"]
+  },
+  {
+    term: "Accelerated Death Benefit",
+    definition: "A provision that allows terminally ill policyholders to receive a portion of their life insurance death benefit before death to help cover medical or end-of-life expenses.",
+    category: "Life",
+    relatedTerms: ["Living Benefit","Death Benefit","Terminal Illness"]
+  },
+  {
+    term: "Guaranteed Issue Life Insurance",
+    definition: "Life insurance that doesn't require a medical exam or health questions, guaranteeing acceptance but typically offering lower coverage amounts and higher premiums.",
+    category: "Life",
+    relatedTerms: ["Simplified Issue","Life Insurance","Underwriting"]
+  },
+  {
+    term: "Simplified Issue Life Insurance",
+    definition: "Life insurance that requires answering health questions but no medical exam, offering faster approval than fully underwritten policies with moderate coverage amounts.",
+    category: "Life",
+    relatedTerms: ["Guaranteed Issue Life Insurance","Underwriting","Medical Exam"]
+  },
+  {
+    term: "Dwelling Coverage",
+    definition: "The part of a homeowners or renters insurance policy that covers damage to the physical structure of your home, including walls, roof, and built-in appliances.",
+    category: "Property",
+    relatedTerms: ["Homeowners Insurance","Replacement Cost","Structure"]
+  },
+  {
+    term: "Personal Property Coverage",
+    definition: "Insurance coverage for personal belongings such as furniture, clothing, and electronics against theft, damage, or loss, typically included in homeowners and renters policies.",
+    category: "Property",
+    relatedTerms: ["Renters Insurance","Homeowners Insurance","Contents"]
+  },
+  {
+    term: "Loss of Use Coverage",
+    definition: "Coverage that pays for additional living expenses if you must temporarily relocate due to a covered loss that makes your home uninhabitable, such as fire or severe storm damage.",
+    category: "Property",
+    relatedTerms: ["Homeowners Insurance","Additional Living Expenses","Temporary Housing"]
+  },
+  {
+    term: "Personal Liability Coverage",
+    definition: "Protection against lawsuits for bodily injury or property damage that you or family members cause to others, typically included in homeowners and renters insurance policies.",
+    category: "Property",
+    relatedTerms: ["Liability","Homeowners Insurance","Lawsuit"]
+  },
+  {
+    term: "Medical Payments Coverage",
+    definition: "Coverage that pays medical expenses for guests injured on your property, regardless of fault, typically included in homeowners and auto insurance policies with relatively low limits.",
+    category: "General",
+    relatedTerms: ["Personal Liability Coverage","Bodily Injury","Guest"]
+  },
+  {
+    term: "Ordinance or Law Coverage",
+    definition: "Insurance that covers the increased costs of rebuilding to meet current building codes after a covered loss, as older homes may not meet modern code requirements.",
+    category: "Property",
+    relatedTerms: ["Homeowners Insurance","Building Code","Reconstruction"]
+  },
+  {
+    term: "Water Backup Coverage",
+    definition: "Optional homeowners insurance coverage for damage caused by water backing up through sewers or drains, which is typically excluded from standard policies.",
+    category: "Property",
+    relatedTerms: ["Homeowners Insurance","Sewer Backup","Exclusion"]
+  },
+  {
+    term: "Equipment Breakdown Coverage",
+    definition: "Insurance that covers the cost of repairing or replacing home systems and appliances that break down due to mechanical or electrical failure, such as HVAC systems or water heaters.",
+    category: "Property",
+    relatedTerms: ["Homeowners Insurance","Mechanical Failure","Appliance"]
+  },
+  {
+    term: "Scheduled Personal Property",
+    definition: "Additional coverage for high-value items like jewelry, art, or collectibles that exceed standard policy limits, requiring appraisals and separate listing on the policy.",
+    category: "Property",
+    relatedTerms: ["Personal Property Coverage","Jewelry Insurance","Appraisal"]
+  },
+  {
+    term: "Replacement Cost Coverage",
+    definition: "Insurance that pays to replace damaged property with new items of similar kind and quality without deducting for depreciation, resulting in higher payouts than actual cash value coverage.",
+    category: "Property",
+    relatedTerms: ["Actual Cash Value","Depreciation","Claim"]
+  },
+  {
+    term: "Extended Replacement Cost",
+    definition: "Coverage that pays more than the dwelling coverage limit (typically 125-150%) to rebuild your home if construction costs have increased since the policy was written.",
+    category: "Property",
+    relatedTerms: ["Replacement Cost Coverage","Dwelling Coverage","Inflation"]
+  },
+  {
+    term: "Guaranteed Replacement Cost",
+    definition: "The most comprehensive coverage that pays whatever it costs to rebuild your home to its original condition, even if it exceeds your policy limits, regardless of construction cost increases.",
+    category: "Property",
+    relatedTerms: ["Extended Replacement Cost","Dwelling Coverage","Unlimited"]
+  },
+  {
+    term: "Windstorm Deductible",
+    definition: "A separate, typically higher deductible that applies specifically to wind and hail damage, often expressed as a percentage of the dwelling coverage limit rather than a fixed dollar amount.",
+    category: "Property",
+    relatedTerms: ["Deductible","Hurricane Deductible","Percentage Deductible"]
+  },
+  {
+    term: "Hurricane Deductible",
+    definition: "A separate deductible that applies specifically to hurricane damage, typically a percentage of the dwelling coverage (2-5%), and only triggered when a hurricane is officially declared.",
+    category: "Property",
+    relatedTerms: ["Windstorm Deductible","Percentage Deductible","Named Storm"]
+  },
+  {
+    term: "Earthquake Insurance",
+    definition: "Separate coverage for damage caused by earthquakes, typically not included in standard homeowners policies and requiring a separate policy or endorsement with its own deductible.",
+    category: "Property",
+    relatedTerms: ["Flood Insurance","Catastrophic Coverage","Exclusion"]
+  },
+  {
+    term: "Sinkhole Coverage",
+    definition: "Insurance coverage for damage caused by sinkholes, which may be included, excluded, or available as an endorsement depending on the state and insurer.",
+    category: "Property",
+    relatedTerms: ["Homeowners Insurance","Catastrophic Coverage","Ground Movement"]
+  },
+  {
+    term: "Mold Coverage",
+    definition: "Limited coverage for mold damage that results from a covered peril, with most policies capping mold remediation at $10,000-$50,000 and excluding mold from maintenance issues.",
+    category: "Property",
+    relatedTerms: ["Homeowners Insurance","Water Damage","Exclusion"]
+  },
+  {
+    term: "Identity Theft Coverage",
+    definition: "Coverage that reimburses expenses related to restoring your identity after theft, such as legal fees, lost wages, and document replacement costs.",
+    category: "General",
+    relatedTerms: ["Personal Property Coverage","Fraud","Credit Monitoring"]
+  },
+  {
+    term: "Pet Insurance",
+    definition: "Coverage for veterinary expenses related to illness, injury, or preventive care for pets, with policies varying in coverage limits, deductibles, and exclusions.",
+    category: "General",
+    relatedTerms: ["Health Insurance","Veterinary Care","Wellness Coverage"]
+  },
+  {
+    term: "Travel Insurance",
+    definition: "Coverage for unexpected events during travel, including trip cancellation, medical emergencies, lost luggage, and travel delays.",
+    category: "General",
+    relatedTerms: ["Trip Cancellation","Medical Coverage","Baggage Loss"]
+  },
+  {
+    term: "Trip Cancellation Insurance",
+    definition: "Coverage that reimburses prepaid, non-refundable trip costs if you must cancel for covered reasons such as illness, injury, or severe weather.",
+    category: "General",
+    relatedTerms: ["Travel Insurance","Trip Interruption","Covered Reason"]
+  },
+  {
+    term: "Trip Interruption Insurance",
+    definition: "Coverage that reimburses unused trip costs and additional expenses if your trip is cut short due to covered reasons like family emergencies or natural disasters.",
+    category: "General",
+    relatedTerms: ["Travel Insurance","Trip Cancellation Insurance","Emergency"]
+  },
+  {
+    term: "Baggage Insurance",
+    definition: "Coverage for lost, stolen, or damaged luggage and personal items during travel, typically included in comprehensive travel insurance policies.",
+    category: "General",
+    relatedTerms: ["Travel Insurance","Personal Property Coverage","Lost Luggage"]
+  },
+  {
+    term: "Rental Car Insurance",
+    definition: "Coverage for damage to or theft of a rental vehicle, which may be provided by your personal auto policy, credit card, or purchased from the rental company.",
+    category: "Auto",
+    relatedTerms: ["Collision Coverage","Comprehensive Coverage","Loss Damage Waiver"]
+  },
+  {
+    term: "Loss Damage Waiver",
+    definition: "An optional rental car agreement (not insurance) that waives the rental company's right to hold you financially responsible for damage or theft of the rental vehicle.",
+    category: "Auto",
+    relatedTerms: ["Rental Car Insurance","Collision Damage Waiver","Rental Agreement"]
+  },
+  {
+    term: "Roadside Assistance",
+    definition: "Coverage that provides services like towing, tire changes, jump starts, and lockout assistance when your vehicle breaks down, often available as an auto insurance add-on.",
+    category: "Auto",
+    relatedTerms: ["Towing Coverage","Emergency Service","Auto Insurance"]
+  },
+  {
+    term: "Towing Coverage",
+    definition: "Insurance coverage that pays for towing your vehicle to a repair facility after a breakdown or accident, typically with per-incident limits of $50-$100.",
+    category: "Auto",
+    relatedTerms: ["Roadside Assistance","Auto Insurance","Breakdown"]
+  },
+  {
+    term: "Rental Reimbursement Coverage",
+    definition: "Auto insurance coverage that pays for a rental car while your vehicle is being repaired after a covered accident, typically with daily and total limits.",
+    category: "Auto",
+    relatedTerms: ["Auto Insurance","Collision Coverage","Rental Car"]
+  },
+  {
+    term: "Loan/Lease Payoff Coverage",
+    definition: "Similar to gap insurance, this coverage pays the difference between your vehicle's actual cash value and the remaining loan or lease balance after a total loss.",
+    category: "Auto",
+    relatedTerms: ["Gap Insurance","Total Loss","Auto Loan"]
+  },
+  {
+    term: "New Car Replacement Coverage",
+    definition: "Auto insurance coverage that pays to replace your totaled vehicle with a brand new car of the same make and model, rather than paying actual cash value.",
+    category: "Auto",
+    relatedTerms: ["Gap Insurance","Total Loss","Replacement Cost"]
+  },
+  {
+    term: "Accident Forgiveness",
+    definition: "An auto insurance feature that prevents your premium from increasing after your first at-fault accident, helping maintain your good driver discount.",
+    category: "Auto",
+    relatedTerms: ["Premium","At-Fault Accident","Discount"]
+  },
+  {
+    term: "Vanishing Deductible",
+    definition: "An auto insurance program that reduces your deductible by a set amount (typically $50-$100) for each year you go without an accident or violation.",
+    category: "Auto",
+    relatedTerms: ["Deductible","Safe Driver Discount","Reward Program"]
+  },
+  {
+    term: "Usage-Based Insurance",
+    definition: "Auto insurance pricing based on actual driving behavior monitored through telematics devices or smartphone apps, rewarding safe driving with lower premiums.",
+    category: "Auto",
+    relatedTerms: ["Telematics","Safe Driver Discount","Pay-Per-Mile"]
+  },
+  {
+    term: "Telematics",
+    definition: "Technology that monitors driving behavior such as speed, braking, mileage, and time of day to determine auto insurance premiums based on actual risk.",
+    category: "Auto",
+    relatedTerms: ["Usage-Based Insurance","Safe Driving","Discount"]
+  },
+  {
+    term: "Pay-Per-Mile Insurance",
+    definition: "Auto insurance pricing based primarily on miles driven, with a low base rate plus a per-mile charge, ideal for low-mileage drivers.",
+    category: "Auto",
+    relatedTerms: ["Usage-Based Insurance","Mileage","Low-Mileage Discount"]
+  },
+  {
+    term: "Rideshare Insurance",
+    definition: "Coverage designed for drivers who work for rideshare companies like Uber or Lyft, filling gaps between personal auto insurance and the company's commercial coverage.",
+    category: "Auto",
+    relatedTerms: ["Commercial Auto Insurance","Uber","Lyft"]
+  },
+  {
+    term: "Commercial Auto Insurance",
+    definition: "Insurance coverage for vehicles owned by a business and used for business purposes, providing higher liability limits and different coverage than personal auto policies.",
+    category: "Business",
+    relatedTerms: ["Business Insurance","Liability","Fleet Insurance"]
+  },
+  {
+    term: "Fleet Insurance",
+    definition: "Commercial auto insurance that covers multiple vehicles (typically 5 or more) owned by a business under a single policy, often at discounted rates.",
+    category: "Business",
+    relatedTerms: ["Commercial Auto Insurance","Business Insurance","Multiple Vehicles"]
+  },
+  {
+    term: "Hired and Non-Owned Auto Coverage",
+    definition: "Business insurance that covers liability for vehicles rented by the company or employees' personal vehicles used for business purposes.",
+    category: "Business",
+    relatedTerms: ["Commercial Auto Insurance","Business Liability","Employee Vehicles"]
+  },
+  {
+    term: "Employment Practices Liability Insurance",
+    definition: "Coverage that protects businesses against claims by employees alleging discrimination, wrongful termination, harassment, or other employment-related issues.",
+    category: "Business",
+    relatedTerms: ["Directors and Officers Insurance","Business Liability","Wrongful Termination"]
+  },
+  {
+    term: "Fiduciary Liability Insurance",
+    definition: "Coverage for businesses that manage employee benefit plans, protecting against claims of mismanagement or breach of fiduciary duty under ERISA.",
+    category: "Business",
+    relatedTerms: ["Directors and Officers Insurance","Employee Benefits","ERISA"]
+  },
+  {
+    term: "Crime Insurance",
+    definition: "Coverage that protects businesses against financial losses from employee theft, forgery, fraud, robbery, and other criminal acts.",
+    category: "Business",
+    relatedTerms: ["Business Insurance","Employee Theft","Fraud"]
+  },
+  {
+    term: "Fidelity Bond",
+    definition: "Insurance that protects businesses against losses caused by fraudulent or dishonest acts by employees, including theft and embezzlement.",
+    category: "Business",
+    relatedTerms: ["Crime Insurance","Employee Theft","Surety Bond"]
+  },
+  {
+    term: "Surety Bond",
+    definition: "A three-party agreement where a surety guarantees to an obligee that a principal will fulfill an obligation, such as completing a construction project or obtaining a business license.",
+    category: "Business",
+    relatedTerms: ["Fidelity Bond","Performance Bond","Contract"]
+  },
+  {
+    term: "Performance Bond",
+    definition: "A surety bond that guarantees a contractor will complete a project according to contract terms, protecting the project owner from financial loss if the contractor defaults.",
+    category: "Business",
+    relatedTerms: ["Surety Bond","Construction","Contract"]
+  },
+  {
+    term: "Payment Bond",
+    definition: "A surety bond that guarantees a contractor will pay subcontractors, laborers, and material suppliers, protecting them from non-payment if the contractor defaults.",
+    category: "Business",
+    relatedTerms: ["Performance Bond","Surety Bond","Construction"]
+  },
+  {
+    term: "Bid Bond",
+    definition: "A surety bond submitted with a construction bid that guarantees the bidder will enter into the contract and provide required performance and payment bonds if awarded the project.",
+    category: "Business",
+    relatedTerms: ["Performance Bond","Surety Bond","Construction Bid"]
+  },
+  {
+    term: "Maintenance Bond",
+    definition: "A surety bond that guarantees a contractor will repair defects in workmanship or materials for a specified period after project completion, typically one year.",
+    category: "Business",
+    relatedTerms: ["Performance Bond","Warranty","Construction"]
+  },
+  {
+    term: "License and Permit Bond",
+    definition: "A surety bond required by government agencies to obtain certain business licenses or permits, guaranteeing compliance with applicable laws and regulations.",
+    category: "Business",
+    relatedTerms: ["Surety Bond","Business License","Compliance"]
+  },
+  {
+    term: "Tail Coverage",
+    definition: "Extended reporting period coverage purchased when a claims-made policy ends, allowing claims for incidents that occurred during the policy period to be reported after it expires.",
+    category: "General",
+    relatedTerms: ["Claims-Made Policy","Professional Liability Insurance","Extended Reporting Period"]
+  },
+  {
+    term: "Prior Acts Coverage",
+    definition: "Coverage under a claims-made policy for incidents that occurred before the policy's retroactive date, protecting against claims for past work when switching insurers.",
+    category: "General",
+    relatedTerms: ["Claims-Made Policy","Retroactive Date","Professional Liability Insurance"]
+  },
+  {
+    term: "Retroactive Date",
+    definition: "The date from which a claims-made policy provides coverage for incidents, with claims only covered if the incident occurred on or after this date.",
+    category: "General",
+    relatedTerms: ["Claims-Made Policy","Prior Acts Coverage","Coverage Period"]
+  },
+  {
+    term: "Occurrence Policy",
+    definition: "An insurance policy that covers incidents that occur during the policy period, regardless of when the claim is filed, providing longer-term protection than claims-made policies.",
+    category: "General",
+    relatedTerms: ["Claims-Made Policy","Coverage Period","Liability"]
+  }
+,
+  {
+    term: "ACORD 25 Form",
+    definition: "An industry standard form used to create a certificate of insurance (COI). This form provides proof of insurance coverage and is commonly required by clients, contractors, or landlords.",
+    category: "Industry",
+    relatedTerms: ["Certificate of Insurance","Endorsement","Policy"]
+  },
+  {
+    term: "Aggregate Limit",
+    definition: "The maximum amount an insurer will pay for covered losses over a specified period of time, typically the policy term. Once this limit is reached, no additional claims will be paid during that period.",
+    category: "General",
+    relatedTerms: ["Policy Limit","Per Occurrence Limit","Coverage"]
+  },
+  {
+    term: "Appraisal",
+    definition: "An assessment of a property's value by an independent professional, often required for insurance purposes to determine appropriate coverage limits or claim settlements.",
+    category: "Property",
+    relatedTerms: ["Actual Cash Value","Replacement Cost","Valuation"]
+  },
+  {
+    term: "Arbitration",
+    definition: "An alternative to going to court where a neutral third-party is used to settle a dispute between an insurer and a policyholder, typically regarding claim settlements or coverage interpretations.",
+    category: "Claims",
+    relatedTerms: ["Dispute Resolution","Claim","Settlement"]
+  },
+  {
+    term: "Builder's Risk Insurance",
+    definition: "A specialized type of property insurance designed to cover materials, fixtures, and equipment used in the building or renovation of a structure in case of loss or damage during construction.",
+    category: "Business",
+    relatedTerms: ["Commercial Property Insurance","Construction Insurance","Property Insurance"]
+  },
+  {
+    term: "Business Interruption Insurance",
+    definition: "Also known as Business Income Insurance, this coverage helps cover a business's income and operational expenses when operations must be suspended due to a covered loss, such as after a fire or property damage.",
+    category: "Business",
+    relatedTerms: ["Commercial Property Insurance","Business Owner's Policy","Loss of Income"]
+  },
+  {
+    term: "Business Personal Property",
+    definition: "Coverage for the cost to repair or replace business property such as computers, furniture, and inventories if they're lost, damaged, or stolen. Generally does not cover property stolen by an employee.",
+    category: "Business",
+    relatedTerms: ["Commercial Property Insurance","Business Owner's Policy","Contents Insurance"]
+  },
+  {
+    term: "Certificate Holder",
+    definition: "A person or entity who has a certificate of insurance (COI) in their possession, which could be the policyholder or someone who requested proof of insurance. Being a certificate holder does not necessarily mean coverage under the policy.",
+    category: "Industry",
+    relatedTerms: ["Certificate of Insurance","Additional Insured","Named Insured"]
+  },
+  {
+    term: "Claimant",
+    definition: "The person or business that makes a claim to the insured person or their insurance company, seeking compensation for damages or losses.",
+    category: "Claims",
+    relatedTerms: ["Claim","Third Party","Settlement"]
+  },
+  {
+    term: "Claims-Made Policy",
+    definition: "A type of insurance policy that covers claims that are made against the insured during the policy period, regardless of when the incident occurred. Claims made after the policy ends would not be covered unless tail coverage is purchased.",
+    category: "General",
+    relatedTerms: ["Occurrence Policy","Tail Coverage","Professional Liability Insurance"]
+  },
+  {
+    term: "Class of Business",
+    definition: "The type of industry a business falls into, such as 'construction' or 'professional services.' Used by insurers to determine risk levels and set coverage limits and premium costs.",
+    category: "Industry",
+    relatedTerms: ["Underwriting","Risk Classification","Premium"]
+  },
+  {
+    term: "Inland Marine Insurance",
+    definition: "Coverage that helps protect tools and equipment if they get damaged or stolen while in transit or temporarily stored at a location other than the main business premises.",
+    category: "Business",
+    relatedTerms: ["Commercial Property Insurance","Equipment Coverage","Tools Coverage"]
+  },
+  {
+    term: "Loss Payable Provision",
+    definition: "An endorsement where an insurer makes claim payments to a third party instead of the named insured, often included when multiple parties have a financial interest in the insured property.",
+    category: "Industry",
+    relatedTerms: ["Loss Payee","Named Insured","Endorsement"]
+  },
+  {
+    term: "Loss Payee",
+    definition: "The person or entity entitled to payment when an insurance claim is settled, which may be the policyholder or another party with a financial interest in the insured property.",
+    category: "Industry",
+    relatedTerms: ["Loss Payable Provision","Beneficiary","Named Insured"]
+  },
+  {
+    term: "Primary and Noncontributory",
+    definition: "'Primary' means the insurance policy responds to a covered claim first before another policy. 'Non-contributory' means the policy must respond without requesting the other policy contribute to paying the claim.",
+    category: "Industry",
+    relatedTerms: ["Additional Insured","Endorsement","Coverage"]
+  },
+  {
+    term: "Products-Completed Operations Aggregate",
+    definition: "The maximum amount of coverage offered under a general liability insurance policy for claims and lawsuits related to injury, illness, or property damage caused by delivered products or completed services.",
+    category: "Business",
+    relatedTerms: ["General Liability Insurance","Aggregate Limit","Product Liability"]
+  },
+  {
+    term: "Rider",
+    definition: "Also known as an endorsement, this is an insurance policy form that changes or adds to the provisions included in the base policy, modifying coverage terms or adding additional coverage.",
+    category: "General",
+    relatedTerms: ["Endorsement","Policy","Coverage"]
+  },
+  {
+    term: "Bodily Injury",
+    definition: "Physical injury, sickness, or disease sustained by a person, typically covered under liability insurance policies when the insured is legally responsible for causing the injury.",
+    category: "General",
+    relatedTerms: ["Liability","General Liability Insurance","Personal Injury"]
+  },
+  {
+    term: "Gap Insurance",
+    definition: "Auto insurance coverage that pays the difference between what you owe on your car loan or lease and the vehicle's actual cash value if it's totaled or stolen.",
+    category: "Auto",
+    relatedTerms: ["Actual Cash Value","Total Loss","Loan Payoff"]
+  },
+  {
+    term: "HMO",
+    definition: "Health Maintenance Organization - a type of health insurance plan that requires members to use network providers and obtain referrals from a primary care physician to see specialists.",
+    category: "Health",
+    relatedTerms: ["PPO","Health Insurance","Network Provider"]
+  },
+  {
+    term: "PPO",
+    definition: "Preferred Provider Organization - a type of health insurance plan that offers more flexibility than an HMO, allowing members to see out-of-network providers at a higher cost without referrals.",
+    category: "Health",
+    relatedTerms: ["HMO","Health Insurance","Network Provider"]
+  },
+  {
+    term: "EPO",
+    definition: "Exclusive Provider Organization - a health insurance plan that covers services only if you use doctors, specialists, or hospitals in the plan's network, except in emergencies.",
+    category: "Health",
+    relatedTerms: ["HMO","PPO","Health Insurance"]
+  },
+  {
+    term: "POS Plan",
+    definition: "Point of Service Plan - a health insurance plan that combines features of HMO and PPO plans, requiring a primary care physician but allowing out-of-network care at higher costs.",
+    category: "Health",
+    relatedTerms: ["HMO","PPO","Health Insurance"]
+  },
+  {
+    term: "High Deductible Health Plan",
+    definition: "A health insurance plan with lower premiums and higher deductibles than traditional plans, often paired with a Health Savings Account (HSA) for tax-advantaged savings.",
+    category: "Health",
+    relatedTerms: ["Deductible","Health Savings Account","Premium"]
+  },
+  {
+    term: "Health Savings Account",
+    definition: "A tax-advantaged savings account available to individuals enrolled in high-deductible health plans, allowing pre-tax contributions for qualified medical expenses.",
+    category: "Health",
+    relatedTerms: ["High Deductible Health Plan","Medical Expenses","Tax Deduction"]
+  },
+  {
+    term: "Flexible Spending Account",
+    definition: "An employer-sponsored account that allows employees to set aside pre-tax dollars for eligible healthcare or dependent care expenses, with use-it-or-lose-it provisions.",
+    category: "Health",
+    relatedTerms: ["Health Savings Account","Medical Expenses","Tax Benefit"]
+  },
+  {
+    term: "Term Life Insurance",
+    definition: "Life insurance coverage for a specific period (term), typically 10, 20, or 30 years, that pays a death benefit if the insured dies during the term but has no cash value.",
+    category: "Life",
+    relatedTerms: ["Whole Life Insurance","Death Benefit","Premium"]
+  },
+  {
+    term: "Whole Life Insurance",
+    definition: "Permanent life insurance that provides coverage for the insured's entire lifetime, builds cash value over time, and typically has level premiums that don't increase with age.",
+    category: "Life",
+    relatedTerms: ["Term Life Insurance","Cash Value","Universal Life Insurance"]
+  },
+  {
+    term: "Universal Life Insurance",
+    definition: "A type of permanent life insurance with flexible premiums and death benefits, plus a cash value component that earns interest based on market rates.",
+    category: "Life",
+    relatedTerms: ["Whole Life Insurance","Cash Value","Variable Life Insurance"]
+  },
+  {
+    term: "Variable Life Insurance",
+    definition: "Permanent life insurance that allows policyholders to invest the cash value in various investment options, with death benefits and cash value fluctuating based on investment performance.",
+    category: "Life",
+    relatedTerms: ["Universal Life Insurance","Cash Value","Investment"]
+  },
+  {
+    term: "Cash Value",
+    definition: "The savings component of permanent life insurance policies that accumulates over time and can be borrowed against or withdrawn by the policyholder.",
+    category: "Life",
+    relatedTerms: ["Whole Life Insurance","Universal Life Insurance","Loan"]
+  },
+  {
+    term: "Death Benefit",
+    definition: "The amount of money paid to beneficiaries upon the death of the insured person under a life insurance policy.",
+    category: "Life",
+    relatedTerms: ["Beneficiary","Life Insurance","Policy"]
+  },
+  {
+    term: "Living Benefit",
+    definition: "A life insurance policy feature that allows the policyholder to access a portion of the death benefit while still alive, typically in cases of terminal illness or chronic conditions.",
+    category: "Life",
+    relatedTerms: ["Death Benefit","Accelerated Death Benefit","Terminal Illness"]
+  },
+  {
+    term: "Accelerated Death Benefit",
+    definition: "A provision that allows terminally ill policyholders to receive a portion of their life insurance death benefit before death to help cover medical or end-of-life expenses.",
+    category: "Life",
+    relatedTerms: ["Living Benefit","Death Benefit","Terminal Illness"]
+  },
+  {
+    term: "Guaranteed Issue Life Insurance",
+    definition: "Life insurance that doesn't require a medical exam or health questions, guaranteeing acceptance but typically offering lower coverage amounts and higher premiums.",
+    category: "Life",
+    relatedTerms: ["Simplified Issue","Life Insurance","Underwriting"]
+  },
+  {
+    term: "Simplified Issue Life Insurance",
+    definition: "Life insurance that requires answering health questions but no medical exam, offering faster approval than fully underwritten policies with moderate coverage amounts.",
+    category: "Life",
+    relatedTerms: ["Guaranteed Issue Life Insurance","Underwriting","Medical Exam"]
+  },
+  {
+    term: "Dwelling Coverage",
+    definition: "The part of a homeowners or renters insurance policy that covers damage to the physical structure of your home, including walls, roof, and built-in appliances.",
+    category: "Property",
+    relatedTerms: ["Homeowners Insurance","Replacement Cost","Structure"]
+  },
+  {
+    term: "Personal Property Coverage",
+    definition: "Insurance coverage for personal belongings such as furniture, clothing, and electronics against theft, damage, or loss, typically included in homeowners and renters policies.",
+    category: "Property",
+    relatedTerms: ["Renters Insurance","Homeowners Insurance","Contents"]
+  },
+  {
+    term: "Loss of Use Coverage",
+    definition: "Coverage that pays for additional living expenses if you must temporarily relocate due to a covered loss that makes your home uninhabitable, such as fire or severe storm damage.",
+    category: "Property",
+    relatedTerms: ["Homeowners Insurance","Additional Living Expenses","Temporary Housing"]
+  },
+  {
+    term: "Personal Liability Coverage",
+    definition: "Protection against lawsuits for bodily injury or property damage that you or family members cause to others, typically included in homeowners and renters insurance policies.",
+    category: "Property",
+    relatedTerms: ["Liability","Homeowners Insurance","Lawsuit"]
+  },
+  {
+    term: "Medical Payments Coverage",
+    definition: "Coverage that pays medical expenses for guests injured on your property, regardless of fault, typically included in homeowners and auto insurance policies with relatively low limits.",
+    category: "General",
+    relatedTerms: ["Personal Liability Coverage","Bodily Injury","Guest"]
+  },
+  {
+    term: "Ordinance or Law Coverage",
+    definition: "Insurance that covers the increased costs of rebuilding to meet current building codes after a covered loss, as older homes may not meet modern code requirements.",
+    category: "Property",
+    relatedTerms: ["Homeowners Insurance","Building Code","Reconstruction"]
+  },
+  {
+    term: "Water Backup Coverage",
+    definition: "Optional homeowners insurance coverage for damage caused by water backing up through sewers or drains, which is typically excluded from standard policies.",
+    category: "Property",
+    relatedTerms: ["Homeowners Insurance","Sewer Backup","Exclusion"]
+  },
+  {
+    term: "Equipment Breakdown Coverage",
+    definition: "Insurance that covers the cost of repairing or replacing home systems and appliances that break down due to mechanical or electrical failure, such as HVAC systems or water heaters.",
+    category: "Property",
+    relatedTerms: ["Homeowners Insurance","Mechanical Failure","Appliance"]
+  },
+  {
+    term: "Scheduled Personal Property",
+    definition: "Additional coverage for high-value items like jewelry, art, or collectibles that exceed standard policy limits, requiring appraisals and separate listing on the policy.",
+    category: "Property",
+    relatedTerms: ["Personal Property Coverage","Jewelry Insurance","Appraisal"]
+  },
+  {
+    term: "Replacement Cost Coverage",
+    definition: "Insurance that pays to replace damaged property with new items of similar kind and quality without deducting for depreciation, resulting in higher payouts than actual cash value coverage.",
+    category: "Property",
+    relatedTerms: ["Actual Cash Value","Depreciation","Claim"]
+  },
+  {
+    term: "Extended Replacement Cost",
+    definition: "Coverage that pays more than the dwelling coverage limit (typically 125-150%) to rebuild your home if construction costs have increased since the policy was written.",
+    category: "Property",
+    relatedTerms: ["Replacement Cost Coverage","Dwelling Coverage","Inflation"]
+  },
+  {
+    term: "Guaranteed Replacement Cost",
+    definition: "The most comprehensive coverage that pays whatever it costs to rebuild your home to its original condition, even if it exceeds your policy limits, regardless of construction cost increases.",
+    category: "Property",
+    relatedTerms: ["Extended Replacement Cost","Dwelling Coverage","Unlimited"]
+  },
+  {
+    term: "Windstorm Deductible",
+    definition: "A separate, typically higher deductible that applies specifically to wind and hail damage, often expressed as a percentage of the dwelling coverage limit rather than a fixed dollar amount.",
+    category: "Property",
+    relatedTerms: ["Deductible","Hurricane Deductible","Percentage Deductible"]
+  },
+  {
+    term: "Hurricane Deductible",
+    definition: "A separate deductible that applies specifically to hurricane damage, typically a percentage of the dwelling coverage (2-5%), and only triggered when a hurricane is officially declared.",
+    category: "Property",
+    relatedTerms: ["Windstorm Deductible","Percentage Deductible","Named Storm"]
+  },
+  {
+    term: "Earthquake Insurance",
+    definition: "Separate coverage for damage caused by earthquakes, typically not included in standard homeowners policies and requiring a separate policy or endorsement with its own deductible.",
+    category: "Property",
+    relatedTerms: ["Flood Insurance","Catastrophic Coverage","Exclusion"]
+  },
+  {
+    term: "Sinkhole Coverage",
+    definition: "Insurance coverage for damage caused by sinkholes, which may be included, excluded, or available as an endorsement depending on the state and insurer.",
+    category: "Property",
+    relatedTerms: ["Homeowners Insurance","Catastrophic Coverage","Ground Movement"]
+  },
+  {
+    term: "Mold Coverage",
+    definition: "Limited coverage for mold damage that results from a covered peril, with most policies capping mold remediation at $10,000-$50,000 and excluding mold from maintenance issues.",
+    category: "Property",
+    relatedTerms: ["Homeowners Insurance","Water Damage","Exclusion"]
+  },
+  {
+    term: "Identity Theft Coverage",
+    definition: "Coverage that reimburses expenses related to restoring your identity after theft, such as legal fees, lost wages, and document replacement costs.",
+    category: "General",
+    relatedTerms: ["Personal Property Coverage","Fraud","Credit Monitoring"]
+  },
+  {
+    term: "Pet Insurance",
+    definition: "Coverage for veterinary expenses related to illness, injury, or preventive care for pets, with policies varying in coverage limits, deductibles, and exclusions.",
+    category: "General",
+    relatedTerms: ["Health Insurance","Veterinary Care","Wellness Coverage"]
+  },
+  {
+    term: "Travel Insurance",
+    definition: "Coverage for unexpected events during travel, including trip cancellation, medical emergencies, lost luggage, and travel delays.",
+    category: "General",
+    relatedTerms: ["Trip Cancellation","Medical Coverage","Baggage Loss"]
+  },
+  {
+    term: "Trip Cancellation Insurance",
+    definition: "Coverage that reimburses prepaid, non-refundable trip costs if you must cancel for covered reasons such as illness, injury, or severe weather.",
+    category: "General",
+    relatedTerms: ["Travel Insurance","Trip Interruption","Covered Reason"]
+  },
+  {
+    term: "Trip Interruption Insurance",
+    definition: "Coverage that reimburses unused trip costs and additional expenses if your trip is cut short due to covered reasons like family emergencies or natural disasters.",
+    category: "General",
+    relatedTerms: ["Travel Insurance","Trip Cancellation Insurance","Emergency"]
+  },
+  {
+    term: "Baggage Insurance",
+    definition: "Coverage for lost, stolen, or damaged luggage and personal items during travel, typically included in comprehensive travel insurance policies.",
+    category: "General",
+    relatedTerms: ["Travel Insurance","Personal Property Coverage","Lost Luggage"]
+  },
+  {
+    term: "Rental Car Insurance",
+    definition: "Coverage for damage to or theft of a rental vehicle, which may be provided by your personal auto policy, credit card, or purchased from the rental company.",
+    category: "Auto",
+    relatedTerms: ["Collision Coverage","Comprehensive Coverage","Loss Damage Waiver"]
+  },
+  {
+    term: "Loss Damage Waiver",
+    definition: "An optional rental car agreement (not insurance) that waives the rental company's right to hold you financially responsible for damage or theft of the rental vehicle.",
+    category: "Auto",
+    relatedTerms: ["Rental Car Insurance","Collision Damage Waiver","Rental Agreement"]
+  },
+  {
+    term: "Roadside Assistance",
+    definition: "Coverage that provides services like towing, tire changes, jump starts, and lockout assistance when your vehicle breaks down, often available as an auto insurance add-on.",
+    category: "Auto",
+    relatedTerms: ["Towing Coverage","Emergency Service","Auto Insurance"]
+  },
+  {
+    term: "Towing Coverage",
+    definition: "Insurance coverage that pays for towing your vehicle to a repair facility after a breakdown or accident, typically with per-incident limits of $50-$100.",
+    category: "Auto",
+    relatedTerms: ["Roadside Assistance","Auto Insurance","Breakdown"]
+  },
+  {
+    term: "Rental Reimbursement Coverage",
+    definition: "Auto insurance coverage that pays for a rental car while your vehicle is being repaired after a covered accident, typically with daily and total limits.",
+    category: "Auto",
+    relatedTerms: ["Auto Insurance","Collision Coverage","Rental Car"]
+  },
+  {
+    term: "Loan/Lease Payoff Coverage",
+    definition: "Similar to gap insurance, this coverage pays the difference between your vehicle's actual cash value and the remaining loan or lease balance after a total loss.",
+    category: "Auto",
+    relatedTerms: ["Gap Insurance","Total Loss","Auto Loan"]
+  },
+  {
+    term: "New Car Replacement Coverage",
+    definition: "Auto insurance coverage that pays to replace your totaled vehicle with a brand new car of the same make and model, rather than paying actual cash value.",
+    category: "Auto",
+    relatedTerms: ["Gap Insurance","Total Loss","Replacement Cost"]
+  },
+  {
+    term: "Accident Forgiveness",
+    definition: "An auto insurance feature that prevents your premium from increasing after your first at-fault accident, helping maintain your good driver discount.",
+    category: "Auto",
+    relatedTerms: ["Premium","At-Fault Accident","Discount"]
+  },
+  {
+    term: "Vanishing Deductible",
+    definition: "An auto insurance program that reduces your deductible by a set amount (typically $50-$100) for each year you go without an accident or violation.",
+    category: "Auto",
+    relatedTerms: ["Deductible","Safe Driver Discount","Reward Program"]
+  },
+  {
+    term: "Usage-Based Insurance",
+    definition: "Auto insurance pricing based on actual driving behavior monitored through telematics devices or smartphone apps, rewarding safe driving with lower premiums.",
+    category: "Auto",
+    relatedTerms: ["Telematics","Safe Driver Discount","Pay-Per-Mile"]
+  },
+  {
+    term: "Telematics",
+    definition: "Technology that monitors driving behavior such as speed, braking, mileage, and time of day to determine auto insurance premiums based on actual risk.",
+    category: "Auto",
+    relatedTerms: ["Usage-Based Insurance","Safe Driving","Discount"]
+  },
+  {
+    term: "Pay-Per-Mile Insurance",
+    definition: "Auto insurance pricing based primarily on miles driven, with a low base rate plus a per-mile charge, ideal for low-mileage drivers.",
+    category: "Auto",
+    relatedTerms: ["Usage-Based Insurance","Mileage","Low-Mileage Discount"]
+  },
+  {
+    term: "Rideshare Insurance",
+    definition: "Coverage designed for drivers who work for rideshare companies like Uber or Lyft, filling gaps between personal auto insurance and the company's commercial coverage.",
+    category: "Auto",
+    relatedTerms: ["Commercial Auto Insurance","Uber","Lyft"]
+  },
+  {
+    term: "Commercial Auto Insurance",
+    definition: "Insurance coverage for vehicles owned by a business and used for business purposes, providing higher liability limits and different coverage than personal auto policies.",
+    category: "Business",
+    relatedTerms: ["Business Insurance","Liability","Fleet Insurance"]
+  },
+  {
+    term: "Fleet Insurance",
+    definition: "Commercial auto insurance that covers multiple vehicles (typically 5 or more) owned by a business under a single policy, often at discounted rates.",
+    category: "Business",
+    relatedTerms: ["Commercial Auto Insurance","Business Insurance","Multiple Vehicles"]
+  },
+  {
+    term: "Hired and Non-Owned Auto Coverage",
+    definition: "Business insurance that covers liability for vehicles rented by the company or employees' personal vehicles used for business purposes.",
+    category: "Business",
+    relatedTerms: ["Commercial Auto Insurance","Business Liability","Employee Vehicles"]
+  },
+  {
+    term: "Employment Practices Liability Insurance",
+    definition: "Coverage that protects businesses against claims by employees alleging discrimination, wrongful termination, harassment, or other employment-related issues.",
+    category: "Business",
+    relatedTerms: ["Directors and Officers Insurance","Business Liability","Wrongful Termination"]
+  },
+  {
+    term: "Fiduciary Liability Insurance",
+    definition: "Coverage for businesses that manage employee benefit plans, protecting against claims of mismanagement or breach of fiduciary duty under ERISA.",
+    category: "Business",
+    relatedTerms: ["Directors and Officers Insurance","Employee Benefits","ERISA"]
+  },
+  {
+    term: "Crime Insurance",
+    definition: "Coverage that protects businesses against financial losses from employee theft, forgery, fraud, robbery, and other criminal acts.",
+    category: "Business",
+    relatedTerms: ["Business Insurance","Employee Theft","Fraud"]
+  },
+  {
+    term: "Fidelity Bond",
+    definition: "Insurance that protects businesses against losses caused by fraudulent or dishonest acts by employees, including theft and embezzlement.",
+    category: "Business",
+    relatedTerms: ["Crime Insurance","Employee Theft","Surety Bond"]
+  },
+  {
+    term: "Surety Bond",
+    definition: "A three-party agreement where a surety guarantees to an obligee that a principal will fulfill an obligation, such as completing a construction project or obtaining a business license.",
+    category: "Business",
+    relatedTerms: ["Fidelity Bond","Performance Bond","Contract"]
+  },
+  {
+    term: "Performance Bond",
+    definition: "A surety bond that guarantees a contractor will complete a project according to contract terms, protecting the project owner from financial loss if the contractor defaults.",
+    category: "Business",
+    relatedTerms: ["Surety Bond","Construction","Contract"]
+  },
+  {
+    term: "Payment Bond",
+    definition: "A surety bond that guarantees a contractor will pay subcontractors, laborers, and material suppliers, protecting them from non-payment if the contractor defaults.",
+    category: "Business",
+    relatedTerms: ["Performance Bond","Surety Bond","Construction"]
+  },
+  {
+    term: "Bid Bond",
+    definition: "A surety bond submitted with a construction bid that guarantees the bidder will enter into the contract and provide required performance and payment bonds if awarded the project.",
+    category: "Business",
+    relatedTerms: ["Performance Bond","Surety Bond","Construction Bid"]
+  },
+  {
+    term: "Maintenance Bond",
+    definition: "A surety bond that guarantees a contractor will repair defects in workmanship or materials for a specified period after project completion, typically one year.",
+    category: "Business",
+    relatedTerms: ["Performance Bond","Warranty","Construction"]
+  },
+  {
+    term: "License and Permit Bond",
+    definition: "A surety bond required by government agencies to obtain certain business licenses or permits, guaranteeing compliance with applicable laws and regulations.",
+    category: "Business",
+    relatedTerms: ["Surety Bond","Business License","Compliance"]
+  },
+  {
+    term: "Tail Coverage",
+    definition: "Extended reporting period coverage purchased when a claims-made policy ends, allowing claims for incidents that occurred during the policy period to be reported after it expires.",
+    category: "General",
+    relatedTerms: ["Claims-Made Policy","Professional Liability Insurance","Extended Reporting Period"]
+  },
+  {
+    term: "Prior Acts Coverage",
+    definition: "Coverage under a claims-made policy for incidents that occurred before the policy's retroactive date, protecting against claims for past work when switching insurers.",
+    category: "General",
+    relatedTerms: ["Claims-Made Policy","Retroactive Date","Professional Liability Insurance"]
+  },
+  {
+    term: "Retroactive Date",
+    definition: "The date from which a claims-made policy provides coverage for incidents, with claims only covered if the incident occurred on or after this date.",
+    category: "General",
+    relatedTerms: ["Claims-Made Policy","Prior Acts Coverage","Coverage Period"]
+  },
+  {
+    term: "Occurrence Policy",
+    definition: "An insurance policy that covers incidents that occur during the policy period, regardless of when the claim is filed, providing longer-term protection than claims-made policies.",
+    category: "General",
+    relatedTerms: ["Claims-Made Policy","Coverage Period","Liability"]
+  }
 ];
 
 export const categoryColors: Record<string, string> = {
