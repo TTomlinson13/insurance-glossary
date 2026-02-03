@@ -126,3 +126,43 @@ export const blogPosts = mysqlTable("blog_posts", {
 
 export type BlogPost = typeof blogPosts.$inferSelect;
 export type InsertBlogPost = typeof blogPosts.$inferInsert;
+
+/**
+ * Newsletter subscribers table
+ * Stores email addresses for weekly insurance tips newsletter
+ */
+export const newsletterSubscribers = mysqlTable("newsletter_subscribers", {
+  id: int("id").autoincrement().primaryKey(),
+  email: varchar("email", { length: 320 }).notNull().unique(),
+  /** Subscriber status: 'active', 'unsubscribed' */
+  status: mysqlEnum("status", ["active", "unsubscribed"]).default("active").notNull(),
+  /** Source of subscription: 'footer_form', 'quiz_result', 'blog_post' */
+  source: varchar("source", { length: 50 }).notNull(),
+  subscribedAt: timestamp("subscribedAt").defaultNow().notNull(),
+  unsubscribedAt: timestamp("unsubscribedAt"),
+});
+
+export type NewsletterSubscriber = typeof newsletterSubscribers.$inferSelect;
+export type InsertNewsletterSubscriber = typeof newsletterSubscribers.$inferInsert;
+
+/**
+ * Term ratings table
+ * Stores user feedback (thumbs up/down) for glossary term definitions
+ */
+export const termRatings = mysqlTable("term_ratings", {
+  id: int("id").autoincrement().primaryKey(),
+  /** Term slug for URL-safe identification */
+  termSlug: varchar("termSlug", { length: 255 }).notNull(),
+  /** Rating: 1 for helpful (thumbs up), -1 for not helpful (thumbs down) */
+  rating: int("rating").notNull(),
+  /** Optional user ID if authenticated */
+  userId: int("userId"),
+  /** Session ID for anonymous users to prevent duplicate ratings */
+  sessionId: varchar("sessionId", { length: 255 }),
+  /** User's IP address (for spam prevention) */
+  ipAddress: varchar("ipAddress", { length: 45 }),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type TermRating = typeof termRatings.$inferSelect;
+export type InsertTermRating = typeof termRatings.$inferInsert;

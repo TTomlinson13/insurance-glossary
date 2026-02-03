@@ -152,3 +152,15 @@
 - [x] Add comparison table structured data to all comparison pages
 - [x] Implement automatic related term suggestions on TermPage (same category + keyword overlap)
 - [x] Add internal linking based on categories and keywords (up to 4 automatic suggestions per term)
+
+## User Engagement Enhancements
+- [x] Create newsletter signup database schema
+- [x] Build newsletter signup tRPC procedure (subscribe, unsubscribe)
+- [x] Add newsletter signup form to footer (Home page)
+- [x] Create insurance quiz component with 7 questions
+- [x] Build quiz results page with personalized recommendations
+- [x] Add quiz to homepage CTA and navigation
+- [x] Create content ratings database schema
+- [x] Build rating tRPC procedures (submit rating, get stats, check user rating)
+- [x] Add thumbs up/down rating buttons to TermPage
+- [x] Display rating stats on TermPage (percentage and total count)

@@ -6,9 +6,10 @@ import { useEffect, useState } from "react";
 import { useRoute, Link } from "wouter";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import InsuranceChatbot from "@/components/InsuranceChatbot";
+import TermRating from "@/components/TermRating";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, BookOpen, ExternalLink } from "lucide-react";
+import { ArrowLeft, BookOpen, ExternalLink, ThumbsUp, ThumbsDown } from "lucide-react";
 import { glossaryTerms, categoryColors, type GlossaryTerm } from "@/data/glossary";
 import { termFAQs } from "@/data/faq-terms";
 import { findTermBySlug, generateSlug } from "@/lib/utils-slug";
@@ -17,6 +18,7 @@ export default function TermPage() {
   const [, params] = useRoute("/term/:slug");
   const [term, setTerm] = useState<GlossaryTerm | null>(null);
   const [relatedTermsData, setRelatedTermsData] = useState<GlossaryTerm[]>([]);
+  const [sessionId] = useState(() => `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`);
 
   useEffect(() => {
     if (params?.slug) {
@@ -239,6 +241,9 @@ export default function TermPage() {
                       {term.definition}
                     </p>
                   </div>
+
+                  {/* Rating Section */}
+                  <TermRating termSlug={params?.slug || ""} sessionId={sessionId} />
 
                   {/* Related Terms */}
                   {relatedTermsData.length > 0 && (

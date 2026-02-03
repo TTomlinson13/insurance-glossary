@@ -6,6 +6,7 @@ import { useState, useMemo } from "react";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Input } from "@/components/ui/input";
 import InsuranceChatbot from "@/components/InsuranceChatbot";
+import NewsletterSignup from "@/components/NewsletterSignup";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -222,14 +223,14 @@ export default function Home() {
               Explore our blog for in-depth guides and expert insights on insurance topics.
             </p>
             <div className="flex flex-wrap gap-4 justify-center pt-4">
-              <Link href="/blog">
+              <Link href="/quiz">
                 <Button size="lg" className="rounded-full px-8 ui-text">
-                  Read Our Blog
+                  Take Quiz
                 </Button>
               </Link>
-              <Link href="/business-insurance">
+              <Link href="/calculators">
                 <Button size="lg" variant="outline" className="rounded-full px-8 ui-text">
-                  Business Insurance Guide
+                  Use Calculators
                 </Button>
               </Link>
             </div>
@@ -250,6 +251,13 @@ export default function Home() {
                 Your comprehensive guide to understanding insurance terminology. 
                 Making insurance accessible for everyone.
               </p>
+              <div className="mt-6">
+                <h3 className="font-semibold mb-3 ui-text">Weekly Insurance Tips</h3>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Get expert insurance insights delivered to your inbox every week.
+                </p>
+                <NewsletterSignup />
+              </div>
             </div>
             
             <div>
