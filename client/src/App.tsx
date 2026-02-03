@@ -7,6 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import TermPage from "./pages/TermPage";
 import BusinessInsurancePage from "./pages/BusinessInsurancePage";
+import ISOFormsPage from "./pages/ISOFormsPage";
 import AdminDashboard from "./pages/AdminDashboard";
 import AdminBlogGenerator from "./pages/AdminBlogGenerator";
 import BlogPage from "./pages/BlogPage";
@@ -18,6 +19,7 @@ function Router() {
       <Route path={"/"} component={Home} />
       <Route path={"/term/:slug"} component={TermPage} />
       <Route path={"/business-insurance"} component={BusinessInsurancePage} />
+      <Route path={"/iso-forms"} component={ISOFormsPage} />
         <Route path="/admin" component={AdminDashboard} />
       <Route path="/admin/blog-generator" component={AdminBlogGenerator} />
       <Route path={"/blog"} component={BlogPage} />

@@ -1201,6 +1201,102 @@ export const glossaryTerms: GlossaryTerm[] = [
     category: "Industry",
     relatedTerms: ["ISO","Custom Coverage","Non-Standard Policy"]
   },
+  {
+    term: "ACORD",
+    definition: "Association for Cooperative Operations Research and Development - an organization that develops standardized forms and data standards for the insurance industry, widely used for certificates of insurance and policy applications.",
+    category: "Industry",
+    relatedTerms: ["Certificate of Insurance","ISO","Standardization"]
+  },
+  {
+    term: "ACORD 25",
+    definition: "The standard Certificate of Liability Insurance form used to provide evidence of insurance coverage to third parties, showing policy types, limits, and effective dates without altering the actual policy.",
+    category: "Industry",
+    relatedTerms: ["ACORD","Certificate of Insurance","Certificate Holder","Additional Insured"]
+  },
+  {
+    term: "ACORD 27",
+    definition: "Evidence of Property Insurance form used to certify property insurance coverage, commonly required by lenders and lessors to verify building and contents coverage.",
+    category: "Industry",
+    relatedTerms: ["ACORD","Certificate of Insurance","Property Insurance","Loss Payee"]
+  },
+  {
+    term: "ACORD 28",
+    definition: "Evidence of Commercial Property Insurance form providing detailed information about property coverage, including building values, contents, business interruption, and special coverages.",
+    category: "Industry",
+    relatedTerms: ["ACORD","Commercial Property Insurance","Business Interruption","Certificate of Insurance"]
+  },
+  {
+    term: "Admitted Carrier",
+    definition: "An insurance company licensed and approved by a state's insurance department to do business in that state, subject to state regulations and backed by state guaranty funds in case of insolvency.",
+    category: "Industry",
+    relatedTerms: ["Non-Admitted Carrier","Surplus Lines","State Insurance Department"]
+  },
+  {
+    term: "Non-Admitted Carrier",
+    definition: "An insurance company not licensed in a particular state but allowed to provide coverage for risks that admitted carriers won't insure, typically through surplus lines brokers. Also called 'non-admitted' or 'excess and surplus' carriers.",
+    category: "Industry",
+    relatedTerms: ["Admitted Carrier","Surplus Lines","Excess and Surplus Lines"]
+  },
+  {
+    term: "Surplus Lines",
+    definition: "Insurance coverage placed with non-admitted carriers for risks that standard admitted carriers are unwilling to insure, typically requiring a licensed surplus lines broker and subject to special state taxes and regulations.",
+    category: "Industry",
+    relatedTerms: ["Non-Admitted Carrier","Admitted Carrier","Excess and Surplus Lines","Hard-to-Place Risk"]
+  },
+  {
+    term: "Citizens Property Insurance (Florida)",
+    definition: "Florida's state-run property insurer of last resort, providing coverage to property owners who cannot obtain insurance in the private market, primarily for hurricane and windstorm exposure.",
+    category: "Property",
+    relatedTerms: ["FAIR Plan","Windstorm Insurance","Hurricane Coverage","State Insurance Pool"]
+  },
+  {
+    term: "FAIR Plan",
+    definition: "Fair Access to Insurance Requirements Plan - state-mandated insurance programs providing property coverage to high-risk properties that cannot obtain insurance in the standard market, available in multiple states including California, Illinois, and Massachusetts.",
+    category: "Property",
+    relatedTerms: ["Citizens Property Insurance","High-Risk Property","State Insurance Pool"]
+  },
+  {
+    term: "California Earthquake Authority (CEA)",
+    definition: "California's state-run earthquake insurance program providing residential earthquake coverage, created after the 1994 Northridge earthquake when private insurers stopped offering earthquake insurance.",
+    category: "Property",
+    relatedTerms: ["Earthquake Insurance","FAIR Plan","State Insurance Pool"]
+  },
+  {
+    term: "Texas Windstorm Insurance Association (TWIA)",
+    definition: "Texas's state-run windstorm and hail insurance pool providing coverage for coastal properties that cannot obtain coverage in the private market, covering 14 coastal counties and portions of Harris County.",
+    category: "Property",
+    relatedTerms: ["Windstorm Insurance","Citizens Property Insurance","Hurricane Coverage","State Insurance Pool"]
+  },
+  {
+    term: "New York No-Fault Insurance",
+    definition: "New York's mandatory auto insurance system requiring Personal Injury Protection (PIP) coverage of at least $50,000, providing immediate medical and lost wage benefits regardless of who caused the accident.",
+    category: "Auto",
+    relatedTerms: ["Personal Injury Protection","PIP","No-Fault Insurance","Auto Insurance"]
+  },
+  {
+    term: "Louisiana Road Home Program",
+    definition: "Louisiana's disaster recovery program providing grants to homeowners for hurricane damage repair and rebuilding, created after Hurricanes Katrina and Rita in 2005.",
+    category: "Property",
+    relatedTerms: ["Hurricane Coverage","Disaster Recovery","State Insurance Program"]
+  },
+  {
+    term: "Massachusetts Auto Insurance Law",
+    definition: "Massachusetts's unique auto insurance system requiring specific coverage combinations and using a managed competition model where insurers must offer coverage to all drivers but rates are regulated by the state.",
+    category: "Auto",
+    relatedTerms: ["Auto Insurance","State Insurance Regulation","Compulsory Insurance"]
+  },
+  {
+    term: "Michigan Catastrophic Claims Association (MCCA)",
+    definition: "Michigan's state reinsurance facility that reimburses auto insurers for Personal Injury Protection (PIP) claims exceeding a specific threshold, funded by assessments on all Michigan auto policies.",
+    category: "Auto",
+    relatedTerms: ["Personal Injury Protection","PIP","No-Fault Insurance","Reinsurance"]
+  },
+  {
+    term: "Hawaii Hurricane Relief Fund",
+    definition: "Hawaii's state program providing reinsurance to property insurers for hurricane losses, helping maintain availability of hurricane coverage in the private market.",
+    category: "Property",
+    relatedTerms: ["Hurricane Coverage","Reinsurance","State Insurance Pool"]
+  },
 ];
 
 export const categoryColors: Record<string, string> = {

@@ -77,3 +77,11 @@
 - [x] Add ISO Basic Form (CP 00 10)
 - [x] Add ISO Broad Form (CP 00 20)
 - [x] Add other common ISO forms and terminology (12 new terms added)
+
+## New Enhancements
+- [x] Add ACORD forms (ACORD 25, 27, 28, etc.)
+- [x] Research state-specific insurance terms
+- [x] Add unique terms from Florida, California, Texas, New York, Louisiana, Massachusetts, Michigan, Hawaii
+- [x] Create ISO forms reference page at /iso-forms
+- [x] Add Admitted vs Non-Admitted Carrier
+- [x] Add Surplus Lines terminology

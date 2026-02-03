@@ -267,9 +267,9 @@ export default function Home() {
               <h3 className="font-semibold mb-4 ui-text">Resources</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li><Link href="/blog" className="hover:text-primary transition-colors">Blog</Link></li>
+                <li><Link href="/iso-forms" className="hover:text-primary transition-colors">ISO Forms Guide</Link></li>
                 <li><Link href="/business-insurance" className="hover:text-primary transition-colors">Business Insurance</Link></li>
                 <li><a href="#" className="hover:text-primary transition-colors">FAQ</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Contact Us</a></li>
               </ul>
             </div>
           </div>
