@@ -66,3 +66,8 @@
 
 ## Bug Fixes
 - [x] Remove duplicate "Surety Bond" term causing React key error
+
+## Duplicate Term Cleanup
+- [x] Find all duplicate terms in glossary (found 91 duplicates)
+- [x] Remove duplicate "Windstorm Deductible" and all others
+- [x] Verify no other duplicates remain (187 unique terms)
