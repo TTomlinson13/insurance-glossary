@@ -71,7 +71,7 @@ export default function InsuranceChatbot() {
     if (isOpen && messages.length === 0) {
       setMessages([{
         role: "assistant",
-        content: "👋 Hi! I'm your insurance advisor. I can help you understand insurance terms, recommend coverage, and connect you with quotes. What can I help you with today?",
+        content: "👋 Hi! I'm your insurance education assistant. I can help you understand insurance terms, explain coverage types, and answer your insurance questions. What would you like to learn about today?",
       }]);
     }
   }, [isOpen]);
