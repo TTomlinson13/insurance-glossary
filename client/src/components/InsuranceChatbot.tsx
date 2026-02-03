@@ -83,6 +83,14 @@ export default function InsuranceChatbot() {
     setMessages(prev => [...prev, { role: "user", content: userMessage }]);
     setInput("");
 
+    // Track chatbot interaction in GA4
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'chatbot_message', {
+        'message_length': userMessage.length,
+        'message_count': messages.filter(m => m.role === 'user').length + 1
+      });
+    }
+
     sendMessageMutation.mutate({
       message: userMessage,
       conversationId: conversationId || undefined,
@@ -120,7 +128,15 @@ export default function InsuranceChatbot() {
   if (!isOpen) {
     return (
       <Button
-        onClick={() => setIsOpen(true)}
+        onClick={() => {
+          setIsOpen(true);
+          // Track chatbot open in GA4
+          if (typeof window !== 'undefined' && (window as any).gtag) {
+            (window as any).gtag('event', 'chatbot_opened', {
+              'event_category': 'engagement'
+            });
+          }
+        }}
         size="lg"
         className="fixed bottom-6 right-6 rounded-full w-16 h-16 shadow-2xl z-50 hover:scale-110 transition-transform"
         aria-label="Open chat"

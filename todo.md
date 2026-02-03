@@ -121,3 +121,11 @@
 - [x] Get GA4 Measurement ID (G-T9JG7RDWC8)
 - [x] Add Measurement ID to website code
 - [ ] Verify GA4 tracking is working after deployment
+
+## Analytics Enhancements
+- [x] Add custom event tracking for chatbot interactions (open, messages)
+- [x] Add custom event tracking for calculator usage (all 3 calculators)
+- [x] Add custom event tracking for blog post scroll depth (25%, 50%, 75%, 100%)
+- [x] Create Google Search Console integration guide (GOOGLE_SEARCH_CONSOLE_SETUP.md)
+- [x] Create custom GA4 reports setup guide (GA4_CUSTOM_REPORTS_GUIDE.md)
+- [ ] Test all custom events after deployment

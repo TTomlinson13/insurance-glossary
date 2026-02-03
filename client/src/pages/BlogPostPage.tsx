@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRoute, Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -15,6 +15,7 @@ export default function BlogPostPage() {
     { slug: params?.slug || "" },
     { enabled: !!params?.slug }
   );
+  const [scrollTracked, setScrollTracked] = useState({ 25: false, 50: false, 75: false, 100: false });
 
   useEffect(() => {
     if (post) {
@@ -49,6 +50,58 @@ export default function BlogPostPage() {
       script.textContent = JSON.stringify(structuredData);
     }
   }, [post]);
+
+  // Track scroll depth for blog engagement
+  useEffect(() => {
+    if (!post) return;
+
+    const handleScroll = () => {
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = window.scrollY;
+      const scrollPercent = (scrolled / scrollHeight) * 100;
+
+      // Track milestones
+      if (scrollPercent >= 25 && !scrollTracked[25]) {
+        setScrollTracked(prev => ({ ...prev, 25: true }));
+        if (typeof window !== 'undefined' && (window as any).gtag) {
+          (window as any).gtag('event', 'blog_scroll', {
+            'percent_scrolled': 25,
+            'article_title': post.title
+          });
+        }
+      }
+      if (scrollPercent >= 50 && !scrollTracked[50]) {
+        setScrollTracked(prev => ({ ...prev, 50: true }));
+        if (typeof window !== 'undefined' && (window as any).gtag) {
+          (window as any).gtag('event', 'blog_scroll', {
+            'percent_scrolled': 50,
+            'article_title': post.title
+          });
+        }
+      }
+      if (scrollPercent >= 75 && !scrollTracked[75]) {
+        setScrollTracked(prev => ({ ...prev, 75: true }));
+        if (typeof window !== 'undefined' && (window as any).gtag) {
+          (window as any).gtag('event', 'blog_scroll', {
+            'percent_scrolled': 75,
+            'article_title': post.title
+          });
+        }
+      }
+      if (scrollPercent >= 95 && !scrollTracked[100]) {
+        setScrollTracked(prev => ({ ...prev, 100: true }));
+        if (typeof window !== 'undefined' && (window as any).gtag) {
+          (window as any).gtag('event', 'blog_scroll', {
+            'percent_scrolled': 100,
+            'article_title': post.title
+          });
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [post, scrollTracked]);
 
   if (isLoading) {
     return (

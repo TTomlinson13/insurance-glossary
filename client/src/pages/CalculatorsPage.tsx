@@ -174,7 +174,17 @@ export default function CalculatorsPage() {
                       <Label>Select Deductible: ${deductible[0].toLocaleString()}</Label>
                       <Slider
                         value={deductible}
-                        onValueChange={setDeductible}
+                        onValueChange={(val) => {
+                          setDeductible(val);
+                          // Track calculator usage in GA4
+                          if (typeof window !== 'undefined' && (window as any).gtag) {
+                            (window as any).gtag('event', 'calculator_used', {
+                              'calculator_type': 'deductible_impact',
+                              'deductible_amount': val[0],
+                              'premium_amount': premiumAmount
+                            });
+                          }
+                        }}
                         min={250}
                         max={5000}
                         step={250}
@@ -263,7 +273,18 @@ export default function CalculatorsPage() {
                           id="coverage"
                           type="number"
                           value={coverageAmount}
-                          onChange={(e) => setCoverageAmount(Number(e.target.value))}
+                          onChange={(e) => {
+                            const newValue = Number(e.target.value);
+                            setCoverageAmount(newValue);
+                            // Track coverage gap analyzer usage in GA4
+                            if (typeof window !== 'undefined' && (window as any).gtag) {
+                              (window as any).gtag('event', 'calculator_used', {
+                                'calculator_type': 'coverage_gap_analyzer',
+                                'home_value': homeValue,
+                                'coverage_amount': newValue
+                              });
+                            }
+                          }}
                           className="text-lg"
                         />
                       </div>
@@ -381,7 +402,17 @@ export default function CalculatorsPage() {
                       <Label>Coverage Amount: ${estimatorCoverage.toLocaleString()}</Label>
                       <Slider
                         value={[estimatorCoverage]}
-                        onValueChange={(val) => setEstimatorCoverage(val[0])}
+                        onValueChange={(val) => {
+                          setEstimatorCoverage(val[0]);
+                          // Track life insurance calculator usage in GA4
+                          if (typeof window !== 'undefined' && (window as any).gtag) {
+                            (window as any).gtag('event', 'calculator_used', {
+                              'calculator_type': 'life_insurance_estimator',
+                              'age': estimatorAge,
+                              'coverage_amount': val[0]
+                            });
+                          }
+                        }}
                         min={100000}
                         max={2000000}
                         step={50000}
