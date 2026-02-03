@@ -1196,6 +1196,12 @@ export const glossaryTerms: GlossaryTerm[] = [
     relatedTerms: ["Crime Insurance","Employee Theft","Surety Bond"]
   },
   {
+    term: "Surety Bond",
+    definition: "A three-party agreement where a surety guarantees to an obligee that a principal will fulfill an obligation, such as completing a construction project or obtaining a business license.",
+    category: "Business",
+    relatedTerms: ["Fidelity Bond","Performance Bond","Contract"]
+  },
+  {
     term: "Performance Bond",
     definition: "A surety bond that guarantees a contractor will complete a project according to contract terms, protecting the project owner from financial loss if the contractor defaults.",
     category: "Business",
@@ -1717,6 +1723,18 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: "Coverage that protects businesses against financial losses from employee theft, forgery, fraud, robbery, and other criminal acts.",
     category: "Business",
     relatedTerms: ["Business Insurance","Employee Theft","Fraud"]
+  },
+  {
+    term: "Fidelity Bond",
+    definition: "Insurance that protects businesses against losses caused by fraudulent or dishonest acts by employees, including theft and embezzlement.",
+    category: "Business",
+    relatedTerms: ["Crime Insurance","Employee Theft","Surety Bond"]
+  },
+  {
+    term: "Surety Bond",
+    definition: "A three-party agreement where a surety guarantees to an obligee that a principal will fulfill an obligation, such as completing a construction project or obtaining a business license.",
+    category: "Business",
+    relatedTerms: ["Fidelity Bond","Performance Bond","Contract"]
   },
   {
     term: "Performance Bond",

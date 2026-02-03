@@ -63,3 +63,6 @@
 - [x] Generate first AI blog post
 - [x] Expand glossary to 200+ terms (now 298 terms!)
 - [x] Update GA4 configuration instructions
+
+## Bug Fixes
+- [x] Remove duplicate "Surety Bond" term causing React key error
