@@ -1135,6 +1135,72 @@ export const glossaryTerms: GlossaryTerm[] = [
     category: "General",
     relatedTerms: ["Claims-Made Policy","Retroactive Date","Professional Liability Insurance"]
   },
+  {
+    term: "ISO",
+    definition: "Insurance Services Office - an organization that develops standardized insurance policy forms, rating information, and risk data used by property-casualty insurers across the United States.",
+    category: "Industry",
+    relatedTerms: ["Policy Form","Standardization","Commercial Insurance"]
+  },
+  {
+    term: "Special Form (CP 00 30)",
+    definition: "An ISO commercial property coverage form providing the broadest coverage, insuring against all risks of direct physical loss except those specifically excluded. Also known as 'all-risk' or 'open perils' coverage.",
+    category: "Property",
+    relatedTerms: ["ISO","Basic Form","Broad Form","Named Perils","Commercial Property Insurance"]
+  },
+  {
+    term: "Basic Form (CP 00 10)",
+    definition: "An ISO commercial property coverage form providing the most limited coverage, insuring only against specifically named perils such as fire, lightning, explosion, windstorm, hail, smoke, aircraft, vehicles, riot, vandalism, and sprinkler leakage.",
+    category: "Property",
+    relatedTerms: ["ISO","Special Form","Broad Form","Named Perils","Commercial Property Insurance"]
+  },
+  {
+    term: "Broad Form (CP 00 20)",
+    definition: "An ISO commercial property coverage form providing mid-level coverage between Basic and Special Forms, covering all Basic Form perils plus additional perils like falling objects, weight of snow/ice/sleet, and water damage.",
+    category: "Property",
+    relatedTerms: ["ISO","Special Form","Basic Form","Named Perils","Commercial Property Insurance"]
+  },
+  {
+    term: "Named Perils",
+    definition: "A type of insurance coverage that only protects against losses specifically listed in the policy, as opposed to all-risk coverage which covers all perils except those excluded.",
+    category: "General",
+    relatedTerms: ["Basic Form","Broad Form","Special Form","All-Risk Coverage"]
+  },
+  {
+    term: "All-Risk Coverage",
+    definition: "Insurance coverage that protects against all causes of loss except those specifically excluded in the policy, providing broader protection than named perils coverage. Also called 'open perils' coverage.",
+    category: "General",
+    relatedTerms: ["Special Form","Named Perils","Exclusions"]
+  },
+  {
+    term: "ISO CGL Form",
+    definition: "ISO Commercial General Liability form - a standardized liability insurance policy that covers bodily injury, property damage, personal injury, and advertising injury claims. The most common form is CG 00 01.",
+    category: "Business",
+    relatedTerms: ["ISO","Commercial General Liability","Liability Insurance","CGL"]
+  },
+  {
+    term: "ISO BOP",
+    definition: "ISO Businessowners Policy - a standardized package policy combining property and liability coverage designed for small to medium-sized businesses, typically using form BP 00 03.",
+    category: "Business",
+    relatedTerms: ["ISO","Business Insurance","Package Policy","Commercial Property"]
+  },
+  {
+    term: "ISO Workers Compensation Form",
+    definition: "Standardized ISO forms for workers compensation coverage, including WC 00 00 01 (basic policy) and various endorsements for modifying coverage terms.",
+    category: "Business",
+    relatedTerms: ["ISO","Workers Compensation","Workplace Injury","Employee Benefits"]
+  },
+  {
+    term: "ISO Endorsement",
+    definition: "A standardized form used to modify, add, or delete coverage provisions in an ISO policy, identified by form numbers (e.g., CG 21 39 for Additional Insured endorsement).",
+    category: "Industry",
+    relatedTerms: ["ISO","Endorsement","Policy Modification","Additional Coverage"]
+  },
+  {
+    term: "Manuscript Policy",
+    definition: "A non-standard insurance policy specially drafted to meet unique coverage needs, as opposed to standardized ISO forms. Often used for complex or unusual risks.",
+    category: "Industry",
+    relatedTerms: ["ISO","Custom Coverage","Non-Standard Policy"]
+  },
 ];
 
 export const categoryColors: Record<string, string> = {

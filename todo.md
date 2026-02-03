@@ -71,3 +71,9 @@
 - [x] Find all duplicate terms in glossary (found 91 duplicates)
 - [x] Remove duplicate "Windstorm Deductible" and all others
 - [x] Verify no other duplicates remain (187 unique terms)
+
+## ISO Forms Addition
+- [x] Add ISO Special Form (CP 00 30)
+- [x] Add ISO Basic Form (CP 00 10)
+- [x] Add ISO Broad Form (CP 00 20)
+- [x] Add other common ISO forms and terminology (12 new terms added)
