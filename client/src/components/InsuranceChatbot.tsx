@@ -38,15 +38,8 @@ export default function InsuranceChatbot() {
         suggestedTerms: data.suggestedTerms,
       }]);
 
-      // Check if bot is asking for contact info or suggesting quotes
-      if (data.message.toLowerCase().includes("get free quotes") || 
-          data.message.toLowerCase().includes("connect you with") ||
-          data.intentType === "coverage_recommendation") {
-        // Suggest lead capture after a brief delay
-        setTimeout(() => {
-          setShowLeadForm(true);
-        }, 2000);
-      }
+      // Lead form can be manually triggered by user if needed
+      // No automatic triggering to avoid sales pressure
     },
     onError: (error) => {
       toast.error("Failed to send message. Please try again.");

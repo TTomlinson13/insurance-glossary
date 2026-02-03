@@ -21,3 +21,6 @@
 - [ ] Category landing pages (Auto, Health, Life, Property)
 - [ ] Analytics integration
 - [ ] Email notifications for new leads
+
+## New Changes
+- [x] Update chatbot to not push quote connections
