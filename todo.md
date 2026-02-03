@@ -28,3 +28,8 @@
 ## SEO Improvements
 - [x] Add meta keywords to homepage
 - [x] Add alt text to all images on homepage
+
+## New Insurance Terms
+- [x] Add Golf Cart Insurance
+- [x] Add Motorcycle Insurance
+- [x] Add Jewelry Insurance

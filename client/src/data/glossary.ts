@@ -217,6 +217,18 @@ export const glossaryTerms: GlossaryTerm[] = [
     relatedTerms: ["Liability Coverage", "Collision Coverage", "Premium"]
   },
   {
+    term: "Motorcycle Insurance",
+    definition: "Specialized insurance coverage for motorcycles including liability, collision, comprehensive, uninsured motorist, and optional coverages like accessory coverage and roadside assistance.",
+    category: "Auto",
+    relatedTerms: ["Auto Insurance", "Collision Coverage", "Comprehensive Coverage"]
+  },
+  {
+    term: "Golf Cart Insurance",
+    definition: "Insurance coverage for golf carts used on golf courses or private property, typically including liability, physical damage, and medical payments. May be covered under homeowners insurance or require separate policy.",
+    category: "Auto",
+    relatedTerms: ["Auto Insurance", "Liability Coverage", "Homeowners Insurance"]
+  },
+  {
     term: "Whole Life Insurance",
     definition: "Permanent life insurance that provides coverage for the insured's entire lifetime and includes a cash value component.",
     category: "Life",
@@ -263,6 +275,12 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: "Insurance coverage for tenants that protects personal property and provides liability coverage, but does not cover the building structure.",
     category: "Property",
     relatedTerms: ["Homeowners Insurance", "Liability Coverage", "Personal Property"]
+  },
+  {
+    term: "Jewelry Insurance",
+    definition: "Specialized insurance coverage for valuable jewelry, watches, and gemstones that provides protection against loss, theft, damage, and mysterious disappearance. Often purchased as a scheduled personal property endorsement to homeowners or renters insurance.",
+    category: "Property",
+    relatedTerms: ["Homeowners Insurance", "Personal Property", "Scheduled Personal Property"]
   },
   {
     term: "Disability Insurance",
