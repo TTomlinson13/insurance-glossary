@@ -3,7 +3,9 @@
  */
 
 import { useState, useMemo } from "react";
+import { useAuth } from "@/_core/hooks/useAuth";
 import { Input } from "@/components/ui/input";
+import InsuranceChatbot from "@/components/InsuranceChatbot";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -13,6 +15,10 @@ import { generateSlug } from "@/lib/utils-slug";
 import { Link } from "wouter";
 
 export default function Home() {
+  // The userAuth hooks provides authentication state
+  // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
+  let { user, loading, error, isAuthenticated, logout } = useAuth();
+
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
 
@@ -273,6 +279,9 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* AI Chatbot */}
+      <InsuranceChatbot />
     </div>
   );
 }

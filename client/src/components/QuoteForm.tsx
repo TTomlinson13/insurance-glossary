@@ -3,6 +3,7 @@
  */
 
 import { useState } from "react";
+import { trpc } from "@/lib/trpc";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -25,6 +26,17 @@ export default function QuoteForm({ category = "General" }: QuoteFormProps) {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
+  const captureLeadMutation = trpc.chat.captureLead.useMutation({
+    onSuccess: () => {
+      setIsSubmitted(true);
+      toast.success("Quote request submitted! We'll send you personalized quotes shortly.");
+    },
+    onError: (error) => {
+      console.error("Failed to capture lead:", error);
+      toast.error("Failed to submit. Please try again.");
+    },
+  });
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -34,15 +46,14 @@ export default function QuoteForm({ category = "General" }: QuoteFormProps) {
       return;
     }
 
-    // In production, this would send to your backend which forwards to affiliate partners
-    // For now, we'll simulate success
-    console.log("Quote request:", formData);
-    
-    setIsSubmitted(true);
-    toast.success("Quote request submitted! We'll send you personalized quotes shortly.");
-    
-    // In production, redirect to affiliate partner or show comparison results
-    // Example: window.location.href = `https://affiliate-partner.com/quotes?email=${formData.email}&type=${formData.insuranceType}`;
+    // Save lead to database
+    captureLeadMutation.mutate({
+      name: formData.name,
+      email: formData.email,
+      zipCode: formData.zipCode,
+      insuranceType: formData.insuranceType,
+      currentlyInsured: formData.currentlyInsured || undefined,
+    });
   };
 
   if (isSubmitted) {

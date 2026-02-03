@@ -5,6 +5,7 @@
 import { useEffect, useState } from "react";
 import { useRoute, Link } from "wouter";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import InsuranceChatbot from "@/components/InsuranceChatbot";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, BookOpen, ExternalLink } from "lucide-react";
@@ -217,6 +218,9 @@ export default function TermPage() {
           </div>
         </div>
       </footer>
+
+      {/* AI Chatbot */}
+      <InsuranceChatbot />
     </div>
   );
 }

@@ -8,8 +8,8 @@ import Home from "./pages/Home";
 import TermPage from "./pages/TermPage";
 import ComparePage from "./pages/ComparePage";
 import BusinessInsurancePage from "./pages/BusinessInsurancePage";
-
 function Router() {
+  // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
       <Route path={"/"} component={Home} />
