@@ -12,6 +12,10 @@ import AdminDashboard from "./pages/AdminDashboard";
 import AdminBlogGenerator from "./pages/AdminBlogGenerator";
 import BlogPage from "./pages/BlogPage";
 import BlogPostPage from "./pages/BlogPostPage";
+import FloridaInsurancePage from "./pages/FloridaInsurancePage";
+import CaliforniaInsurancePage from "./pages/CaliforniaInsurancePage";
+import TexasInsurancePage from "./pages/TexasInsurancePage";
+import CalculatorsPage from "./pages/CalculatorsPage";
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
@@ -20,6 +24,10 @@ function Router() {
       <Route path={"/term/:slug"} component={TermPage} />
       <Route path={"/business-insurance"} component={BusinessInsurancePage} />
       <Route path={"/iso-forms"} component={ISOFormsPage} />
+      <Route path={"/florida-insurance"} component={FloridaInsurancePage} />
+      <Route path={"/california-insurance"} component={CaliforniaInsurancePage} />
+      <Route path={"/texas-insurance"} component={TexasInsurancePage} />
+      <Route path={"/calculators"} component={CalculatorsPage} />
         <Route path="/admin" component={AdminDashboard} />
       <Route path="/admin/blog-generator" component={AdminBlogGenerator} />
       <Route path={"/blog"} component={BlogPage} />

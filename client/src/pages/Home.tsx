@@ -264,12 +264,21 @@ export default function Home() {
             </div>
             
             <div>
+              <h3 className="font-semibold mb-4 ui-text">By State</h3>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li><Link href="/florida-insurance" className="hover:text-primary transition-colors">Florida</Link></li>
+                <li><Link href="/california-insurance" className="hover:text-primary transition-colors">California</Link></li>
+                <li><Link href="/texas-insurance" className="hover:text-primary transition-colors">Texas</Link></li>
+              </ul>
+            </div>
+            
+            <div>
               <h3 className="font-semibold mb-4 ui-text">Resources</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li><Link href="/blog" className="hover:text-primary transition-colors">Blog</Link></li>
+                <li><Link href="/calculators" className="hover:text-primary transition-colors">Insurance Calculators</Link></li>
                 <li><Link href="/iso-forms" className="hover:text-primary transition-colors">ISO Forms Guide</Link></li>
                 <li><Link href="/business-insurance" className="hover:text-primary transition-colors">Business Insurance</Link></li>
-                <li><a href="#" className="hover:text-primary transition-colors">FAQ</a></li>
               </ul>
             </div>
           </div>

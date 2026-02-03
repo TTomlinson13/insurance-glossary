@@ -86,3 +86,32 @@
 - [x] Add Admitted vs Non-Admitted Carrier
 - [x] Add Surplus Lines terminology
 - [x] Update chatbot welcome message to remove sales-oriented language (recommend coverage, connect with quotes)
+
+## Comprehensive Enhancement Package
+- [x] Create Florida insurance landing page (/florida-insurance)
+- [x] Create California insurance landing page (/california-insurance)
+- [x] Create Texas insurance landing page (/texas-insurance)
+- [ ] Create New York insurance landing page (/new-york-insurance)
+- [ ] Create Illinois insurance landing page (/illinois-insurance)
+- [ ] Create Pennsylvania insurance landing page (/pennsylvania-insurance)
+- [ ] Add state pages to navigation and sitemap
+- [x] Generate blog article: "What is a Deductible in Simple Terms"
+- [x] Generate blog article: "Business Insurance for Restaurants Explained"
+- [x] Generate blog article: "Understanding Health Insurance Copays vs Coinsurance"
+- [x] Generate blog article: "Auto Insurance Coverage Types Explained"
+- [x] Generate blog article: "Life Insurance Term vs Whole Life"
+- [x] Generate blog article: "Homeowners Insurance What Does It Cover"
+- [x] Generate blog article: "Liability Insurance for Small Business"
+- [x] Generate blog article: "Workers Compensation Insurance Requirements"
+- [x] Generate blog article: "Professional Liability Insurance Who Needs It"
+- [x] Generate blog article: "Umbrella Insurance Is It Worth It"
+- [x] Generate blog article: "Commercial Property Insurance Guide"
+- [x] Generate blog article: "Cyber Insurance for Businesses"
+- [x] Generate blog article: "Understanding Insurance Premiums"
+- [x] Generate blog article: "How Insurance Claims Work"
+- [x] Generate blog article: "Choosing the Right Insurance Agent"
+- [x] Build Deductible Impact Calculator
+- [x] Build Coverage Gap Analyzer
+- [x] Build Insurance Cost Estimator
+- [x] Add calculators page to navigation
+- [x] Update sitemap with all new pages (state pages, calculators, blog posts auto-included)
