@@ -164,3 +164,15 @@
 - [x] Build rating tRPC procedures (submit rating, get stats, check user rating)
 - [x] Add thumbs up/down rating buttons to TermPage
 - [x] Display rating stats on TermPage (percentage and total count)
+
+## Advanced Engagement Features
+- [x] Create admin newsletter dashboard page (/admin/newsletter)
+- [x] Build newsletter subscriber list view with search/filter
+- [x] Add CSV export functionality for subscribers
+- [x] Display newsletter subscription growth stats (total, active, unsubscribed, 30-day growth)
+- [ ] Create Insurance 101 learning path content (5-7 lessons)
+- [ ] Build learning path progress tracking system
+- [ ] Add completion badges and certificates
+- [ ] Create term bookmark/favorites UI component
+- [ ] Implement localStorage persistence for bookmarks
+- [ ] Add account sync for logged-in users

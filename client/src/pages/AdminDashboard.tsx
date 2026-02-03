@@ -74,11 +74,23 @@ export default function AdminDashboard() {
               <h1 className="text-2xl font-semibold">Admin Dashboard</h1>
               <p className="text-sm text-muted-foreground">Lead management and analytics</p>
             </div>
-            <Link href="/">
-              <Button variant="outline" className="rounded-full">
-                Back to Site
-              </Button>
-            </Link>
+            <div className="flex gap-2">
+              <Link href="/admin/newsletter">
+                <Button variant="outline" className="rounded-full">
+                  Newsletter
+                </Button>
+              </Link>
+              <Link href="/admin/blog-generator">
+                <Button variant="outline" className="rounded-full">
+                  Blog Generator
+                </Button>
+              </Link>
+              <Link href="/">
+                <Button variant="outline" className="rounded-full">
+                  Back to Site
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </header>

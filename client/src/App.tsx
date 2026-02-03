@@ -20,6 +20,7 @@ import HmoVsPpoPage from "./pages/HmoVsPpoPage";
 import TermVsWholeLifePage from "./pages/TermVsWholeLifePage";
 import LiabilityLimitsPage from "./pages/LiabilityLimitsPage";
 import InsuranceQuizPage from "./pages/InsuranceQuizPage";
+import AdminNewsletterPage from "./pages/AdminNewsletterPage";
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
@@ -36,7 +37,8 @@ function Router() {
       <Route path={"/compare/term-vs-whole-life"} component={TermVsWholeLifePage} />
       <Route path="/compare/liability-limits" component={LiabilityLimitsPage} />
       <Route path="/quiz" component={InsuranceQuizPage} />
-        <Route path="/admin" component={AdminDashboard} />
+      <Route path="/admin" component={AdminDashboard} />
+      <Route path="/admin/newsletter" component={AdminNewsletterPage} />
       <Route path="/admin/blog-generator" component={AdminBlogGenerator} />
       <Route path={"/blog"} component={BlogPage} />
       <Route path={"/blog/:slug"} component={BlogPostPage} />

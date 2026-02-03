@@ -1,8 +1,8 @@
 import { z } from "zod";
-import { publicProcedure, router } from "../_core/trpc";
+import { publicProcedure, protectedProcedure, router } from "../_core/trpc";
 import { getDb } from "../db";
 import { newsletterSubscribers } from "../../drizzle/schema";
-import { eq } from "drizzle-orm";
+import { eq, desc, sql, and } from "drizzle-orm";
 
 export const newsletterRouter = router({
   /**
@@ -112,6 +112,113 @@ export const newsletterRouter = router({
       return { 
         success: true, 
         message: "You've been unsubscribed. We're sorry to see you go!"
+      };
+    }),
+
+  // Admin procedures
+  getAllSubscribers: protectedProcedure
+    .input(
+      z.object({
+        status: z.enum(["all", "active", "unsubscribed"]).optional().default("all"),
+        search: z.string().optional(),
+      })
+    )
+    .query(async ({ input }) => {
+      const db = await getDb();
+      if (!db) throw new Error("Database not available");
+
+      let query = db.select().from(newsletterSubscribers);
+
+      // Filter by status
+      if (input.status !== "all") {
+        query = query.where(eq(newsletterSubscribers.status, input.status)) as any;
+      }
+
+      // Search by email
+      if (input.search) {
+        query = query.where(sql`${newsletterSubscribers.email} LIKE ${`%${input.search}%`}`) as any;
+      }
+
+      const subscribers = await query.orderBy(desc(newsletterSubscribers.subscribedAt));
+      return subscribers;
+    }),
+
+  getSubscriberStats: protectedProcedure.query(async () => {
+    const db = await getDb();
+    if (!db) throw new Error("Database not available");
+
+    const [totalResult] = await db
+      .select({ count: sql<number>`count(*)` })
+      .from(newsletterSubscribers);
+
+    const [activeResult] = await db
+      .select({ count: sql<number>`count(*)` })
+      .from(newsletterSubscribers)
+      .where(eq(newsletterSubscribers.status, "active"));
+
+    const [unsubscribedResult] = await db
+      .select({ count: sql<number>`count(*)` })
+      .from(newsletterSubscribers)
+      .where(eq(newsletterSubscribers.status, "unsubscribed"));
+
+    // Get growth over last 30 days
+    const thirtyDaysAgo = new Date();
+    thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+
+    const [recentResult] = await db
+      .select({ count: sql<number>`count(*)` })
+      .from(newsletterSubscribers)
+      .where(
+        and(
+          eq(newsletterSubscribers.status, "active"),
+          sql`${newsletterSubscribers.subscribedAt} >= ${thirtyDaysAgo}`
+        )
+      );
+
+    return {
+      total: Number(totalResult?.count || 0),
+      active: Number(activeResult?.count || 0),
+      unsubscribed: Number(unsubscribedResult?.count || 0),
+      recentGrowth: Number(recentResult?.count || 0),
+    };
+  }),
+
+  exportSubscribers: protectedProcedure
+    .input(
+      z.object({
+        status: z.enum(["all", "active", "unsubscribed"]).optional().default("active"),
+      })
+    )
+    .query(async ({ input }) => {
+      const db = await getDb();
+      if (!db) throw new Error("Database not available");
+
+      let query = db.select().from(newsletterSubscribers);
+
+      if (input.status !== "all") {
+        query = query.where(eq(newsletterSubscribers.status, input.status)) as any;
+      }
+
+      const subscribers = await query.orderBy(desc(newsletterSubscribers.subscribedAt));
+
+      // Convert to CSV format
+      const headers = ["Email", "Status", "Source", "Subscribed At", "Unsubscribed At"];
+      const rows = subscribers.map((sub) => [
+        sub.email,
+        sub.status,
+        sub.source || "",
+        sub.subscribedAt?.toISOString() || "",
+        sub.unsubscribedAt?.toISOString() || "",
+      ]);
+
+      const csv = [
+        headers.join(","),
+        ...rows.map((row) => row.map((cell) => `"${cell}"`).join(",")),
+      ].join("\n");
+
+      return {
+        csv,
+        filename: `newsletter-subscribers-${new Date().toISOString().split("T")[0]}.csv`,
       };
     }),
 });
