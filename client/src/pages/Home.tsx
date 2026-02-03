@@ -266,7 +266,7 @@ export default function Home() {
             <div>
               <h3 className="font-semibold mb-4 ui-text">Resources</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#" className="hover:text-primary transition-colors">Insurance Guides</a></li>
+                <li><Link href="/blog" className="hover:text-primary transition-colors">Blog</Link></li>
                 <li><Link href="/compare" className="hover:text-primary transition-colors">Compare Quotes</Link></li>
                 <li><a href="#" className="hover:text-primary transition-colors">FAQ</a></li>
                 <li><a href="#" className="hover:text-primary transition-colors">Contact Us</a></li>
