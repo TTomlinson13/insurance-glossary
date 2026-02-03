@@ -147,7 +147,7 @@ export default function InsuranceChatbot() {
   }
 
   return (
-    <Card className="fixed bottom-6 right-6 w-[400px] h-[600px] shadow-2xl z-50 flex flex-col rounded-3xl border-2">
+    <Card className="fixed bottom-4 right-4 w-[calc(100vw-2rem)] sm:w-[400px] max-w-[400px] h-[600px] max-h-[calc(100vh-2rem)] shadow-2xl z-50 flex flex-col rounded-3xl border-2">
       {/* Header */}
       <CardHeader className="border-b bg-primary/5 rounded-t-3xl">
         <div className="flex items-center justify-between">

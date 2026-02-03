@@ -138,7 +138,7 @@ export default function Home() {
       </section>
 
       {/* Glossary Terms */}
-      <section className="py-16">
+      <section id="main-content" className="py-16">
         <div className="container">
           {filteredTerms.length === 0 ? (
             <div className="text-center py-16">

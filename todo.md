@@ -188,3 +188,15 @@
 - [x] Create weekly digest email template with blog posts and CTAs
 - [x] Create setup guide for scheduled weekly sending (WEEKLY_DIGEST_SETUP.md)
 - [x] Add email tracking and analytics guidance
+
+## Mobile & Accessibility Fixes
+- [x] Fix chatbot width on mobile devices (responsive width with proper margins)
+- [x] Add proper ARIA labels to all interactive elements
+- [x] Ensure keyboard navigation works throughout site
+- [x] Add skip-to-content link for screen readers
+- [x] Improve color contrast ratios for WCAG AA compliance
+- [x] Add alt text to all images (category icons have descriptive alt text)
+- [x] Ensure form labels are properly associated
+- [x] Create comprehensive accessibility documentation (ACCESSIBILITY.md)
+- [x] Add focus indicators for keyboard navigation (built into shadcn/ui)
+- [x] Ensure chatbot is keyboard accessible
