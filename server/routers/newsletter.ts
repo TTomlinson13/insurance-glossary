@@ -3,6 +3,7 @@ import { publicProcedure, protectedProcedure, router } from "../_core/trpc";
 import { getDb } from "../db";
 import { newsletterSubscribers } from "../../drizzle/schema";
 import { eq, desc, sql, and } from "drizzle-orm";
+import { sendWelcomeEmail, sendNewsletter } from "../_core/email";
 
 export const newsletterRouter = router({
   /**
@@ -43,6 +44,11 @@ export const newsletterRouter = router({
             })
             .where(eq(newsletterSubscribers.email, email));
           
+          // Send welcome email for resubscribers
+          sendWelcomeEmail(email).catch(error => {
+            console.error("Failed to send welcome email:", error);
+          });
+          
           return { 
             success: true, 
             message: "Welcome back! You've been resubscribed to our newsletter.",
@@ -63,6 +69,11 @@ export const newsletterRouter = router({
         email,
         source,
         status: "active",
+      });
+
+      // Send welcome email (don't await to avoid blocking the response)
+      sendWelcomeEmail(email).catch(error => {
+        console.error("Failed to send welcome email:", error);
       });
 
       return { 
@@ -220,5 +231,58 @@ export const newsletterRouter = router({
         csv,
         filename: `newsletter-subscribers-${new Date().toISOString().split("T")[0]}.csv`,
       };
+    }),
+
+  /**
+   * Send manual newsletter to active subscribers
+   */
+  sendManualNewsletter: protectedProcedure
+    .input(
+      z.object({
+        subject: z.string().min(1, "Subject is required"),
+        content: z.string().min(1, "Content is required"),
+      })
+    )
+    .mutation(async ({ input }) => {
+      const { subject, content } = input;
+      const db = await getDb();
+      if (!db) throw new Error("Database not available");
+
+      // Get all active subscribers
+      const subscribers = await db
+        .select()
+        .from(newsletterSubscribers)
+        .where(eq(newsletterSubscribers.status, "active"));
+
+      if (subscribers.length === 0) {
+        return {
+          success: false,
+          message: "No active subscribers to send to.",
+          sent: 0,
+        };
+      }
+
+      const emails = subscribers.map((sub) => sub.email);
+
+      // Send newsletter (Resend handles batching)
+      const result = await sendNewsletter({
+        to: emails,
+        subject,
+        content,
+      });
+
+      if (result.success) {
+        return {
+          success: true,
+          message: `Newsletter sent to ${emails.length} subscribers!`,
+          sent: emails.length,
+        };
+      } else {
+        return {
+          success: false,
+          message: `Failed to send newsletter: ${result.error}`,
+          sent: 0,
+        };
+      }
     }),
 });

@@ -26,7 +26,8 @@ import {
   TrendingUp, 
   Users, 
   UserX,
-  Loader2 
+  Loader2,
+  Send
 } from "lucide-react";
 import { format } from "date-fns";
 
@@ -77,11 +78,19 @@ export default function AdminNewsletterPage() {
           </Button>
         </Link>
 
-        <div className="mb-8">
-          <h1 className="text-4xl font-semibold mb-2">Newsletter Management</h1>
-          <p className="text-muted-foreground">
-            Manage your newsletter subscribers and track growth
-          </p>
+        <div className="mb-8 flex items-start justify-between">
+          <div>
+            <h1 className="text-4xl font-semibold mb-2">Newsletter Management</h1>
+            <p className="text-muted-foreground">
+              Manage your newsletter subscribers and track growth
+            </p>
+          </div>
+          <Link href="/admin/newsletter/compose">
+            <Button className="rounded-full">
+              <Send className="w-4 h-4 mr-2" />
+              Compose Newsletter
+            </Button>
+          </Link>
         </div>
 
         {/* Stats Cards */}

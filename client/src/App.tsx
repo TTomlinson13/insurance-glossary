@@ -21,6 +21,7 @@ import TermVsWholeLifePage from "./pages/TermVsWholeLifePage";
 import LiabilityLimitsPage from "./pages/LiabilityLimitsPage";
 import InsuranceQuizPage from "./pages/InsuranceQuizPage";
 import AdminNewsletterPage from "./pages/AdminNewsletterPage";
+import AdminNewsletterComposerPage from "./pages/AdminNewsletterComposerPage";
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
@@ -39,6 +40,7 @@ function Router() {
       <Route path="/quiz" component={InsuranceQuizPage} />
       <Route path="/admin" component={AdminDashboard} />
       <Route path="/admin/newsletter" component={AdminNewsletterPage} />
+      <Route path="/admin/newsletter/compose" component={AdminNewsletterComposerPage} />
       <Route path="/admin/blog-generator" component={AdminBlogGenerator} />
       <Route path={"/blog"} component={BlogPage} />
       <Route path={"/blog/:slug"} component={BlogPostPage} />

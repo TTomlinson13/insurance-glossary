@@ -176,3 +176,15 @@
 - [ ] Create term bookmark/favorites UI component
 - [ ] Implement localStorage persistence for bookmarks
 - [ ] Add account sync for logged-in users
+
+## Newsletter Email System
+- [x] Set up email service integration (Resend API)
+- [x] Create welcome email template
+- [x] Implement automated welcome email on signup
+- [x] Build manual newsletter composer UI in admin dashboard (/admin/newsletter/compose)
+- [x] Create newsletter email template with dynamic content
+- [x] Add manual send functionality with preview
+- [x] Implement automated weekly digest system (server/_core/weeklyDigest.ts)
+- [x] Create weekly digest email template with blog posts and CTAs
+- [x] Create setup guide for scheduled weekly sending (WEEKLY_DIGEST_SETUP.md)
+- [x] Add email tracking and analytics guidance
