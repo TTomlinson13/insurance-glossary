@@ -115,3 +115,9 @@
 - [x] Build Insurance Cost Estimator
 - [x] Add calculators page to navigation
 - [x] Update sitemap with all new pages (state pages, calculators, blog posts auto-included)
+
+## Google Analytics 4 Setup
+- [x] Create GA4 account and property
+- [x] Get GA4 Measurement ID (G-T9JG7RDWC8)
+- [x] Add Measurement ID to website code
+- [ ] Verify GA4 tracking is working after deployment
