@@ -221,3 +221,7 @@
 - [x] Update chatbot branding to "Polly" (welcome message and header)
 - [x] Add pulse animation to Polly avatar in chat header
 - [x] Test animations across devices (verified via dev server preview)
+
+## Fix Search Functionality
+- [x] Fix Enter key not working in search box on homepage (added smooth scroll to results)
+- [x] Ensure search filters glossary terms correctly (already working via onChange)

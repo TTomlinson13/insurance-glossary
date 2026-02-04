@@ -87,6 +87,15 @@ export default function Home() {
                   placeholder="Search insurance terms..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' && searchQuery.trim()) {
+                      // Scroll to results section
+                      const resultsSection = document.getElementById('search-results');
+                      if (resultsSection) {
+                        resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      }
+                    }
+                  }}
                   className="pl-12 pr-4 py-6 text-lg rounded-2xl bg-card/90 backdrop-blur-sm border-2 border-border/50 focus:border-primary shadow-xl"
                 />
               </div>
@@ -138,7 +147,7 @@ export default function Home() {
       </section>
 
       {/* Glossary Terms */}
-      <section id="main-content" className="py-16">
+      <section id="search-results" className="py-16">
         <div className="container">
           {filteredTerms.length === 0 ? (
             <div className="text-center py-16">
