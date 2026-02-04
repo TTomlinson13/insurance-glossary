@@ -237,3 +237,25 @@
 - [x] Add NFIP (National Flood Insurance Program) definition
 - [x] Add related flood insurance terms (9 total: NFIP, National Flood Insurance Program, Flood Insurance, Flood Zone, Base Flood Elevation, Special Flood Hazard Area, FIRM, 100-Year Flood, Elevation Certificate)
 - [x] Verify terms appear in search and autocomplete (tested - working perfectly)
+
+## Expand NFIP Flood Insurance Terms
+- [x] Add LFE (Lowest Floor Elevation) definition
+- [x] Add DFE (Design Flood Elevation) definition
+- [x] Add BFD (Base Flood Depth) definition
+- [ ] Add flood zone definitions (Zone A, AE, AH, AO, V, VE, X)
+- [x] Add Freeboard definition
+- [x] Add Floodway definition
+- [x] Add Pre-FIRM and Post-FIRM definitions
+- [x] Add Substantial Improvement definition
+- [x] Add Substantial Damage definition
+- [x] Add ICC Coverage (Increased Cost of Compliance)
+- [x] Add CRS (Community Rating System)
+- [x] Add LOMA (Letter of Map Amendment)
+- [ ] Add Flood Vent definition
+- [ ] Add Breakaway Wall definition
+- [ ] Add Crawlspace (flood insurance context)
+- [x] Add Lowest Floor definition (covered by LFE)
+- [ ] Add Waiting Period (flood insurance specific)
+- [ ] Add Coastal High Hazard Area (detailed V Zone)
+- [x] Add Floodplain definition
+- [x] Test all new terms in search and autocomplete (verified LFE, DFE, BFD, Freeboard, Substantial Improvement/Damage, CRS, LOMA all working)

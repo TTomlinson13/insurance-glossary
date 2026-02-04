@@ -1387,6 +1387,120 @@ export const glossaryTerms: GlossaryTerm[] = [
     category: "Property",
     relatedTerms: ["Base Flood Elevation","NFIP","Flood Insurance","FIRM"]
   },
+  {
+    term: "LFE",
+    definition: "Lowest Floor Elevation - the measured distance of a building's lowest floor above the National Geodetic Vertical Datum (NGVD) or North American Vertical Datum (NAVD) as specified on the Flood Insurance Rate Map. The LFE is a critical measurement used to determine flood insurance premium rates under the National Flood Insurance Program. For buildings with basements, the LFE is the basement floor elevation. For buildings without basements, it's the elevation of the lowest floor including any attached garage or enclosure. A higher LFE relative to the Base Flood Elevation results in lower insurance premiums.",
+    category: "Property",
+    relatedTerms: ["Base Flood Elevation","Elevation Certificate","NFIP","Flood Insurance"]
+  },
+  {
+    term: "Lowest Floor Elevation",
+    definition: "The elevation of the lowest floor of a building, including basement, crawlspace, or enclosure, measured above a specific datum (NGVD or NAVD). This measurement is documented on an Elevation Certificate and is the primary factor in determining flood insurance rates. For rating purposes, the lowest floor includes any area with a floor below the Base Flood Elevation, even if it's only used for parking or storage. Buildings with the lowest floor at or above the BFE qualify for preferred risk or lower premium rates. Elevating the lowest floor is one of the most effective flood mitigation strategies.",
+    category: "Property",
+    relatedTerms: ["LFE","Base Flood Elevation","Elevation Certificate","Freeboard"]
+  },
+  {
+    term: "DFE",
+    definition: "Design Flood Elevation - the regulatory flood elevation adopted by a community that meets or exceeds the Base Flood Elevation. Many communities require structures to be built above the BFE by adding freeboard (typically 1-3 feet) to provide an additional margin of safety. The DFE is the minimum elevation at which new construction and substantial improvements must be built to comply with local floodplain management regulations. Building to the DFE rather than just the BFE provides better flood protection and may result in lower insurance premiums. The DFE is determined by local ordinances and varies by community.",
+    category: "Property",
+    relatedTerms: ["Base Flood Elevation","Freeboard","NFIP","Floodplain Management"]
+  },
+  {
+    term: "Design Flood Elevation",
+    definition: "The elevation of the design flood, which is the flood magnitude selected for floodplain management purposes and used to establish regulatory requirements. The DFE typically equals the Base Flood Elevation plus any freeboard required by the community. Local governments adopt DFE standards that meet or exceed FEMA's minimum BFE requirements to reduce flood risk and qualify for Community Rating System discounts. New buildings and substantial improvements must have their lowest floor (or lowest horizontal structural member in V zones) at or above the DFE. Compliance with DFE requirements is verified through Elevation Certificates.",
+    category: "Property",
+    relatedTerms: ["DFE","Base Flood Elevation","Freeboard","Community Rating System"]
+  },
+  {
+    term: "BFD",
+    definition: "Base Flood Depth - the depth shown on Flood Insurance Rate Maps for Zone AO that indicates the depth of water above the highest adjacent grade resulting from a base flood (1% annual chance flood). Unlike other flood zones that show elevation, Zone AO shows flood depth in feet. This depth measurement is used to determine the required elevation for new construction and to calculate flood insurance premiums. Properties in Zone AO must be elevated so that the lowest floor is above the highest adjacent grade by at least the BFD shown on the FIRM, plus any additional freeboard required by local ordinance.",
+    category: "Property",
+    relatedTerms: ["Base Flood Elevation","Zone AO","FIRM","Highest Adjacent Grade"]
+  },
+  {
+    term: "Base Flood Depth",
+    definition: "The vertical distance between the highest adjacent grade and the water surface elevation during a base flood (100-year flood). Shown on FIRMs for Zone AO areas where shallow flooding or sheet flow occurs, typically ranging from 1 to 3 feet. The BFD is used instead of Base Flood Elevation in areas where detailed hydraulic analyses have not been performed. Buildings in these zones must be elevated above the highest adjacent grade by at least the BFD amount. Insurance rates in Zone AO are based on the BFD and the building's elevation relative to the highest adjacent grade.",
+    category: "Property",
+    relatedTerms: ["BFD","Zone AO","Base Flood Elevation","Sheet Flow"]
+  },
+  {
+    term: "Freeboard",
+    definition: "Additional elevation above the Base Flood Elevation required by many communities as a factor of safety against higher flood levels than predicted. Freeboard compensates for uncertainties in flood calculations, wave action, and future development that may increase flood heights. Common freeboard requirements range from 1 to 3 feet above the BFE. Building with freeboard provides better flood protection and typically results in lower flood insurance premiums through the Community Rating System. Some communities mandate freeboard for new construction, while others offer it as a voluntary best practice. Freeboard is especially important in coastal areas subject to wave action.",
+    category: "Property",
+    relatedTerms: ["Base Flood Elevation","Design Flood Elevation","Community Rating System","Flood Insurance"]
+  },
+  {
+    term: "Floodway",
+    definition: "The channel of a river or stream and the adjacent land areas that must be reserved to discharge the base flood without cumulatively increasing the water surface elevation more than a designated height (typically one foot). Floodways are shown on Flood Insurance Rate Maps and represent the most hazardous portion of the floodplain due to high velocity water and debris. Development in floodways is strictly regulated or prohibited because any obstruction could increase flood heights on other properties. Buildings in floodways face the highest flood insurance rates and may be difficult or impossible to insure. Floodway boundaries are determined through detailed hydraulic modeling.",
+    category: "Property",
+    relatedTerms: ["Floodplain","Base Flood Elevation","FIRM","Special Flood Hazard Area"]
+  },
+  {
+    term: "Floodplain",
+    definition: "Any land area susceptible to being inundated by floodwater from any source, including rivers, streams, coastal waters, and areas with inadequate drainage. The regulatory floodplain is the land area covered by the floodwaters of the base flood (1% annual chance flood), also called the Special Flood Hazard Area. Floodplain management regulations restrict development in these areas to reduce flood damage and protect lives. Properties in the regulatory floodplain typically require flood insurance if they have federally backed mortgages. Floodplain boundaries are shown on FEMA Flood Insurance Rate Maps and are subject to change as conditions evolve.",
+    category: "Property",
+    relatedTerms: ["Special Flood Hazard Area","Floodway","Base Flood Elevation","FIRM"]
+  },
+  {
+    term: "Pre-FIRM",
+    definition: "A building constructed before the effective date of the first Flood Insurance Rate Map (FIRM) for a community. Pre-FIRM buildings were built before current floodplain management regulations and often do not meet modern elevation requirements. These structures typically qualify for subsidized flood insurance rates under the National Flood Insurance Program, though these subsidies are being phased out. Pre-FIRM buildings can maintain grandfathered rates if they met the floodplain management requirements in effect at the time of construction. When Pre-FIRM buildings undergo substantial improvement or substantial damage, they must be brought into compliance with current standards.",
+    category: "Property",
+    relatedTerms: ["Post-FIRM","FIRM","Grandfathered Rate","Substantial Improvement"]
+  },
+  {
+    term: "Post-FIRM",
+    definition: "A building constructed after the effective date of the first Flood Insurance Rate Map for a community. Post-FIRM buildings are required to meet floodplain management regulations, including elevation requirements, and typically have lower flood risk than Pre-FIRM structures. Flood insurance rates for Post-FIRM buildings are based on actuarial risk and are generally lower than Pre-FIRM rates if the building is properly elevated. These buildings must have an Elevation Certificate to document compliance with local regulations. Post-FIRM construction standards significantly reduce flood damage and insurance costs compared to older, non-compliant structures.",
+    category: "Property",
+    relatedTerms: ["Pre-FIRM","FIRM","Elevation Certificate","Base Flood Elevation"]
+  },
+  {
+    term: "Substantial Improvement",
+    definition: "Any reconstruction, rehabilitation, addition, or improvement of a building where the cost equals or exceeds 50% of the market value of the structure before the improvement began. When a building undergoes substantial improvement, it must be brought into compliance with current floodplain management regulations, including elevation requirements. This trigger applies cumulatively over a specified period (often 10 years) to prevent incremental improvements from avoiding compliance. Substantial improvement determinations are made by local floodplain administrators and can significantly impact project costs. Property owners should consult with local officials before starting major renovation projects in flood zones.",
+    category: "Property",
+    relatedTerms: ["Substantial Damage","Base Flood Elevation","Floodplain Management","Pre-FIRM"]
+  },
+  {
+    term: "Substantial Damage",
+    definition: "Damage of any origin sustained by a building where the cost of restoring the structure to its pre-damaged condition equals or exceeds 50% of the market value before the damage occurred. Substantially damaged buildings must be brought into compliance with current floodplain management regulations when repaired, including meeting elevation requirements. This applies to damage from any cause (flood, fire, earthquake, etc.), not just flooding. The 50% threshold is calculated using the building's market value excluding land value. Communities track cumulative damage over time to prevent property owners from avoiding compliance through multiple smaller repairs. Substantial damage determinations are made by local floodplain administrators.",
+    category: "Property",
+    relatedTerms: ["Substantial Improvement","Base Flood Elevation","Floodplain Management","Market Value"]
+  },
+  {
+    term: "ICC Coverage",
+    definition: "Increased Cost of Compliance coverage - an additional flood insurance benefit of up to $30,000 to help pay for mitigation measures that reduce flood risk after a flood loss. ICC coverage is automatically included in all NFIP policies at no additional cost. It can be used for elevation, relocation, demolition, or floodproofing of buildings that have been substantially damaged or repetitively flooded. ICC funds are paid in addition to building claim payments but cannot exceed $30,000. To qualify, the building must be declared substantially damaged by the community, and the mitigation work must meet NFIP and local requirements. ICC coverage helps property owners comply with floodplain management regulations after a loss.",
+    category: "Property",
+    relatedTerms: ["NFIP","Substantial Damage","Flood Insurance","Mitigation"]
+  },
+  {
+    term: "Increased Cost of Compliance",
+    definition: "Additional flood insurance coverage that pays up to $30,000 for costs to bring a substantially damaged or repetitively flooded building into compliance with current floodplain management regulations. This coverage is included automatically in all National Flood Insurance Program policies. Eligible activities include elevating the building above the Base Flood Elevation, relocating it outside the floodplain, demolishing it, or floodproofing (for non-residential buildings only). ICC payments are made after a qualifying flood loss and are separate from the building coverage limit. The property must be declared substantially damaged by the local floodplain administrator to access ICC benefits.",
+    category: "Property",
+    relatedTerms: ["ICC Coverage","NFIP","Substantial Damage","Base Flood Elevation"]
+  },
+  {
+    term: "CRS",
+    definition: "Community Rating System - a voluntary incentive program that recognizes and rewards communities for exceeding minimum National Flood Insurance Program floodplain management requirements. Communities that participate in CRS implement additional flood mitigation activities and receive discounted flood insurance rates for their residents. CRS classes range from 10 (no discount) to 1 (45% discount), with each class improvement providing a 5% premium reduction in Special Flood Hazard Areas and 10% in preferred risk areas. Activities that earn CRS credit include enhanced mapping, public information programs, drainage system maintenance, and higher regulatory standards. Over 1,500 communities participate in CRS, providing millions of dollars in annual premium savings.",
+    category: "Property",
+    relatedTerms: ["NFIP","Community Rating System","Flood Insurance","Floodplain Management"]
+  },
+  {
+    term: "Community Rating System",
+    definition: "A program administered by FEMA that provides flood insurance premium discounts to residents of communities that implement floodplain management practices beyond NFIP minimum requirements. Communities earn points through activities in four categories: public information, mapping and regulations, flood damage reduction, and warning and response. Points determine the community's CRS class (1-10), with each class providing a 5% premium discount in Special Flood Hazard Areas. Class 1 communities receive a 45% discount. The program encourages communities to reduce flood risk, protect natural floodplain functions, and facilitate accurate insurance rating. CRS communities must recertify annually and undergo detailed verification every few years.",
+    category: "Property",
+    relatedTerms: ["CRS","NFIP","Flood Insurance","Special Flood Hazard Area"]
+  },
+  {
+    term: "LOMA",
+    definition: "Letter of Map Amendment - an official document from FEMA that removes a property from the Special Flood Hazard Area when it is shown to be at or above the Base Flood Elevation. A LOMA is issued when a property was incorrectly included in the flood zone on the Flood Insurance Rate Map due to natural grade elevation. Property owners must submit an application with elevation data certified by a licensed surveyor or engineer. Once approved, a LOMA eliminates the mandatory flood insurance requirement for federally backed mortgages and may significantly reduce insurance costs. LOMAs are permanent unless the FIRM is revised. Similar letters include LOMR (Letter of Map Revision) for map changes based on physical alterations.",
+    category: "Property",
+    relatedTerms: ["LOMR","FIRM","Special Flood Hazard Area","Base Flood Elevation"]
+  },
+  {
+    term: "Letter of Map Amendment",
+    definition: "An official amendment issued by FEMA to remove a property or structure from a Special Flood Hazard Area shown on a Flood Insurance Rate Map. LOMAs are granted when elevation data demonstrates that the property is naturally at or above the Base Flood Elevation and was inadvertently included in the flood zone. The amendment does not physically change the FIRM but provides legal documentation that the property is not in the SFHA. Property owners must provide an Elevation Certificate and topographic data certified by a licensed professional. LOMA approval eliminates mandatory flood insurance requirements and can reduce insurance costs substantially. Processing typically takes 60-90 days and there is no fee for most residential properties.",
+    category: "Property",
+    relatedTerms: ["LOMA","FIRM","Base Flood Elevation","Elevation Certificate"]
+  },
 ];
 
 export const categoryColors: Record<string, string> = {
