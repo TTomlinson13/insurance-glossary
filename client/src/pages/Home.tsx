@@ -2,7 +2,7 @@
  * Hero with organic background, search bar, category filters, glossary cards
  */
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef, useEffect } from "react";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Input } from "@/components/ui/input";
 import InsuranceChatbot from "@/components/InsuranceChatbot";
@@ -22,6 +22,30 @@ export default function Home() {
 
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const [selectedSuggestionIndex, setSelectedSuggestionIndex] = useState(-1);
+  const searchRef = useRef<HTMLDivElement>(null);
+  
+  // Get top 8 matching suggestions
+  const suggestions = useMemo(() => {
+    if (!searchQuery.trim()) return [];
+    return glossaryTerms
+      .filter((term) => 
+        term.term.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+      .slice(0, 8);
+  }, [searchQuery]);
+  
+  // Close suggestions when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+        setShowSuggestions(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   const categories = ["All", "Auto", "Health", "Life", "Property", "Business", "General", "Claims", "Industry"];
 
@@ -78,26 +102,85 @@ export default function Home() {
               Your trusted guide to understanding insurance.
             </p>
 
-            {/* Search Bar */}
-            <div className="max-w-2xl mx-auto mt-8">
+            {/* Search Bar with Autocomplete */}
+            <div className="max-w-2xl mx-auto mt-8" ref={searchRef}>
               <div className="relative">
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground z-10" />
                 <Input
                   type="text"
                   placeholder="Search insurance terms..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e) => {
+                    setSearchQuery(e.target.value);
+                    setShowSuggestions(true);
+                    setSelectedSuggestionIndex(-1);
+                  }}
+                  onFocus={() => searchQuery && setShowSuggestions(true)}
                   onKeyDown={(e) => {
-                    if (e.key === 'Enter' && searchQuery.trim()) {
-                      // Scroll to results section
-                      const resultsSection = document.getElementById('search-results');
-                      if (resultsSection) {
-                        resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    if (e.key === 'ArrowDown') {
+                      e.preventDefault();
+                      setSelectedSuggestionIndex(prev => 
+                        prev < suggestions.length - 1 ? prev + 1 : prev
+                      );
+                    } else if (e.key === 'ArrowUp') {
+                      e.preventDefault();
+                      setSelectedSuggestionIndex(prev => prev > 0 ? prev - 1 : -1);
+                    } else if (e.key === 'Enter') {
+                      e.preventDefault();
+                      if (selectedSuggestionIndex >= 0 && suggestions[selectedSuggestionIndex]) {
+                        // Navigate to selected suggestion
+                        window.location.href = `/term/${generateSlug(suggestions[selectedSuggestionIndex].term)}`;
+                      } else if (searchQuery.trim()) {
+                        // Scroll to results section
+                        setShowSuggestions(false);
+                        const resultsSection = document.getElementById('search-results');
+                        if (resultsSection) {
+                          resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
                       }
+                    } else if (e.key === 'Escape') {
+                      setShowSuggestions(false);
                     }
                   }}
                   className="pl-12 pr-4 py-6 text-lg rounded-2xl bg-card/90 backdrop-blur-sm border-2 border-border/50 focus:border-primary shadow-xl"
                 />
+                
+                {/* Suggestions Dropdown */}
+                {showSuggestions && suggestions.length > 0 && (
+                  <div className="absolute top-full mt-2 w-full bg-card border-2 border-border rounded-2xl shadow-2xl overflow-hidden z-50">
+                    {suggestions.map((term, index) => (
+                      <Link key={term.term} href={`/term/${generateSlug(term.term)}`}>
+                        <div
+                          className={`px-4 py-3 cursor-pointer transition-colors ${
+                            index === selectedSuggestionIndex
+                              ? 'bg-primary/10'
+                              : 'hover:bg-muted'
+                          }`}
+                          onMouseEnter={() => setSelectedSuggestionIndex(index)}
+                          onClick={() => setShowSuggestions(false)}
+                        >
+                          <div className="flex items-center justify-between gap-3">
+                            <div className="flex-1">
+                              <div className="font-medium text-foreground">{term.term}</div>
+                              <div className="text-sm text-muted-foreground line-clamp-1">
+                                {term.definition}
+                              </div>
+                            </div>
+                            <Badge
+                              className="shrink-0 text-xs"
+                              style={{
+                                backgroundColor: categoryColors[term.category],
+                                color: "oklch(0.98 0.01 85)"
+                              }}
+                            >
+                              {term.category}
+                            </Badge>
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
 

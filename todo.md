@@ -225,3 +225,10 @@
 ## Fix Search Functionality
 - [x] Fix Enter key not working in search box on homepage (added smooth scroll to results)
 - [x] Ensure search filters glossary terms correctly (already working via onChange)
+
+## Search Autocomplete Dropdown
+- [x] Build search suggestions dropdown component
+- [x] Show top 8 matching terms as user types
+- [x] Add keyboard navigation (arrow keys, Enter to select, Escape to close)
+- [x] Click outside to close dropdown
+- [x] Navigate to term page on selection
