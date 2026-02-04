@@ -120,6 +120,15 @@ export default function TermPage() {
         const twitterUrl = document.querySelector('meta[property="twitter:url"]');
         if (twitterUrl) twitterUrl.setAttribute('content', `https://insurance-glossary.manus.space/term/${params.slug}`);
         
+        // Add canonical URL to prevent duplicate content issues
+        let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+        if (!canonical) {
+          canonical = document.createElement('link');
+          canonical.rel = 'canonical';
+          document.head.appendChild(canonical);
+        }
+        canonical.href = `https://insurance-glossary.manus.space/term/${params.slug}`;
+        
         // Find related terms data - combine manual + automatic suggestions
         const manualRelated = foundTerm.relatedTerms
           ? foundTerm.relatedTerms
