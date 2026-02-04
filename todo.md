@@ -210,3 +210,6 @@
 - [x] Add Coverage F - Medical Payments to Others definition
 - [x] Add additional property insurance coverage terms (20 total terms added)
 - [x] Verify all terms are properly categorized as Property insurance
+
+## Fix Duplicate Glossary Terms
+- [x] Remove duplicate entries causing React key errors (removed 13 duplicate terms)
