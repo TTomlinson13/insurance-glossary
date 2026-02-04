@@ -232,3 +232,8 @@
 - [x] Add keyboard navigation (arrow keys, Enter to select, Escape to close)
 - [x] Click outside to close dropdown
 - [x] Navigate to term page on selection
+
+## Add NFIP and Flood Insurance Terms
+- [x] Add NFIP (National Flood Insurance Program) definition
+- [x] Add related flood insurance terms (9 total: NFIP, National Flood Insurance Program, Flood Insurance, Flood Zone, Base Flood Elevation, Special Flood Hazard Area, FIRM, 100-Year Flood, Elevation Certificate)
+- [x] Verify terms appear in search and autocomplete (tested - working perfectly)

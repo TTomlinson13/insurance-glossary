@@ -1333,6 +1333,60 @@ export const glossaryTerms: GlossaryTerm[] = [
     category: "Property",
     relatedTerms: ["Medical Payments","Coverage E","Personal Liability","No-Fault Coverage"]
   },
+  {
+    term: "NFIP",
+    definition: "The National Flood Insurance Program is a federal program created by Congress in 1968 to provide flood insurance to property owners, renters, and businesses. Managed by FEMA, the NFIP makes flood insurance available in communities that adopt and enforce floodplain management regulations to reduce future flood damage. Standard homeowners insurance does not cover flood damage, making NFIP policies essential for properties in flood-prone areas. The program offers up to $250,000 in building coverage and $100,000 in contents coverage.",
+    category: "Property",
+    relatedTerms: ["Flood Insurance","FEMA","Flood Zone","Base Flood Elevation"]
+  },
+  {
+    term: "National Flood Insurance Program",
+    definition: "A federal program administered by FEMA that provides flood insurance to property owners, renters, and businesses in participating communities. Created in 1968 because standard homeowners insurance excludes flood coverage, the NFIP helps reduce the socio-economic impact of floods by providing affordable insurance and encouraging communities to adopt floodplain management regulations. Coverage limits are $250,000 for residential buildings and $100,000 for contents. Properties in high-risk flood zones with federally backed mortgages are required to carry flood insurance.",
+    category: "Property",
+    relatedTerms: ["NFIP","Flood Insurance","FEMA","Special Flood Hazard Area"]
+  },
+  {
+    term: "Flood Insurance",
+    definition: "Insurance coverage that protects against losses from flooding, which is specifically excluded from standard homeowners and renters insurance policies. Flood insurance covers direct physical losses caused by flooding, including overflow of inland or tidal waters, unusual accumulation of surface water, mudflow, and collapse of land along a body of water. Available primarily through the National Flood Insurance Program (NFIP) or private insurers, with a typical 30-day waiting period before coverage takes effect. Essential for properties in flood zones but recommended for all properties since 25% of flood claims come from low-risk areas.",
+    category: "Property",
+    relatedTerms: ["NFIP","Flood Zone","FEMA","Base Flood Elevation"]
+  },
+  {
+    term: "Flood Zone",
+    definition: "Geographic areas that FEMA defines according to varying levels of flood risk. These zones are depicted on Flood Insurance Rate Maps (FIRMs) and determine flood insurance requirements and premiums. High-risk zones (Special Flood Hazard Areas) include Zone A (1% annual chance of flooding) and Zone V (coastal high-hazard areas with wave action). Moderate-to-low risk zones include Zone B, C, and X. Properties in high-risk zones with federally backed mortgages must carry flood insurance. Zone designations directly impact insurance costs and building requirements.",
+    category: "Property",
+    relatedTerms: ["NFIP","Flood Insurance","FEMA","Special Flood Hazard Area","FIRM"]
+  },
+  {
+    term: "Base Flood Elevation",
+    definition: "The computed elevation to which floodwater is anticipated to rise during a base flood (a flood with a 1% chance of occurring in any given year, also called a 100-year flood). Shown on FEMA Flood Insurance Rate Maps (FIRMs), the BFE is used to determine flood insurance premiums and building requirements. Structures built below the BFE face higher insurance costs and greater flood risk. Local building codes typically require new construction in flood zones to have the lowest floor elevated at or above the BFE. Knowing your property's BFE is crucial for flood risk assessment and insurance decisions.",
+    category: "Property",
+    relatedTerms: ["Flood Zone","NFIP","FIRM","100-Year Flood","Elevation Certificate"]
+  },
+  {
+    term: "Special Flood Hazard Area",
+    definition: "High-risk flood zones designated by FEMA where there is at least a 1% chance of flooding in any given year (also known as the 100-year floodplain). Properties located in SFHAs and secured by federally backed mortgages are required by law to carry flood insurance. These areas are shown on Flood Insurance Rate Maps (FIRMs) and include Zone A (riverine flooding) and Zone V (coastal flooding with wave action). Buildings in SFHAs face significantly higher flood insurance premiums than those in moderate or low-risk zones.",
+    category: "Property",
+    relatedTerms: ["Flood Zone","NFIP","Base Flood Elevation","100-Year Flood"]
+  },
+  {
+    term: "FIRM",
+    definition: "Flood Insurance Rate Map - an official map created by FEMA that shows flood risk zones, base flood elevations, and floodplain boundaries for a community. FIRMs are used to determine flood insurance requirements and premium rates under the National Flood Insurance Program. These maps identify Special Flood Hazard Areas where flood insurance is mandatory for federally backed mortgages. Property owners can use FIRMs to understand their flood risk and make informed decisions about insurance coverage and property improvements. Maps are periodically updated as flood risk data changes.",
+    category: "Property",
+    relatedTerms: ["Flood Zone","Base Flood Elevation","NFIP","FEMA"]
+  },
+  {
+    term: "100-Year Flood",
+    definition: "A flood event that has a 1% probability of occurring in any given year, not a flood that happens once every 100 years. This statistical measure defines the Special Flood Hazard Area and base flood elevation used by FEMA and the National Flood Insurance Program. Properties in 100-year floodplains face mandatory flood insurance requirements if they have federally backed mortgages. The term is often misunderstood—a 100-year flood can occur multiple times within 100 years, or not at all. Over a 30-year mortgage, a property in a 100-year floodplain has a 26% chance of experiencing such a flood.",
+    category: "Property",
+    relatedTerms: ["Flood Zone","Base Flood Elevation","Special Flood Hazard Area","NFIP"]
+  },
+  {
+    term: "Elevation Certificate",
+    definition: "An official FEMA document that provides elevation information about a building's lowest floor and the ground elevation around the structure. Prepared by a licensed surveyor or engineer, this certificate is used to determine accurate flood insurance premium rates under the National Flood Insurance Program. Properties built at or above the Base Flood Elevation typically qualify for lower insurance rates. An Elevation Certificate may be required when purchasing flood insurance, refinancing a mortgage, or applying for a Letter of Map Amendment. The certificate is valid indefinitely unless the property or surrounding area is significantly altered.",
+    category: "Property",
+    relatedTerms: ["Base Flood Elevation","NFIP","Flood Insurance","FIRM"]
+  },
 ];
 
 export const categoryColors: Record<string, string> = {
