@@ -26,6 +26,7 @@ import AdminNewsletterComposerPage from "./pages/AdminNewsletterComposerPage";
 import QueEsDeducible from "./pages/QueEsDeducible";
 import SeguroAutoBarato from "./pages/SeguroAutoBarato";
 import TerminosSeguroEspanol from "./pages/TerminosSeguroEspanol";
+import GetQuotes from "./pages/GetQuotes";
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
@@ -51,6 +52,7 @@ function Router() {
       <Route path="/que-es-deducible" component={QueEsDeducible} />
       <Route path="/seguro-auto-barato" component={SeguroAutoBarato} />
       <Route path="/terminos-seguro-espanol" component={TerminosSeguroEspanol} />
+      <Route path="/get-quotes" component={GetQuotes} />
       <Route path="/404" component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

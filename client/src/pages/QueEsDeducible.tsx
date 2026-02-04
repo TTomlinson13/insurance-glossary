@@ -8,6 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { BookOpen, DollarSign, Shield, ArrowRight, CheckCircle2 } from "lucide-react";
 import { useEffect } from "react";
+import { AffiliateCTA } from "@/components/AffiliateCTA";
 
 export default function QueEsDeducible() {
   // SEO meta tags
@@ -258,6 +259,15 @@ export default function QueEsDeducible() {
                 </Card>
               </div>
             </div>
+
+            {/* Affiliate CTA */}
+            <AffiliateCTA 
+              category="auto"
+              title="¿Listo para Ahorrar en tu Seguro de Auto?"
+              description="Compara cotizaciones de las mejores aseguradoras y ahorra hasta $500 al año en tu seguro de auto."
+              buttonText="Comparar Cotizaciones"
+              variant="banner"
+            />
 
             {/* Related Terms */}
             <div className="space-y-6">

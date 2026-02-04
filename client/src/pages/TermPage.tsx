@@ -10,6 +10,8 @@ import TermRating from "@/components/TermRating";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, BookOpen, ExternalLink, ThumbsUp, ThumbsDown } from "lucide-react";
+import { AffiliateCTA } from "@/components/AffiliateCTA";
+import { AdSenseAd } from "@/components/AdSenseAd";
 import { glossaryTerms, categoryColors, type GlossaryTerm } from "@/data/glossary";
 import { termFAQs } from "@/data/faq-terms";
 import { findTermBySlug, generateSlug } from "@/lib/utils-slug";
@@ -308,6 +310,21 @@ export default function TermPage() {
                     </div>
                   )}
 
+                  {/* Affiliate CTA - Show for relevant categories */}
+                  {(term.category === "Auto" || term.category === "Property" || term.category === "Life" || term.category === "Health") && (
+                    <div className="pt-6 border-t border-border/50">
+                      <AffiliateCTA 
+                        category={
+                          term.category === "Auto" ? "auto" :
+                          term.category === "Property" ? "home" :
+                          term.category === "Life" ? "life" :
+                          "home"
+                        }
+                        variant="default"
+                      />
+                    </div>
+                  )}
+
                   {/* Rating Section */}
                   <TermRating termSlug={params?.slug || ""} sessionId={sessionId} />
 
@@ -342,6 +359,12 @@ export default function TermPage() {
 
             {/* Sidebar - Related Terms */}
             <div className="space-y-6">
+              {/* AdSense Sidebar Ad */}
+              <AdSenseAd 
+                slot="sidebar-term-page"
+                format="vertical"
+                className="min-h-[250px]"
+              />
               <Card className="card-organic">
                 <CardHeader>
                   <CardTitle>Explore More</CardTitle>
