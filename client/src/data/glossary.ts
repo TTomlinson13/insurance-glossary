@@ -1650,6 +1650,96 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: "A regulatory framework that requires insurance companies to maintain capital reserves proportional to the risks inherent in their business operations. The NAIC Risk-Based Capital (RBC) system calculates minimum capital requirements based on four categories of risk: asset risk (investments), underwriting risk (pricing and reserving), credit risk (reinsurance and other recoverables), and off-balance sheet risk. Insurers must file annual RBC reports, and regulatory intervention is triggered if an insurer's actual capital falls below specified RBC thresholds. The RBC ratio compares an insurer's total adjusted capital to its risk-based capital requirement. Ratios below certain levels trigger increasingly severe regulatory actions, from company action level (200%) to mandatory control level (70%), where regulators must place the insurer under regulatory control.",
     category: "Industry",
     relatedTerms: ["NAIC","Solvency","Capital and Surplus","Financial Examination"]
+  },
+  {
+    term: "MCCA",
+    definition: "Michigan Catastrophic Claims Association - a state-mandated reinsurance association that reimburses auto insurers for Personal Injury Protection (PIP) medical claims exceeding a set threshold. The MCCA collects an assessment fee from every insured Michigan driver to fund catastrophic injury claims under Michigan's no-fault auto insurance system.",
+    category: "Auto",
+    relatedTerms: ["No-Fault Insurance","Personal Injury Protection","Unlimited PIP"]
+  },
+  {
+    term: "Michigan Catastrophic Claims Association",
+    definition: "A private, non-profit association created by the Michigan Legislature in 1978 to protect the financial integrity of Michigan's auto insurance industry. The MCCA provides reinsurance for unlimited lifetime medical benefits under Michigan's no-fault system, reimbursing insurers for PIP claims that exceed the retention limit.",
+    category: "Auto",
+    relatedTerms: ["MCCA","No-Fault Insurance","Personal Injury Protection"]
+  },
+  {
+    term: "Unlimited PIP",
+    definition: "A unique feature of Michigan's no-fault auto insurance system that provides unlimited lifetime medical coverage for injuries sustained in auto accidents. Policyholders can choose unlimited PIP or select capped amounts ($500,000, $250,000, or $50,000) under Michigan's 2019 auto insurance reform.",
+    category: "Auto",
+    relatedTerms: ["Personal Injury Protection","MCCA","No-Fault Insurance"]
+  },
+  {
+    term: "Managed Competition",
+    definition: "Massachusetts' unique auto insurance system implemented in 2008, replacing the prior state-set rate system. Under managed competition, insurance companies can set their own rates and compete for customers, but insurers are still required to provide coverage to all drivers who apply (no cherry-picking).",
+    category: "Auto",
+    relatedTerms: ["Rate Bureau","Admitted Carrier"]
+  },
+  {
+    term: "Lava Zone",
+    definition: "Hawaii's volcanic hazard classification system ranging from Zone 1 (highest risk) to Zone 9 (lowest risk), based on the frequency and coverage of historic lava flows. Lava zones significantly affect property insurance availability and rates, with properties in Zones 1 and 2 often requiring coverage through the Hawaii Property Insurance Association.",
+    category: "Property",
+    relatedTerms: ["HPIA","Volcanic Eruption Coverage","All-Risk Coverage"]
+  },
+  {
+    term: "HPIA",
+    definition: "Hawaii Property Insurance Association - a residual market mechanism that provides property insurance for homes in high-risk lava zones (primarily Zones 1 and 2) that cannot obtain coverage in the voluntary market. HPIA is an association of all property insurers licensed in Hawaii.",
+    category: "Property",
+    relatedTerms: ["Lava Zone","Residual Market","FAIR Plan"]
+  },
+  {
+    term: "Wind Pool",
+    definition: "A residual market mechanism (also called Wind and Hail Underwriting Association) that provides wind and hail coverage for coastal properties unable to obtain coverage in the voluntary market. Common in hurricane-prone states like South Carolina, North Carolina, Texas, and Louisiana.",
+    category: "Property",
+    relatedTerms: ["FAIR Plan","Residual Market","Hurricane Deductible"]
+  },
+  {
+    term: "HHRF",
+    definition: "Hawaii Hurricane Relief Fund - a state program that provides hurricane insurance coverage for condominium associations (AOAOs) that have been denied coverage by at least two private insurers. The fund was created to address the hurricane insurance availability crisis in Hawaii.",
+    category: "Property",
+    relatedTerms: ["Hurricane Insurance","Wind Pool","Residual Market"]
+  },
+  {
+    term: "MVAIC",
+    definition: "Motor Vehicle Accident Indemnification Corporation - a New York state fund that provides compensation to innocent victims injured by uninsured motorists, hit-and-run drivers, or financially irresponsible motorists. MVAIC is funded by assessments on auto insurers doing business in New York.",
+    category: "Auto",
+    relatedTerms: ["Uninsured Motorist Coverage","Hit and Run","Financially Irresponsible Motorist"]
+  },
+  {
+    term: "Financially Irresponsible Motorist",
+    definition: "A New York insurance term for a driver who fails to maintain required auto insurance coverage or cannot pay for damages they cause. Victims of financially irresponsible motorists may file claims with MVAIC (Motor Vehicle Accident Indemnification Corporation).",
+    category: "Auto",
+    relatedTerms: ["MVAIC","Uninsured Motorist Coverage","Underinsured Motorist Coverage"]
+  },
+  {
+    term: "Rate Bureau",
+    definition: "An organization that collects loss statistics and develops advisory insurance rates for its member companies. North Carolina Rate Bureau (NCRB) is a prominent example, providing rating services for auto, property, and workers compensation insurance. Some states use rate bureaus while others allow insurers to file their own rates.",
+    category: "Industry",
+    relatedTerms: ["Advisory Organization","NAIC","Loss Ratio"]
+  },
+  {
+    term: "NCRB",
+    definition: "North Carolina Rate Bureau - a non-profit rating bureau created by the North Carolina General Assembly that provides services and programs for automobile, property, and workers compensation insurance. The NCRB collects loss data, develops rates, and administers various insurance programs in North Carolina.",
+    category: "Industry",
+    relatedTerms: ["Rate Bureau","Advisory Organization","Workers Compensation"]
+  },
+  {
+    term: "Volcanic Eruption Coverage",
+    definition: "Insurance protection for property damage caused by volcanic activity, including lava flow, volcanic blast, airborne shock waves, ash, dust, or particulate matter. In Hawaii, most all-risk homeowners policies include volcanic eruption coverage, though availability varies by lava zone. There is no specific 'lava insurance' policy.",
+    category: "Property",
+    relatedTerms: ["Lava Zone","HPIA","All-Risk Coverage"]
+  },
+  {
+    term: "Beach Plan",
+    definition: "A state-sponsored property insurance program that provides wind and hail coverage for coastal properties in hurricane-prone areas. Beach Plans operate as residual markets when private insurers decline to provide coverage. Also known as Wind Pools or Wind and Hail Underwriting Associations.",
+    category: "Property",
+    relatedTerms: ["Wind Pool","FAIR Plan","Residual Market"]
+  },
+  {
+    term: "Regulation 62",
+    definition: "New York's insurance regulation (11 NYCRR 52) that governs health insurance practices, including minimum loss ratio requirements (typically 65% for group health), claims payment standards, and preexisting condition provisions. Regulation 62 is one of New York's most important health insurance regulations.",
+    category: "Health",
+    relatedTerms: ["Loss Ratio","DFS","Claims-Made Policy"]
   }
 ];
 

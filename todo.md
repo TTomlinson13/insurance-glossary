@@ -301,16 +301,16 @@
 - [x] Test all new NAIC terms in search (verified NAIC, Guaranty Fund, Risk-Based Capital working)
 
 ## Research and Add State-Specific Insurance Terms
-- [ ] Research New York insurance department glossary and unique terms
-- [ ] Research Massachusetts insurance terminology (auto insurance, healthcare)
-- [ ] Research Michigan no-fault auto insurance terms (PIP, MCCA)
-- [ ] Research Hawaii insurance terms (hurricane, volcanic coverage)
-- [ ] Research North Carolina insurance programs and terminology
-- [ ] Research South Carolina coastal insurance terms
-- [ ] Add New York-specific insurance terms to glossary
-- [ ] Add Massachusetts-specific insurance terms to glossary
-- [ ] Add Michigan-specific insurance terms to glossary
-- [ ] Add Hawaii-specific insurance terms to glossary
-- [ ] Add North Carolina-specific insurance terms to glossary
-- [ ] Add South Carolina-specific insurance terms to glossary
-- [ ] Test all new state-specific terms in search
+- [x] Research New York insurance department glossary and unique terms
+- [x] Research Massachusetts insurance terminology (auto insurance, healthcare)
+- [x] Research Michigan no-fault auto insurance terms (PIP, MCCA)
+- [x] Research Hawaii insurance terms (hurricane, volcanic coverage)
+- [x] Research North Carolina insurance programs and terminology
+- [x] Research South Carolina coastal insurance terms
+- [x] Add New York-specific insurance terms to glossary (MVAIC, Financially Irresponsible Motorist, Regulation 62)
+- [x] Add Massachusetts-specific insurance terms to glossary (Managed Competition)
+- [x] Add Michigan-specific insurance terms to glossary (MCCA, Michigan Catastrophic Claims Association, Unlimited PIP)
+- [x] Add Hawaii-specific insurance terms to glossary (Lava Zone, HPIA, HHRF, Volcanic Eruption Coverage)
+- [x] Add North Carolina-specific insurance terms to glossary (NCRB, Rate Bureau, Beach Plan)
+- [x] Add South Carolina-specific insurance terms to glossary (Wind Pool)
+- [x] Test all new state-specific terms in search (verified MCCA, Lava Zone, Wind Pool, MVAIC, HPIA, Beach Plan all working perfectly)
