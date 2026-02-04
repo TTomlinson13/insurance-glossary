@@ -1501,7 +1501,158 @@ export const glossaryTerms: GlossaryTerm[] = [
     category: "Property",
     relatedTerms: ["LOMA","FIRM","Base Flood Elevation","Elevation Certificate"]
   },
+  {
+    term: "Lloyd's of London",
+    definition: "The world's specialist insurance and reinsurance marketplace, established in London in the 17th century. Lloyd's is not itself an insurance company but rather a marketplace where members join together in syndicates to underwrite insurance risks. The market separates capital provision (members) from underwriting expertise (managing agents). Lloyd's operates through a unique three-tier capital structure called the Chain of Security, which backs all policies written through the market. The Corporation of Lloyd's provides infrastructure and regulatory oversight, while syndicates conduct the actual underwriting. Lloyd's is known for insuring unique, complex, and high-value risks that may be difficult to place in standard markets.",
+    category: "Industry",
+    relatedTerms: ["Syndicate","Managing Agent","Coverholder","Excess and Surplus Lines"]
+  },
+  {
+    term: "Syndicate",
+    definition: "A Lloyd's syndicate is formed by one or more members joining together to accept insurance risks at Lloyd's of London. Each syndicate sets its own appetite for risk, develops a business plan, arranges reinsurance protection, and manages exposures and claims. A syndicate is not a legal entity and is formed for a single calendar year called a year of account. At the end of the year, it may reform with identical or similar membership. Syndicates are managed by Managing Agents who employ underwriters and oversee day-to-day operations. Each syndicate is identified by a unique number and operates independently within the Lloyd's marketplace.",
+    category: "Industry",
+    relatedTerms: ["Lloyd's of London","Managing Agent","Active Underwriter","Year of Account"]
+  },
+  {
+    term: "Managing Agent",
+    definition: "A company authorized and regulated by the UK's Prudential Regulation Authority (PRA) and Financial Conduct Authority (FCA), as well as Lloyd's, that manages one or more syndicates on behalf of members at Lloyd's of London. Managing agents employ underwriters, oversee underwriting operations, manage infrastructure, handle day-to-day syndicate operations, and ensure compliance with regulatory requirements. They act as the operational arm of Lloyd's syndicates, executing the business plan and managing the syndicate's exposures and claims on behalf of the capital-providing members.",
+    category: "Industry",
+    relatedTerms: ["Syndicate","Lloyd's of London","Active Underwriter","Coverholder"]
+  },
+  {
+    term: "Coverholder",
+    definition: "A company or partnership authorized by a Lloyd's Managing Agent to enter into contracts of insurance to be underwritten by syndicate members. Coverholders act as agents of the managing agent (not the policyholder) under a binding authority agreement. This delegation allows the coverholder to issue policies and handle claims within specified parameters without referring each risk back to the syndicate. Coverholders are typically located in markets outside London and provide local market access and expertise. They must comply with Lloyd's standards and are subject to oversight by the managing agent.",
+    category: "Industry",
+    relatedTerms: ["Binding Authority","Managing Agent","Lloyd's of London","Syndicate"]
+  },
+  {
+    term: "Binding Authority",
+    definition: "An agreement between a Lloyd's Managing Agent and a Coverholder under which the Managing Agent delegates authority to enter into contracts of insurance on behalf of syndicate members. The binding authority specifies the types of risks that can be underwritten, premium limits, terms and conditions, claims handling procedures, and reporting requirements. This arrangement allows coverholders to bind coverage immediately without seeking approval for each individual risk, providing efficiency and local market responsiveness while maintaining oversight and control parameters set by the managing agent.",
+    category: "Industry",
+    relatedTerms: ["Coverholder","Managing Agent","Lloyd's of London","Delegated Authority"]
+  },
+  {
+    term: "Active Underwriter",
+    definition: "The individual at the underwriting box within Lloyd's of London with principal authority to accept insurance and reinsurance risk on behalf of the members of a syndicate. The active underwriter is responsible for setting underwriting strategy, making binding decisions on risks presented by Lloyd's brokers, managing the syndicate's portfolio, and ensuring that underwriting activities align with the syndicate's business plan and risk appetite. This role requires deep technical expertise, market knowledge, and strong decision-making capabilities as the active underwriter's choices directly impact syndicate performance and member returns.",
+    category: "Industry",
+    relatedTerms: ["Syndicate","Underwriting Box","Lloyd's Broker","Managing Agent"]
+  },
+  {
+    term: "Lloyd's Broker",
+    definition: "An accredited broker authorized to place insurance business at Lloyd's of London. Lloyd's brokers act on behalf of policyholders to negotiate terms with syndicates and secure coverage. They present risks to active underwriters at the underwriting box, negotiate premiums and terms, and coordinate placement across multiple syndicates when risks are shared. Lloyd's brokers must meet strict accreditation requirements and maintain professional standards. They serve as the critical intermediary between clients seeking coverage and the syndicates willing to underwrite risks, leveraging market relationships and technical expertise to achieve optimal placements.",
+    category: "Industry",
+    relatedTerms: ["Lloyd's of London","Syndicate","Active Underwriter","Underwriting Box"]
+  },
+  {
+    term: "Underwriting Box",
+    definition: "The physical location (desk or area) within the Lloyd's of London building where syndicate underwriters sit and where Lloyd's brokers meet them to place insurance risks. The underwriting box is where face-to-face negotiations occur, terms are discussed, and coverage decisions are made. Each syndicate maintains its own underwriting box, and the active underwriter conducts business from this location. While much Lloyd's business has moved to electronic platforms, the underwriting box remains an iconic feature of the Lloyd's marketplace and continues to facilitate complex risk placements that benefit from direct negotiation and relationship-based underwriting.",
+    category: "Industry",
+    relatedTerms: ["Active Underwriter","Lloyd's Broker","Syndicate","Lloyd's of London"]
+  },
+  {
+    term: "Excess and Surplus Lines",
+    definition: "The non-admitted insurance market for risks that cannot be placed in the standard admitted market due to unique characteristics, high risk, or lack of available coverage. Excess and surplus lines insurers are not licensed (admitted) in the state where the risk is located, which provides them flexibility in rates and policy forms not subject to state prior approval requirements. However, they must meet financial requirements and are listed on state-approved eligible surplus lines insurer lists. The E&S market serves as a critical safety valve for the insurance system, providing coverage for unique, high-risk, or emerging exposures. Common E&S placements include high-value properties, unusual liability risks, and specialized commercial coverages. The U.S. surplus lines market exceeded $131 billion in direct premiums written in 2024, representing approximately 12% of the total property and casualty market.",
+    category: "Industry",
+    relatedTerms: ["Non-Admitted Insurance","Surplus Lines Broker","Diligent Search","Admitted Carrier"]
+  },
+  {
+    term: "Non-Admitted Insurance",
+    definition: "Insurance placed with carriers not licensed (admitted) in the state where the insured risk is located. Non-admitted insurers, also called surplus lines insurers, are not subject to state rate and form approval requirements, giving them flexibility to underwrite unique or high-risk exposures. However, they must meet financial requirements and be listed on the state's approved eligible surplus lines insurer list. Non-admitted policies are not protected by state guaranty funds in the event of insurer insolvency, though historical insolvency rates for surplus lines carriers are low. Non-admitted insurance can only be placed after a surplus lines broker conducts a diligent search in the admitted market and documents that coverage is not available from admitted carriers.",
+    category: "Industry",
+    relatedTerms: ["Excess and Surplus Lines","Admitted Carrier","Surplus Lines Broker","Guaranty Fund"]
+  },
+  {
+    term: "Surplus Lines Broker",
+    definition: "A specially licensed insurance broker authorized to place insurance with non-admitted (surplus lines) carriers. Surplus lines brokers must hold a surplus lines license in addition to a standard insurance broker license. Before placing coverage in the surplus lines market, the broker is required to conduct a diligent search to demonstrate that coverage is not available from admitted carriers in the standard market. The surplus lines broker is responsible for ensuring the surplus lines insurer meets state eligibility criteria, collecting and remitting surplus lines premium taxes to the state, and providing required filings and documentation. They serve as the critical link between clients with hard-to-place risks and the non-admitted insurance market.",
+    category: "Industry",
+    relatedTerms: ["Excess and Surplus Lines","Diligent Search","Surplus Lines Tax","Non-Admitted Insurance"]
+  },
+  {
+    term: "Diligent Search",
+    definition: "The requirement that a surplus lines broker must make a good-faith effort to place insurance coverage with admitted carriers in the standard market before resorting to the non-admitted (surplus lines) market. The diligent search typically requires the broker to contact a specified number of admitted insurers (often three or more, depending on state requirements) and document their declinations or inability to provide adequate coverage. The broker must maintain records of the search efforts, including which carriers were contacted, dates of contact, and reasons for declination. This requirement protects the admitted market and ensures that surplus lines are used only when standard market options are genuinely unavailable.",
+    category: "Industry",
+    relatedTerms: ["Surplus Lines Broker","Excess and Surplus Lines","Admitted Carrier","Non-Admitted Insurance"]
+  },
+  {
+    term: "Surplus Lines Tax",
+    definition: "A tax imposed by states on surplus lines (non-admitted) insurance premiums, typically ranging from 2% to 6% of the premium amount. The surplus lines tax is collected by the surplus lines broker at the time of policy placement and remitted to the state where the insured risk is located (the 'home state' under the Nonadmitted and Reinsurance Reform Act). This tax serves as a substitute for the premium taxes that admitted insurers pay. The broker is responsible for calculating, collecting, and remitting the tax, along with required filings documenting the placement. Stamping offices often facilitate the collection and distribution of surplus lines taxes across multiple states.",
+    category: "Industry",
+    relatedTerms: ["Surplus Lines Broker","Excess and Surplus Lines","Stamping Office","Non-Admitted Insurance"]
+  },
+  {
+    term: "Admitted Carrier",
+    definition: "An insurance company that is licensed by a state's insurance department to do business in that state. Admitted carriers must comply with state regulations including rate and form approval requirements, financial solvency standards, and market conduct rules. Their policies are backed by the state guaranty fund, which provides protection to policyholders in the event of insurer insolvency. Admitted carriers file rates and policy forms with state regulators for approval before use. They are subject to regular financial examinations and must meet ongoing reporting requirements. The admitted market represents the standard insurance marketplace, as distinguished from the surplus lines (non-admitted) market.",
+    category: "Industry",
+    relatedTerms: ["Non-Admitted Insurance","Excess and Surplus Lines","Guaranty Fund","Certificate of Authority"]
+  },
+  {
+    term: "Stamping Office",
+    definition: "An organization that collects surplus lines premium taxes, fees, and required filings on behalf of surplus lines brokers and forwards them to state regulatory authorities. Stamping offices serve as clearinghouses that simplify the administrative burden of multi-state surplus lines placements by providing a centralized point for tax collection and regulatory compliance. They verify that surplus lines insurers are eligible to write business in the applicable states, validate diligent search documentation, and ensure proper tax calculation and remittance. The Surplus Line Taxes and Fees Multi-State Compliance Compact (SLTC) is a prominent example of a stamping office that facilitates compliance across multiple jurisdictions.",
+    category: "Industry",
+    relatedTerms: ["Surplus Lines Tax","Surplus Lines Broker","Excess and Surplus Lines","NAIC"]
+  },
+  {
+    term: "NAIC",
+    definition: "The National Association of Insurance Commissioners, an organization of state insurance regulators from all 50 states, the District of Columbia, and U.S. territories. The NAIC develops model laws and regulations, provides regulatory support and education, maintains insurance industry databases, and coordinates regulatory oversight across jurisdictions. While the NAIC itself does not have regulatory authority, its model acts and guidelines are frequently adopted by state legislatures and insurance departments, creating consistency in insurance regulation across the United States. The NAIC oversees initiatives including risk-based capital standards, financial reporting requirements, market conduct standards, and the Quarterly Listing of Alien Insurers eligible for surplus lines placements.",
+    category: "Industry",
+    relatedTerms: ["Admitted Carrier","Surplus Lines Broker","Risk-Based Capital","State Insurance Department"]
+  },
+  {
+    term: "Guaranty Fund",
+    definition: "A funding mechanism employed by states to provide funds to cover policyholder obligations of insolvent insurance companies. State guaranty associations are established by state law and funded by assessments on insurance companies licensed in that state. When an admitted insurer becomes insolvent, the guaranty fund steps in to pay covered claims up to statutory limits, ensuring policyholders receive benefits they were promised. Coverage limits vary by state but typically range from $300,000 to $500,000 per claim. Guaranty fund protection applies only to policies issued by admitted carriers; surplus lines (non-admitted) insurance is not covered by guaranty funds. All licensed insurers in a state are required to participate in and contribute to the state guaranty association.",
+    category: "Industry",
+    relatedTerms: ["Admitted Carrier","Non-Admitted Insurance","Insolvency","State Insurance Department"]
+  },
+  {
+    term: "Alien Insurer",
+    definition: "An insurance company formed according to the laws of a foreign country (outside the United States). To legally sell insurance products in a U.S. state, an alien insurer must conform to that state's regulatory standards and obtain necessary approvals. Alien insurers may write business as admitted carriers (if licensed in the state) or as surplus lines carriers (if listed on the NAIC Quarterly Listing of Alien Insurers). Lloyd's of London syndicates are classified as alien insurers when writing business in the United States. Alien insurers must meet financial requirements, maintain trust funds or letters of credit in the U.S., and comply with applicable state regulations to maintain their eligibility.",
+    category: "Industry",
+    relatedTerms: ["Lloyd's of London","Non-Admitted Insurance","NAIC","Foreign Insurer"]
+  },
+  {
+    term: "Year of Account",
+    definition: "The calendar year in which an insurance policy is written at Lloyd's of London. All premiums and claims from policies incepting in a specific year are allocated to that year of account, regardless of when claims are paid. Years of account run for a minimum of 36 months before being closed through a process called Reinsurance to Close (RITC), which transfers all remaining liabilities to a subsequent year of account. This accounting method allows Lloyd's syndicates to assess the profitability of each underwriting year separately and provides a mechanism for managing long-tail liabilities. The year of account system is unique to Lloyd's and differs from standard annual accounting used by traditional insurance companies.",
+    category: "Industry",
+    relatedTerms: ["Syndicate","Lloyd's of London","Reinsurance to Close","Underwriting Year"]
+  },
+  {
+    term: "Admitted Company",
+    definition: "An insurance company licensed to do business in a state, even if domiciled in an alternative state or country. Admitted companies hold a Certificate of Authority from the state insurance department, allowing them to write policies for risks located in that state. They must comply with all state regulations including rate and form filings, financial reporting, market conduct standards, and participation in the state guaranty fund. Admitted companies are subject to the state's regulatory oversight and examination authority. The term 'admitted' distinguishes these licensed carriers from 'non-admitted' or surplus lines insurers that are not licensed in the state but may write business under surplus lines laws.",
+    category: "Industry",
+    relatedTerms: ["Certificate of Authority","Non-Admitted Insurance","Guaranty Fund","Domiciliary State"]
+  },
+  {
+    term: "Certificate of Authority",
+    definition: "A license issued by a state insurance department that authorizes an insurance company to transact insurance business in that state. Also called a license to do business, the certificate of authority is granted after the insurer demonstrates it meets the state's financial, organizational, and regulatory requirements. The certificate specifies which lines of insurance the company is authorized to write. Insurers must maintain compliance with ongoing requirements including financial reporting, examinations, and solvency standards to keep their certificate of authority in force. Companies holding a certificate of authority in a state are considered 'admitted' carriers in that state and are subject to full state regulatory oversight.",
+    category: "Industry",
+    relatedTerms: ["Admitted Company","State Insurance Department","Domiciliary State","Foreign Insurer"]
+  },
+  {
+    term: "Domiciliary State",
+    definition: "The state in which an insurance company is incorporated or organized. The domiciliary state has primary regulatory authority over the insurer, including conducting financial examinations, approving corporate changes, and overseeing solvency. The domiciliary state insurance department serves as the lead regulator even when the company is licensed to do business in multiple states. If an insurer becomes insolvent, the domiciliary state's insurance commissioner typically serves as the receiver or liquidator. Insurers must comply with the insurance laws and regulations of their domiciliary state as well as any other states where they are licensed to write business (called 'foreign' states from the insurer's perspective).",
+    category: "Industry",
+    relatedTerms: ["Admitted Company","Foreign Insurer","State Insurance Department","Certificate of Authority"]
+  },
+  {
+    term: "Foreign Insurer",
+    definition: "An insurance company that is licensed to do business in a state other than its domiciliary state. From the perspective of any given state, a 'foreign' insurer is one incorporated or organized in a different U.S. state. For example, a company domiciled in Connecticut writing business in New York would be considered a foreign insurer in New York. Foreign insurers must obtain a Certificate of Authority from each state where they wish to write business and comply with that state's regulatory requirements. This term is distinct from 'alien insurer,' which refers to companies formed in countries outside the United States. Most insurance companies operate as foreign insurers in multiple states beyond their domiciliary state.",
+    category: "Industry",
+    relatedTerms: ["Domiciliary State","Alien Insurer","Certificate of Authority","Admitted Company"]
+  },
+  {
+    term: "Advisory Organization",
+    definition: "A group supported by member insurance companies whose function is to gather loss statistics, develop loss costs and rating information, and make this data available to members. Advisory organizations also file rates on behalf of smaller insurance companies and develop standardized policy forms. Examples include the Insurance Services Office (ISO) and the National Council on Compensation Insurance (NCCI). These organizations provide actuarial services, research, and statistical analysis that help insurers price policies accurately and comply with regulatory requirements. Unlike rating bureaus of the past, modern advisory organizations provide information and recommendations but do not set mandatory rates; each insurer makes independent pricing decisions based on the advisory data.",
+    category: "Industry",
+    relatedTerms: ["Rating Bureau","Loss Costs","ISO","Actuarial Data"]
+  },
+  {
+    term: "Risk-Based Capital",
+    definition: "A regulatory framework that requires insurance companies to maintain capital reserves proportional to the risks inherent in their business operations. The NAIC Risk-Based Capital (RBC) system calculates minimum capital requirements based on four categories of risk: asset risk (investments), underwriting risk (pricing and reserving), credit risk (reinsurance and other recoverables), and off-balance sheet risk. Insurers must file annual RBC reports, and regulatory intervention is triggered if an insurer's actual capital falls below specified RBC thresholds. The RBC ratio compares an insurer's total adjusted capital to its risk-based capital requirement. Ratios below certain levels trigger increasingly severe regulatory actions, from company action level (200%) to mandatory control level (70%), where regulators must place the insurer under regulatory control.",
+    category: "Industry",
+    relatedTerms: ["NAIC","Solvency","Capital and Surplus","Financial Examination"]
+  }
 ];
+
 
 export const categoryColors: Record<string, string> = {
   Auto: "oklch(0.65 0.15 35)",

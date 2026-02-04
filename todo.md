@@ -259,3 +259,58 @@
 - [ ] Add Coastal High Hazard Area (detailed V Zone)
 - [x] Add Floodplain definition
 - [x] Test all new terms in search and autocomplete (verified LFE, DFE, BFD, Freeboard, Substantial Improvement/Damage, CRS, LOMA all working)
+
+## Add Lloyd's of London and Excess & Surplus Lines Terms
+- [x] Add Lloyd's of London definition
+- [x] Add Syndicate definition
+- [x] Add Managing Agent definition
+- [ ] Add Members' Agent definition
+- [ ] Add Name (Lloyd's) definition
+- [x] Add Coverholder definition
+- [x] Add Binding Authority definition
+- [x] Add Excess and Surplus Lines definition
+- [x] Add Non-Admitted Insurance definition
+- [x] Add Surplus Lines Broker definition
+- [x] Add Surplus Lines Tax definition
+- [x] Add NAIC (National Association of Insurance Commissioners)
+- [x] Add Diligent Search definition
+- [x] Add Admitted Carrier definition
+- [x] Add Stamping Office definition
+- [ ] Add SLTC (Surplus Line Tax Clearinghouse)
+- [ ] Add Lloyd's Slip definition
+- [x] Add Underwriting Box definition
+- [x] Add Active Underwriter definition
+- [x] Add Lloyd's Broker definition
+- [x] Add Year of Account definition
+- [x] Add Guaranty Fund definition
+- [x] Add Alien Insurer definition
+- [x] Add Admitted Company definition
+- [x] Add Certificate of Authority definition
+- [x] Add Domiciliary State definition
+- [x] Add Foreign Insurer definition
+- [x] Add Advisory Organization definition
+- [x] Add Risk-Based Capital definition
+- [x] Test all new terms in search and autocomplete (verified Lloyd's, Syndicate, Surplus Lines, NAIC, Guaranty Fund all working)
+
+## Research and Add NAIC Glossary Terms
+- [x] Research NAIC official glossary of insurance terms
+- [x] Add regulatory and compliance terms from NAIC (25 total terms added)
+- [x] Add state insurance department related terms
+- [x] Add guaranty fund and solvency terms
+- [x] Add rate filing and form approval terms
+- [x] Test all new NAIC terms in search (verified NAIC, Guaranty Fund, Risk-Based Capital working)
+
+## Research and Add State-Specific Insurance Terms
+- [ ] Research New York insurance department glossary and unique terms
+- [ ] Research Massachusetts insurance terminology (auto insurance, healthcare)
+- [ ] Research Michigan no-fault auto insurance terms (PIP, MCCA)
+- [ ] Research Hawaii insurance terms (hurricane, volcanic coverage)
+- [ ] Research North Carolina insurance programs and terminology
+- [ ] Research South Carolina coastal insurance terms
+- [ ] Add New York-specific insurance terms to glossary
+- [ ] Add Massachusetts-specific insurance terms to glossary
+- [ ] Add Michigan-specific insurance terms to glossary
+- [ ] Add Hawaii-specific insurance terms to glossary
+- [ ] Add North Carolina-specific insurance terms to glossary
+- [ ] Add South Carolina-specific insurance terms to glossary
+- [ ] Test all new state-specific terms in search
