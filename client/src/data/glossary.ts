@@ -2055,6 +2055,166 @@ export const glossaryTerms: GlossaryTerm[] = [
     relatedTerms: ["Reinsurance", "Settlement", "Contract Termination"],
     termEs: "Conmutación",
     definitionEs: "La terminación de un contrato de reaseguro por acuerdo mutuo, donde el reasegurador paga una suma global negociada para liquidar todas las obligaciones actuales y futuras bajo el contrato. Esto proporciona finalidad y elimina costos administrativos continuos para ambas partes."
+  },
+  {
+    term: "Subrogation",
+    definition: "The legal right of an insurance company to pursue a third party that caused an insurance loss to the insured, allowing the insurer to recover the amount of the claim paid to the insured. This right is transferred from the insured to the insurer upon payment of the claim.",
+    category: "Claims",
+    relatedTerms: ["Third Party Claim", "Recovery", "Reimbursement"],
+    termEs: "Subrogación",
+    definitionEs: "El derecho legal de una compañía de seguros de perseguir a un tercero que causó una pérdida asegurada al asegurado, permitiendo al asegurador recuperar el monto del reclamo pagado al asegurado. Este derecho se transfiere del asegurado al asegurador al pagar el reclamo."
+  },
+  {
+    term: "Salvage",
+    definition: "Property that remains after an insurance claim has been paid, which the insurance company may take ownership of to offset the claim payment. Common in total loss situations where damaged property still has residual value.",
+    category: "Claims",
+    relatedTerms: ["Total Loss", "Actual Cash Value", "Recovery"],
+    termEs: "Salvamento",
+    definitionEs: "Propiedad que permanece después de que se ha pagado un reclamo de seguro, de la cual la compañía de seguros puede tomar posesión para compensar el pago del reclamo. Común en situaciones de pérdida total donde la propiedad dañada aún tiene valor residual."
+  },
+  {
+    term: "Proof of Loss",
+    definition: "A formal statement made by the policyholder to the insurance company documenting the amount of loss or damage claimed under an insurance policy. This sworn statement typically includes details of the incident, itemized losses, and supporting documentation.",
+    category: "Claims",
+    relatedTerms: ["Claim", "Documentation", "Loss Assessment"],
+    termEs: "Prueba de Pérdida",
+    definitionEs: "Una declaración formal hecha por el asegurado a la compañía de seguros documentando el monto de la pérdida o daño reclamado bajo una póliza de seguro. Esta declaración jurada típicamente incluye detalles del incidente, pérdidas detalladas y documentación de respaldo."
+  },
+  {
+    term: "Reservation of Rights",
+    definition: "A notice from an insurance company to the insured that coverage for a claim may not apply, while the insurer continues to investigate or defend the claim. This protects the insurer's right to later deny coverage without waiving policy defenses.",
+    category: "Claims",
+    relatedTerms: ["Coverage Denial", "Policy Defense", "Claim Investigation"],
+    termEs: "Reserva de Derechos",
+    definitionEs: "Un aviso de una compañía de seguros al asegurado de que la cobertura para un reclamo puede no aplicar, mientras el asegurador continúa investigando o defendiendo el reclamo. Esto protege el derecho del asegurador de negar cobertura posteriormente sin renunciar a las defensas de la póliza."
+  },
+  {
+    term: "Bad Faith",
+    definition: "An insurance company's unreasonable denial, delay, or underpayment of a valid claim, or failure to properly investigate a claim. Bad faith practices can result in legal action and additional damages beyond the original claim amount.",
+    category: "Claims",
+    relatedTerms: ["Denial of Claim", "Claims Adjudication", "Legal Action"],
+    termEs: "Mala Fe",
+    definitionEs: "La denegación, demora o pago insuficiente no razonable de un reclamo válido por parte de una compañía de seguros, o la falta de investigar adecuadamente un reclamo. Las prácticas de mala fe pueden resultar en acción legal y daños adicionales más allá del monto original del reclamo."
+  },
+  {
+    term: "Independent Adjuster",
+    definition: "A claims adjuster who works as an independent contractor for multiple insurance companies rather than being employed by one specific insurer. Independent adjusters are often used during catastrophic events when claim volume exceeds staff capacity.",
+    category: "Claims",
+    relatedTerms: ["Adjuster", "Claims Investigation", "Staff Adjuster"],
+    termEs: "Ajustador Independiente",
+    definitionEs: "Un ajustador de reclamos que trabaja como contratista independiente para múltiples compañías de seguros en lugar de ser empleado de un asegurador específico. Los ajustadores independientes se utilizan a menudo durante eventos catastróficos cuando el volumen de reclamos excede la capacidad del personal."
+  },
+  {
+    term: "Public Adjuster",
+    definition: "A licensed professional hired by the policyholder (not the insurance company) to assess damage and negotiate the insurance claim on behalf of the insured. Public adjusters typically charge a percentage of the final settlement amount.",
+    category: "Claims",
+    relatedTerms: ["Adjuster", "Claim Settlement", "Loss Assessment"],
+    termEs: "Ajustador Público",
+    definitionEs: "Un profesional licenciado contratado por el asegurado (no por la compañía de seguros) para evaluar daños y negociar el reclamo de seguro en nombre del asegurado. Los ajustadores públicos típicamente cobran un porcentaje del monto final de la liquidación."
+  },
+  {
+    term: "Staff Adjuster",
+    definition: "A claims adjuster who is a salaried employee of a specific insurance company, handling claims exclusively for that insurer. Staff adjusters typically have ongoing training and deep knowledge of their company's policies and procedures.",
+    category: "Claims",
+    relatedTerms: ["Adjuster", "Independent Adjuster", "Claims Investigation"],
+    termEs: "Ajustador de Plantilla",
+    definitionEs: "Un ajustador de reclamos que es empleado asalariado de una compañía de seguros específica, manejando reclamos exclusivamente para ese asegurador. Los ajustadores de plantilla típicamente tienen capacitación continua y conocimiento profundo de las pólizas y procedimientos de su compañía."
+  },
+  {
+    term: "Appraisal Clause",
+    definition: "A provision in an insurance policy that provides a method for resolving disputes over the amount of a loss when the insured and insurer cannot agree. Each party selects an appraiser, and if they disagree, an umpire makes the final decision.",
+    category: "Claims",
+    relatedTerms: ["Dispute Resolution", "Loss Assessment", "Arbitration"],
+    termEs: "Cláusula de Tasación",
+    definitionEs: "Una disposición en una póliza de seguro que proporciona un método para resolver disputas sobre el monto de una pérdida cuando el asegurado y el asegurador no pueden ponerse de acuerdo. Cada parte selecciona un tasador, y si no están de acuerdo, un árbitro toma la decisión final."
+  },
+  {
+    term: "Total Loss",
+    definition: "When the cost to repair damaged property exceeds a specified percentage of its value (typically 70-80%), or when property is completely destroyed. In auto insurance, this is often called a 'totaled' vehicle.",
+    category: "Claims",
+    relatedTerms: ["Actual Cash Value", "Salvage", "Partial Loss"],
+    termEs: "Pérdida Total",
+    definitionEs: "Cuando el costo de reparar la propiedad dañada excede un porcentaje especificado de su valor (típicamente 70-80%), o cuando la propiedad está completamente destruida. En seguro de auto, esto se llama a menudo un vehículo 'totalizado'."
+  },
+  {
+    term: "Partial Loss",
+    definition: "Damage to property where the cost of repairs is less than the total value of the property. The property can be repaired or restored to its pre-loss condition without being declared a total loss.",
+    category: "Claims",
+    relatedTerms: ["Total Loss", "Repair Cost", "Depreciation"],
+    termEs: "Pérdida Parcial",
+    definitionEs: "Daño a la propiedad donde el costo de las reparaciones es menor que el valor total de la propiedad. La propiedad puede ser reparada o restaurada a su condición previa a la pérdida sin ser declarada una pérdida total."
+  },
+  {
+    term: "First Party Claim",
+    definition: "A claim made by the policyholder directly to their own insurance company for coverage under their policy. Examples include collision coverage, comprehensive coverage, or property damage to the insured's own property.",
+    category: "Claims",
+    relatedTerms: ["Third Party Claim", "Policyholder", "Coverage"],
+    termEs: "Reclamo de Primera Parte",
+    definitionEs: "Un reclamo hecho por el asegurado directamente a su propia compañía de seguros para cobertura bajo su póliza. Los ejemplos incluyen cobertura de colisión, cobertura integral o daños a la propiedad del propio asegurado."
+  },
+  {
+    term: "Third Party Claim",
+    definition: "A claim made by someone other than the policyholder against the policyholder's insurance coverage, typically for liability. The third party is seeking compensation for injuries or damages caused by the insured.",
+    category: "Claims",
+    relatedTerms: ["First Party Claim", "Liability", "Subrogation"],
+    termEs: "Reclamo de Terceros",
+    definitionEs: "Un reclamo hecho por alguien que no es el asegurado contra la cobertura de seguro del asegurado, típicamente por responsabilidad. El tercero busca compensación por lesiones o daños causados por el asegurado."
+  },
+  {
+    term: "Claims Adjudication",
+    definition: "The process by which an insurance company reviews, investigates, and makes a decision on a claim. This includes verifying coverage, assessing damages, determining liability, and calculating the settlement amount.",
+    category: "Claims",
+    relatedTerms: ["Claim Settlement", "Loss Assessment", "Coverage Determination"],
+    termEs: "Adjudicación de Reclamos",
+    definitionEs: "El proceso por el cual una compañía de seguros revisa, investiga y toma una decisión sobre un reclamo. Esto incluye verificar la cobertura, evaluar daños, determinar responsabilidad y calcular el monto de la liquidación."
+  },
+  {
+    term: "Loss Assessment",
+    definition: "An evaluation of the extent and value of damage or loss for insurance claim purposes. This assessment determines the amount the insurance company will pay based on policy terms and the actual damage sustained.",
+    category: "Claims",
+    relatedTerms: ["Adjuster", "Proof of Loss", "Claim Settlement"],
+    termEs: "Evaluación de Pérdida",
+    definitionEs: "Una evaluación del alcance y valor del daño o pérdida para propósitos de reclamo de seguro. Esta evaluación determina el monto que la compañía de seguros pagará basándose en los términos de la póliza y el daño real sufrido."
+  },
+  {
+    term: "Supplemental Claim",
+    definition: "An additional claim filed after the initial claim when further damage is discovered or repair costs exceed the original estimate. Also called a reopened claim or additional claim.",
+    category: "Claims",
+    relatedTerms: ["Claim", "Loss Assessment", "Repair Estimate"],
+    termEs: "Reclamo Suplementario",
+    definitionEs: "Un reclamo adicional presentado después del reclamo inicial cuando se descubre más daño o los costos de reparación exceden la estimación original. También llamado reclamo reabierto o reclamo adicional."
+  },
+  {
+    term: "Denial of Claim",
+    definition: "The insurance company's decision to refuse payment on a claim, typically due to policy exclusions, lack of coverage, failure to meet policy conditions, or determination that the loss is not covered under the policy terms.",
+    category: "Claims",
+    relatedTerms: ["Bad Faith", "Reservation of Rights", "Coverage Exclusion"],
+    termEs: "Denegación de Reclamo",
+    definitionEs: "La decisión de la compañía de seguros de rechazar el pago de un reclamo, típicamente debido a exclusiones de la póliza, falta de cobertura, incumplimiento de condiciones de la póliza o determinación de que la pérdida no está cubierta bajo los términos de la póliza."
+  },
+  {
+    term: "Claim Settlement",
+    definition: "The final resolution of an insurance claim, including the payment amount and terms agreed upon between the insurer and insured. Settlement can be reached through negotiation, appraisal, arbitration, or litigation.",
+    category: "Claims",
+    relatedTerms: ["Claims Adjudication", "Payment", "Negotiation"],
+    termEs: "Liquidación de Reclamo",
+    definitionEs: "La resolución final de un reclamo de seguro, incluyendo el monto del pago y los términos acordados entre el asegurador y el asegurado. La liquidación puede alcanzarse mediante negociación, tasación, arbitraje o litigio."
+  },
+  {
+    term: "Demand Letter",
+    definition: "A formal written request from the insured or their attorney to the insurance company demanding payment of a claim or specifying the amount sought. Often used when initial claim negotiations have stalled or been denied.",
+    category: "Claims",
+    relatedTerms: ["Claim Settlement", "Legal Action", "Negotiation"],
+    termEs: "Carta de Demanda",
+    definitionEs: "Una solicitud formal por escrito del asegurado o su abogado a la compañía de seguros exigiendo el pago de un reclamo o especificando el monto solicitado. A menudo se usa cuando las negociaciones iniciales del reclamo se han estancado o sido denegadas."
+  },
+  {
+    term: "Estoppel",
+    definition: "A legal principle preventing an insurance company from denying coverage if they previously led the insured to believe coverage existed. This protects policyholders from insurers changing their position after the insured has relied on prior representations.",
+    category: "Claims",
+    relatedTerms: ["Bad Faith", "Coverage", "Legal Doctrine"],
+    termEs: "Impedimento Legal",
+    definitionEs: "Un principio legal que impide que una compañía de seguros niegue cobertura si previamente llevó al asegurado a creer que existía cobertura. Esto protege a los asegurados de que los aseguradores cambien su posición después de que el asegurado haya confiado en representaciones previas."
   }
 ];
 
