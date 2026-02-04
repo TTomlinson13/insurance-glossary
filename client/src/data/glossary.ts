@@ -1895,6 +1895,166 @@ export const glossaryTerms: GlossaryTerm[] = [
     relatedTerms: ["In-Network", "Out-of-Network", "PPO", "HMO"],
     termEs: "Red de Proveedores",
     definitionEs: "En el seguro de salud, un grupo de proveedores de atención médica (médicos, hospitales, farmacias) que han contratado con una compañía de seguros para proporcionar servicios a tarifas con descuento a los miembros del plan. Usar proveedores dentro de la red generalmente resulta en costos de bolsillo más bajos."
+  },
+  {
+    term: "Reinsurance",
+    definition: "Insurance purchased by an insurance company (the ceding company) from another insurance company (the reinsurer) to transfer risk and protect against large losses. Reinsurance allows insurers to underwrite policies covering higher risks and larger amounts than they could handle independently.",
+    category: "Industry",
+    relatedTerms: ["Ceding Company", "Reinsurer", "Risk Transfer", "Treaty Reinsurance"],
+    termEs: "Reaseguro",
+    definitionEs: "Seguro comprado por una compañía de seguros (la compañía cedente) de otra compañía de seguros (el reasegurador) para transferir riesgo y protegerse contra grandes pérdidas. El reaseguro permite a las aseguradoras suscribir pólizas que cubren riesgos más altos y montos más grandes de lo que podrían manejar independientemente."
+  },
+  {
+    term: "Facultative Reinsurance",
+    definition: "A form of reinsurance where the reinsurer evaluates each individual risk separately and decides whether to accept or reject coverage on a case-by-case basis. This provides flexibility but requires negotiation for each policy.",
+    category: "Industry",
+    relatedTerms: ["Reinsurance", "Treaty Reinsurance", "Underwriting"],
+    termEs: "Reaseguro Facultativo",
+    definitionEs: "Una forma de reaseguro donde el reasegurador evalúa cada riesgo individual por separado y decide si acepta o rechaza la cobertura caso por caso. Esto proporciona flexibilidad pero requiere negociación para cada póliza."
+  },
+  {
+    term: "Treaty Reinsurance",
+    definition: "A reinsurance agreement where the reinsurer automatically accepts all risks within a defined category that the ceding company underwrites, without evaluating each risk individually. This provides automatic coverage for a portfolio of policies.",
+    category: "Industry",
+    relatedTerms: ["Reinsurance", "Facultative Reinsurance", "Ceding Company"],
+    termEs: "Reaseguro por Tratado",
+    definitionEs: "Un acuerdo de reaseguro donde el reasegurador acepta automáticamente todos los riesgos dentro de una categoría definida que la compañía cedente suscribe, sin evaluar cada riesgo individualmente. Esto proporciona cobertura automática para una cartera de pólizas."
+  },
+  {
+    term: "Retrocession",
+    definition: "The practice of a reinsurer transferring some of its assumed risk to another reinsurer (called a retrocessionaire) to further spread risk. This is essentially reinsurance for reinsurers.",
+    category: "Industry",
+    relatedTerms: ["Reinsurance", "Reinsurer", "Risk Transfer"],
+    termEs: "Retrocesión",
+    definitionEs: "La práctica de un reasegurador de transferir parte de su riesgo asumido a otro reasegurador (llamado retrocesionario) para distribuir aún más el riesgo. Esto es esencialmente reaseguro para reaseguradores."
+  },
+  {
+    term: "Ceding Company",
+    definition: "The primary insurance company that purchases reinsurance to transfer part of its risk to a reinsurer. The ceding company retains a portion of the risk and cedes the remainder to the reinsurer.",
+    category: "Industry",
+    relatedTerms: ["Reinsurance", "Reinsurer", "Ceding Commission", "Retention"],
+    termEs: "Compañía Cedente",
+    definitionEs: "La compañía de seguros primaria que compra reaseguro para transferir parte de su riesgo a un reasegurador. La compañía cedente retiene una porción del riesgo y cede el resto al reasegurador."
+  },
+  {
+    term: "Ceding Commission",
+    definition: "A fee paid by the reinsurer to the ceding company to cover the ceding company's acquisition costs, administrative expenses, and profit margin. This compensates the ceding company for originating and servicing the business.",
+    category: "Industry",
+    relatedTerms: ["Reinsurance", "Ceding Company", "Premium"],
+    termEs: "Comisión de Cesión",
+    definitionEs: "Una tarifa pagada por el reasegurador a la compañía cedente para cubrir los costos de adquisición, gastos administrativos y margen de beneficio de la compañía cedente. Esto compensa a la compañía cedente por originar y dar servicio al negocio."
+  },
+  {
+    term: "Reinsurer",
+    definition: "An insurance company that assumes risk from another insurance company through a reinsurance agreement. The reinsurer provides financial protection to the ceding company against large or catastrophic losses.",
+    category: "Industry",
+    relatedTerms: ["Reinsurance", "Ceding Company", "Risk Transfer"],
+    termEs: "Reasegurador",
+    definitionEs: "Una compañía de seguros que asume riesgo de otra compañía de seguros a través de un acuerdo de reaseguro. El reasegurador proporciona protección financiera a la compañía cedente contra pérdidas grandes o catastróficas."
+  },
+  {
+    term: "Quota Share",
+    definition: "A proportional reinsurance arrangement where the reinsurer accepts a fixed percentage of every policy written by the ceding company, sharing premiums and losses proportionally. For example, in a 40% quota share, the reinsurer receives 40% of premiums and pays 40% of losses.",
+    category: "Industry",
+    relatedTerms: ["Proportional Reinsurance", "Surplus Share", "Treaty Reinsurance"],
+    termEs: "Cuota Parte",
+    definitionEs: "Un arreglo de reaseguro proporcional donde el reasegurador acepta un porcentaje fijo de cada póliza escrita por la compañía cedente, compartiendo primas y pérdidas proporcionalmente. Por ejemplo, en una cuota parte del 40%, el reasegurador recibe el 40% de las primas y paga el 40% de las pérdidas."
+  },
+  {
+    term: "Surplus Share",
+    definition: "A proportional reinsurance arrangement where the reinsurer covers the amount of risk that exceeds the ceding company's retention limit, up to a specified multiple. This allows the ceding company to write larger policies while maintaining consistent retention levels.",
+    category: "Industry",
+    relatedTerms: ["Proportional Reinsurance", "Quota Share", "Retention"],
+    termEs: "Excedente de Suma",
+    definitionEs: "Un arreglo de reaseguro proporcional donde el reasegurador cubre la cantidad de riesgo que excede el límite de retención de la compañía cedente, hasta un múltiplo especificado. Esto permite a la compañía cedente escribir pólizas más grandes mientras mantiene niveles de retención consistentes."
+  },
+  {
+    term: "Excess of Loss",
+    definition: "A non-proportional reinsurance arrangement where the reinsurer pays losses that exceed a specified amount (attachment point), up to a maximum limit. The reinsurer only responds when losses exceed the retention, regardless of premium sharing.",
+    category: "Industry",
+    relatedTerms: ["Non-Proportional Reinsurance", "Attachment Point", "Retention"],
+    termEs: "Exceso de Pérdida",
+    definitionEs: "Un arreglo de reaseguro no proporcional donde el reasegurador paga pérdidas que exceden una cantidad especificada (punto de adhesión), hasta un límite máximo. El reasegurador solo responde cuando las pérdidas exceden la retención, independientemente del reparto de primas."
+  },
+  {
+    term: "Stop Loss",
+    definition: "A form of reinsurance that protects the ceding company against an aggregate amount of losses exceeding a specified percentage of premiums during a defined period, typically one year. This protects against unexpectedly high loss ratios.",
+    category: "Industry",
+    relatedTerms: ["Reinsurance", "Aggregate Limit", "Loss Ratio"],
+    termEs: "Stop Loss / Límite de Pérdida",
+    definitionEs: "Una forma de reaseguro que protege a la compañía cedente contra una cantidad agregada de pérdidas que excede un porcentaje especificado de primas durante un período definido, típicamente un año. Esto protege contra ratios de pérdida inesperadamente altos."
+  },
+  {
+    term: "Catastrophe Reinsurance",
+    definition: "Reinsurance coverage that protects against losses from catastrophic events such as hurricanes, earthquakes, or floods that affect multiple policies simultaneously. Also known as Cat Cover, this protects insurers from events that could threaten their solvency.",
+    category: "Industry",
+    relatedTerms: ["Reinsurance", "Excess of Loss", "Aggregate Limit"],
+    termEs: "Reaseguro Catastrófico",
+    definitionEs: "Cobertura de reaseguro que protege contra pérdidas de eventos catastróficos como huracanes, terremotos o inundaciones que afectan múltiples pólizas simultáneamente. También conocido como Cat Cover, esto protege a las aseguradoras de eventos que podrían amenazar su solvencia."
+  },
+  {
+    term: "Proportional Reinsurance",
+    definition: "A reinsurance arrangement where the reinsurer shares premiums and losses with the ceding company in a fixed proportion. Includes quota share and surplus share arrangements. The reinsurer participates proportionally in both the income and the risk.",
+    category: "Industry",
+    relatedTerms: ["Quota Share", "Surplus Share", "Non-Proportional Reinsurance"],
+    termEs: "Reaseguro Proporcional",
+    definitionEs: "Un arreglo de reaseguro donde el reasegurador comparte primas y pérdidas con la compañía cedente en una proporción fija. Incluye arreglos de cuota parte y excedente de suma. El reasegurador participa proporcionalmente tanto en los ingresos como en el riesgo."
+  },
+  {
+    term: "Non-Proportional Reinsurance",
+    definition: "A reinsurance arrangement where the reinsurer pays only when losses exceed a specified threshold, regardless of premium sharing. Includes excess of loss and stop loss arrangements. The reinsurer's obligation is triggered by the size of the loss, not by a fixed percentage.",
+    category: "Industry",
+    relatedTerms: ["Excess of Loss", "Stop Loss", "Proportional Reinsurance"],
+    termEs: "Reaseguro No Proporcional",
+    definitionEs: "Un arreglo de reaseguro donde el reasegurador paga solo cuando las pérdidas exceden un umbral especificado, independientemente del reparto de primas. Incluye arreglos de exceso de pérdida y stop loss. La obligación del reasegurador se activa por el tamaño de la pérdida, no por un porcentaje fijo."
+  },
+  {
+    term: "Reinsurance Pool",
+    definition: "An arrangement where multiple insurers and reinsurers collectively share risks and losses, typically for high-risk or catastrophic exposures that no single company wants to bear alone. Examples include nuclear energy pools and terrorism risk pools.",
+    category: "Industry",
+    relatedTerms: ["Reinsurance", "Risk Sharing", "Catastrophe Reinsurance"],
+    termEs: "Pool de Reaseguro",
+    definitionEs: "Un arreglo donde múltiples aseguradoras y reaseguradoras comparten colectivamente riesgos y pérdidas, típicamente para exposiciones de alto riesgo o catastróficas que ninguna compañía individual quiere asumir sola. Los ejemplos incluyen pools de energía nuclear y pools de riesgo de terrorismo."
+  },
+  {
+    term: "Retention",
+    definition: "The amount of risk that the ceding company keeps for its own account before reinsurance coverage applies. Also called the deductible or attachment point in some contexts. Higher retention means the ceding company bears more risk but pays lower reinsurance premiums.",
+    category: "Industry",
+    relatedTerms: ["Reinsurance", "Attachment Point", "Ceding Company"],
+    termEs: "Retención",
+    definitionEs: "La cantidad de riesgo que la compañía cedente mantiene por su propia cuenta antes de que se aplique la cobertura de reaseguro. También llamado deducible o punto de adhesión en algunos contextos. Una retención más alta significa que la compañía cedente asume más riesgo pero paga primas de reaseguro más bajas."
+  },
+  {
+    term: "Attachment Point",
+    definition: "The dollar amount of loss at which reinsurance coverage begins to apply in an excess of loss arrangement. For example, if the attachment point is $1 million, the reinsurer only pays losses exceeding $1 million.",
+    category: "Industry",
+    relatedTerms: ["Excess of Loss", "Retention", "Non-Proportional Reinsurance"],
+    termEs: "Punto de Adhesión",
+    definitionEs: "La cantidad en dólares de pérdida en la que la cobertura de reaseguro comienza a aplicarse en un arreglo de exceso de pérdida. Por ejemplo, si el punto de adhesión es $1 millón, el reasegurador solo paga pérdidas que excedan $1 millón."
+  },
+  {
+    term: "Aggregate Limit",
+    definition: "The maximum amount a reinsurer will pay for all covered losses during a specified period, typically one year. Once this limit is reached, the reinsurer has no further obligation to pay losses until the next period begins or the coverage is reinstated.",
+    category: "Industry",
+    relatedTerms: ["Reinsurance", "Reinstatement", "Stop Loss"],
+    termEs: "Límite Agregado",
+    definitionEs: "La cantidad máxima que un reasegurador pagará por todas las pérdidas cubiertas durante un período especificado, típicamente un año. Una vez que se alcanza este límite, el reasegurador no tiene más obligación de pagar pérdidas hasta que comience el próximo período o se restablezca la cobertura."
+  },
+  {
+    term: "Reinstatement",
+    definition: "The restoration of reinsurance coverage after it has been partially or fully exhausted by a loss, usually requiring an additional premium payment. This allows the ceding company to maintain protection after a large loss event without waiting for the next policy period.",
+    category: "Industry",
+    relatedTerms: ["Reinsurance", "Aggregate Limit", "Premium"],
+    termEs: "Restablecimiento",
+    definitionEs: "La restauración de la cobertura de reaseguro después de que ha sido parcial o totalmente agotada por una pérdida, generalmente requiriendo un pago de prima adicional. Esto permite a la compañía cedente mantener protección después de un evento de pérdida grande sin esperar al próximo período de póliza."
+  },
+  {
+    term: "Commutation",
+    definition: "The termination of a reinsurance contract by mutual agreement, where the reinsurer pays a negotiated lump sum to settle all current and future obligations under the contract. This provides finality and eliminates ongoing administrative costs for both parties.",
+    category: "Industry",
+    relatedTerms: ["Reinsurance", "Settlement", "Contract Termination"],
+    termEs: "Conmutación",
+    definitionEs: "La terminación de un contrato de reaseguro por acuerdo mutuo, donde el reasegurador paga una suma global negociada para liquidar todas las obligaciones actuales y futuras bajo el contrato. Esto proporciona finalidad y elimina costos administrativos continuos para ambas partes."
   }
 ];
 
