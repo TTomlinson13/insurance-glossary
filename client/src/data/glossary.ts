@@ -259,12 +259,6 @@ export const glossaryTerms: GlossaryTerm[] = [
     relatedTerms: ["Liability Coverage", "Liability Limit", "Premium"]
   },
   {
-    term: "Flood Insurance",
-    definition: "Specialized insurance coverage for property damage caused by flooding, typically not covered by standard homeowners insurance.",
-    category: "Property",
-    relatedTerms: ["Homeowners Insurance", "Coverage", "Exclusion"]
-  },
-  {
     term: "Homeowners Insurance",
     definition: "Insurance coverage that protects your home and personal property against damage, theft, and liability claims.",
     category: "Property",
@@ -1224,12 +1218,6 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: "Evidence of Commercial Property Insurance form providing detailed information about property coverage, including building values, contents, business interruption, and special coverages.",
     category: "Industry",
     relatedTerms: ["ACORD","Commercial Property Insurance","Business Interruption","Certificate of Insurance"]
-  },
-  {
-    term: "Admitted Carrier",
-    definition: "An insurance company licensed and approved by a state's insurance department to do business in that state, subject to state regulations and backed by state guaranty funds in case of insolvency.",
-    category: "Industry",
-    relatedTerms: ["Non-Admitted Carrier","Surplus Lines","State Insurance Department"]
   },
   {
     term: "Non-Admitted Carrier",

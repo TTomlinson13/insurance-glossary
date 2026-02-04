@@ -314,3 +314,10 @@
 - [x] Add North Carolina-specific insurance terms to glossary (NCRB, Rate Bureau, Beach Plan)
 - [x] Add South Carolina-specific insurance terms to glossary (Wind Pool)
 - [x] Test all new state-specific terms in search (verified MCCA, Lava Zone, Wind Pool, MVAIC, HPIA, Beach Plan all working perfectly)
+
+## Fix Duplicate Term Entries
+- [x] Search for duplicate "Flood Insurance" entries in glossary (found 2)
+- [x] Search for duplicate "Admitted Carrier" entries in glossary (found 2)
+- [x] Remove duplicate entries while keeping best definitions (removed shorter versions)
+- [x] Verify no other duplicate terms exist (confirmed - no duplicates remain)
+- [x] Test to confirm React key errors are resolved (verified - no console errors, search working perfectly)
