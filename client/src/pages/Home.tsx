@@ -79,7 +79,7 @@ export default function Home() {
       <section 
         className="relative py-24 md:py-32 overflow-hidden"
         style={{
-          backgroundImage: "url(/images/hero-bg.png)",
+          backgroundImage: "url(https://files.manuscdn.com/user_upload_by_module/session_file/103860271/CllOIHrnYViGWNXO.png)",
           backgroundSize: "cover",
           backgroundPosition: "center"
         }}

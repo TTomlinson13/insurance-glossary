@@ -94,7 +94,7 @@ export default function ComparePage() {
       <section 
         className="relative py-20 md:py-28 overflow-hidden"
         style={{
-          backgroundImage: "url(/images/hero-bg.png)",
+          backgroundImage: "url(https://files.manuscdn.com/user_upload_by_module/session_file/103860271/CllOIHrnYViGWNXO.png)",
           backgroundSize: "cover",
           backgroundPosition: "center"
         }}

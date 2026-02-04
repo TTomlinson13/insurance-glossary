@@ -38,7 +38,13 @@ export default function TermPage() {
               "name": "Insurance Glossary",
               "description": "Comprehensive insurance terminology guide"
             },
-            "termCode": foundTerm.category
+            "termCode": foundTerm.category,
+            // Add Spanish translation if available
+            ...(foundTerm.termEs && foundTerm.definitionEs ? {
+              "inLanguage": ["en", "es"],
+              "alternateName": foundTerm.termEs,
+              "sameAs": `https://insurance-glossary.manus.space/term/${params.slug}`
+            } : {})
           },
           {
             "@context": "https://schema.org",
@@ -128,6 +134,39 @@ export default function TermPage() {
           document.head.appendChild(canonical);
         }
         canonical.href = `https://insurance-glossary.manus.space/term/${params.slug}`;
+        
+        // Add hreflang tags for bilingual content (if Spanish translation exists)
+        if (foundTerm.termEs && foundTerm.definitionEs) {
+          // English version
+          let hreflangEn = document.querySelector('link[hreflang="en"]') as HTMLLinkElement | null;
+          if (!hreflangEn) {
+            hreflangEn = document.createElement('link');
+            hreflangEn.rel = 'alternate';
+            hreflangEn.hreflang = 'en';
+            document.head.appendChild(hreflangEn);
+          }
+          hreflangEn.href = `https://insurance-glossary.manus.space/term/${params.slug}`;
+          
+          // Spanish version (same URL, content is bilingual)
+          let hreflangEs = document.querySelector('link[hreflang="es"]') as HTMLLinkElement | null;
+          if (!hreflangEs) {
+            hreflangEs = document.createElement('link');
+            hreflangEs.rel = 'alternate';
+            hreflangEs.hreflang = 'es';
+            document.head.appendChild(hreflangEs);
+          }
+          hreflangEs.href = `https://insurance-glossary.manus.space/term/${params.slug}`;
+          
+          // x-default for international users
+          let hreflangDefault = document.querySelector('link[hreflang="x-default"]') as HTMLLinkElement | null;
+          if (!hreflangDefault) {
+            hreflangDefault = document.createElement('link');
+            hreflangDefault.rel = 'alternate';
+            hreflangDefault.hreflang = 'x-default';
+            document.head.appendChild(hreflangDefault);
+          }
+          hreflangDefault.href = `https://insurance-glossary.manus.space/term/${params.slug}`;
+        }
         
         // Find related terms data - combine manual + automatic suggestions
         const manualRelated = foundTerm.relatedTerms
@@ -250,6 +289,24 @@ export default function TermPage() {
                       {term.definition}
                     </p>
                   </div>
+
+                  {/* Spanish Translation Section */}
+                  {term.termEs && term.definitionEs && (
+                    <div className="pt-6 border-t border-border/50">
+                      <div className="flex items-center gap-2 mb-3">
+                        <h2 className="text-xl font-semibold">Definición en Español</h2>
+                        <Badge variant="outline" className="text-xs">ES</Badge>
+                      </div>
+                      <div className="space-y-2">
+                        <p className="text-lg font-medium text-primary">
+                          {term.termEs}
+                        </p>
+                        <p className="text-base leading-relaxed text-foreground/80">
+                          {term.definitionEs}
+                        </p>
+                      </div>
+                    </div>
+                  )}
 
                   {/* Rating Section */}
                   <TermRating termSlug={params?.slug || ""} sessionId={sessionId} />

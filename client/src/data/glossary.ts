@@ -3,6 +3,9 @@ export interface GlossaryTerm {
   definition: string;
   category: 'Auto' | 'Health' | 'Life' | 'Property' | 'General' | 'Claims' | 'Industry' | 'Business';
   relatedTerms?: string[];
+  // Spanish translations (optional - for bilingual support)
+  termEs?: string;
+  definitionEs?: string;
 }
 
 export const glossaryTerms: GlossaryTerm[] = [
@@ -22,61 +25,81 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Actuary",
     definition: "A business professional who analyzes probabilities of risk and risk management, including calculation of premiums, dividends, and other applicable insurance industry standards.",
     category: "Industry",
-    relatedTerms: ["Premium", "Risk", "Underwriting"]
+    relatedTerms: ["Premium", "Risk", "Underwriting"],
+    termEs: "Actuario",
+    definitionEs: "Un profesional de negocios que analiza probabilidades de riesgo y gestión de riesgos, incluyendo el cálculo de primas, dividendos y otros estándares aplicables de la industria de seguros."
   },
   {
     term: "Adjuster",
     definition: "A person who investigates claims and recommends settlement options based on estimates of damage and insurance policies held.",
     category: "Claims",
-    relatedTerms: ["Claim", "Settlement", "Loss"]
+    relatedTerms: ["Claim", "Settlement", "Loss"],
+    termEs: "Ajustador / Perito",
+    definitionEs: "Una persona que investiga reclamos y recomienda opciones de liquidación basadas en estimaciones de daños y pólizas de seguro vigentes."
   },
   {
     term: "Actual Cash Value",
     definition: "The repayment value for indemnification due to loss or damage of property; in most cases it is replacement cost minus depreciation.",
     category: "Property",
-    relatedTerms: ["Replacement Cost", "Depreciation", "Indemnity"]
+    relatedTerms: ["Replacement Cost", "Depreciation", "Indemnity"],
+    termEs: "Valor Real en Efectivo",
+    definitionEs: "El valor de reembolso por indemnización debido a pérdida o daño de propiedad; en la mayoría de los casos es el costo de reemplazo menos la depreciación."
   },
   {
     term: "Beneficiary",
     definition: "The person or entity designated to receive the benefits or proceeds from an insurance policy.",
     category: "Life",
-    relatedTerms: ["Death Benefit", "Policy", "Insured"]
+    relatedTerms: ["Death Benefit", "Policy", "Insured"],
+    termEs: "Beneficiario",
+    definitionEs: "La persona o entidad designada para recibir los beneficios o ganancias de una póliza de seguro."
   },
   {
     term: "Claim",
     definition: "A formal request by a policyholder to an insurance company for coverage or compensation for a covered loss or policy event.",
     category: "Claims",
-    relatedTerms: ["Adjuster", "Coverage", "Deductible"]
+    relatedTerms: ["Adjuster", "Coverage", "Deductible"],
+    termEs: "Reclamo / Reclamación",
+    definitionEs: "Una solicitud formal del asegurado a la compañía de seguros para obtener cobertura o compensación por una pérdida cubierta o evento de póliza."
   },
   {
     term: "Collision Coverage",
     definition: "Insurance coverage that pays for damage to your vehicle resulting from a collision with another vehicle or object.",
     category: "Auto",
-    relatedTerms: ["Comprehensive Coverage", "Deductible", "Premium"]
+    relatedTerms: ["Comprehensive Coverage", "Deductible", "Premium"],
+    termEs: "Cobertura de Colisión",
+    definitionEs: "Seguro de auto que paga por daños a su vehículo resultantes de una colisión con otro vehículo u objeto, independientemente de quién tenga la culpa."
   },
   {
     term: "Comprehensive Coverage",
     definition: "Insurance coverage for damage to your vehicle from causes other than collision, such as theft, vandalism, fire, weather events, or hitting an animal.",
     category: "Auto",
-    relatedTerms: ["Collision Coverage", "Deductible", "Premium"]
+    relatedTerms: ["Collision Coverage", "Deductible", "Premium"],
+    termEs: "Cobertura Integral / Cobertura Amplia",
+    definitionEs: "Seguro de auto que cubre daños a su vehículo causados por eventos que no sean colisiones, como robo, vandalismo, incendio, granizo o inundación."
   },
   {
     term: "Copayment",
     definition: "A fixed amount you pay for a covered health care service, usually when you receive the service.",
     category: "Health",
-    relatedTerms: ["Coinsurance", "Deductible", "Out-of-Pocket Maximum"]
+    relatedTerms: ["Coinsurance", "Deductible", "Out-of-Pocket Maximum"],
+    termEs: "Copago",
+    definitionEs: "Una cantidad fija que paga por un servicio de atención médica cubierto, generalmente cuando recibe el servicio."
   },
   {
     term: "Coverage",
     definition: "The scope of protection provided under an insurance policy, including the types of losses and risks that are covered.",
     category: "General",
-    relatedTerms: ["Policy", "Exclusion", "Limit"]
+    relatedTerms: ["Policy", "Exclusion", "Limit"],
+    termEs: "Cobertura",
+    definitionEs: "El alcance de la protección proporcionada bajo una póliza de seguro, incluyendo los tipos de pérdidas y riesgos que están cubiertos."
   },
   {
     term: "Deductible",
     definition: "The amount you must pay out-of-pocket before your insurance coverage begins to pay for covered losses.",
     category: "General",
-    relatedTerms: ["Premium", "Coverage", "Claim"]
+    relatedTerms: ["Premium", "Coverage", "Claim"],
+    termEs: "Deducible",
+    definitionEs: "La cantidad que debe pagar de su bolsillo antes de que su cobertura de seguro comience a pagar las pérdidas cubiertas."
   },
   {
     term: "Depreciation",
@@ -88,49 +111,65 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Exclusion",
     definition: "Specific conditions, circumstances, or types of losses that are not covered by an insurance policy.",
     category: "General",
-    relatedTerms: ["Coverage", "Policy", "Endorsement"]
+    relatedTerms: ["Coverage", "Policy", "Endorsement"],
+    termEs: "Exclusión",
+    definitionEs: "Condiciones o circunstancias específicas que no están cubiertas por una póliza de seguro."
   },
   {
     term: "Endorsement",
     definition: "A written amendment or addition to an insurance policy that modifies the coverage, terms, or conditions.",
     category: "General",
-    relatedTerms: ["Rider", "Policy", "Coverage"]
+    relatedTerms: ["Rider", "Policy", "Coverage"],
+    termEs: "Endoso / Anexo",
+    definitionEs: "Una enmienda o adición a una póliza de seguro existente que modifica los términos o cobertura de la póliza original."
   },
   {
     term: "Grace Period",
     definition: "A specified period after a premium payment is due during which the policy remains in force without penalty.",
     category: "General",
-    relatedTerms: ["Premium", "Lapse", "Policy"]
+    relatedTerms: ["Premium", "Lapse", "Policy"],
+    termEs: "Período de Gracia",
+    definitionEs: "Un período de tiempo después de la fecha de vencimiento del pago de la prima durante el cual la póliza permanece en vigor y se puede realizar el pago sin penalización."
   },
   {
     term: "Hazard",
     definition: "A condition or situation that increases the likelihood or potential severity of a loss.",
     category: "General",
-    relatedTerms: ["Risk", "Peril", "Underwriting"]
+    relatedTerms: ["Risk", "Peril", "Underwriting"],
+    termEs: "Peligro / Factor de Riesgo",
+    definitionEs: "Una condición que aumenta la probabilidad o severidad potencial de una pérdida."
   },
   {
     term: "Indemnity",
     definition: "Compensation for loss or damage, restoring the insured to their financial position before the loss occurred.",
     category: "General",
-    relatedTerms: ["Claim", "Loss", "Coverage"]
+    relatedTerms: ["Claim", "Loss", "Coverage"],
+    termEs: "Indemnización",
+    definitionEs: "Compensación por daño, pérdida o lesión sufrida; el principio de restaurar al asegurado a su posición financiera anterior a la pérdida."
   },
   {
     term: "Insured",
     definition: "The person or entity covered by an insurance policy and protected against specified losses or risks.",
     category: "General",
-    relatedTerms: ["Policyholder", "Beneficiary", "Coverage"]
+    relatedTerms: ["Policyholder", "Beneficiary", "Coverage"],
+    termEs: "Asegurado",
+    definitionEs: "La persona o entidad cubierta por una póliza de seguro."
   },
   {
     term: "Insurer",
     definition: "The insurance company that provides coverage and agrees to pay for covered losses in exchange for premium payments.",
     category: "General",
-    relatedTerms: ["Policy", "Premium", "Coverage"]
+    relatedTerms: ["Policy", "Premium", "Coverage"],
+    termEs: "Aseguradora / Compañía de Seguros",
+    definitionEs: "La compañía que proporciona cobertura de seguro y asume el riesgo financiero a cambio de primas."
   },
   {
     term: "Liability Coverage",
     definition: "Insurance that covers legal responsibility for injuries or damage caused to others or their property.",
     category: "General",
-    relatedTerms: ["Liability Limit", "Premium", "Claim"]
+    relatedTerms: ["Liability Limit", "Premium", "Claim"],
+    termEs: "Cobertura de Responsabilidad Civil",
+    definitionEs: "Seguro que lo protege contra reclamos legales si usted es responsable de causar lesiones a otra persona o daños a la propiedad de otra persona."
   },
   {
     term: "Liability Limit",
@@ -142,7 +181,9 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Lapse",
     definition: "The termination of an insurance policy due to non-payment of premiums or other policy requirements.",
     category: "General",
-    relatedTerms: ["Grace Period", "Premium", "Policy"]
+    relatedTerms: ["Grace Period", "Premium", "Policy"],
+    termEs: "Caducidad / Vencimiento",
+    definitionEs: "La terminación de una póliza de seguro debido a la falta de pago de primas."
   },
   {
     term: "Loss",
@@ -154,67 +195,89 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Peril",
     definition: "The cause of a possible loss, such as fire, theft, windstorm, or collision.",
     category: "General",
-    relatedTerms: ["Hazard", "Risk", "Coverage"]
+    relatedTerms: ["Hazard", "Risk", "Coverage"],
+    termEs: "Peligro / Riesgo Cubierto",
+    definitionEs: "Un evento o causa específica de pérdida cubierta por una póliza de seguro, como incendio, robo o viento."
   },
   {
     term: "Policy",
     definition: "The written contract between the insurer and insured that outlines the terms, conditions, coverage, and exclusions of the insurance agreement.",
     category: "General",
-    relatedTerms: ["Coverage", "Premium", "Endorsement"]
+    relatedTerms: ["Coverage", "Premium", "Endorsement"],
+    termEs: "Póliza",
+    definitionEs: "Un contrato escrito entre el asegurado y la aseguradora que detalla los términos, condiciones, coberturas y exclusiones del acuerdo de seguro."
   },
   {
     term: "Policyholder",
     definition: "The person or entity that owns an insurance policy and is responsible for premium payments.",
     category: "General",
-    relatedTerms: ["Insured", "Policy", "Premium"]
+    relatedTerms: ["Insured", "Policy", "Premium"],
+    termEs: "Titular de la Póliza / Asegurado",
+    definitionEs: "La persona que posee una póliza de seguro."
   },
   {
     term: "Premium",
     definition: "The amount paid by the policyholder to the insurance company for coverage, typically on a monthly, quarterly, or annual basis.",
     category: "General",
-    relatedTerms: ["Policy", "Deductible", "Coverage"]
+    relatedTerms: ["Policy", "Deductible", "Coverage"],
+    termEs: "Prima",
+    definitionEs: "El monto que paga regularmente (mensual, trimestral o anualmente) para mantener su póliza de seguro activa."
   },
   {
     term: "Replacement Cost",
     definition: "The cost to replace damaged or destroyed property with new property of similar kind and quality, without deduction for depreciation.",
     category: "Property",
-    relatedTerms: ["Actual Cash Value", "Depreciation", "Coverage"]
+    relatedTerms: ["Actual Cash Value", "Depreciation", "Coverage"],
+    termEs: "Costo de Reemplazo",
+    definitionEs: "El costo de reemplazar propiedad dañada o destruida con propiedad nueva de tipo y calidad similar, sin deducir por depreciación."
   },
   {
     term: "Rider",
     definition: "An add-on provision to an insurance policy that provides additional coverage or modifies the standard policy terms.",
     category: "General",
-    relatedTerms: ["Endorsement", "Policy", "Coverage"]
+    relatedTerms: ["Endorsement", "Policy", "Coverage"],
+    termEs: "Cláusula Adicional / Anexo",
+    definitionEs: "Una enmienda a una póliza de seguro que agrega, elimina o modifica la cobertura."
   },
   {
     term: "Risk",
     definition: "The chance of loss or the person, property, or entity insured under a policy.",
     category: "General",
-    relatedTerms: ["Hazard", "Peril", "Underwriting"]
+    relatedTerms: ["Hazard", "Peril", "Underwriting"],
+    termEs: "Riesgo",
+    definitionEs: "La posibilidad de pérdida, daño o lesión; en seguros, es la probabilidad de que ocurra un evento asegurado."
   },
   {
     term: "Subrogation",
     definition: "The right of an insurer to pursue a third party that caused an insurance loss to the insured, allowing the insurer to recover the amount paid to the insured.",
     category: "Claims",
-    relatedTerms: ["Claim", "Loss", "Settlement"]
+    relatedTerms: ["Claim", "Loss", "Settlement"],
+    termEs: "Subrogación",
+    definitionEs: "El derecho legal de una aseguradora de buscar recuperación de un tercero responsable después de pagar un reclamo al asegurado."
   },
   {
     term: "Term Life Insurance",
     definition: "Life insurance coverage for a specified period of time, providing a death benefit if the insured dies during the term.",
     category: "Life",
-    relatedTerms: ["Whole Life Insurance", "Death Benefit", "Premium"]
+    relatedTerms: ["Whole Life Insurance", "Death Benefit", "Premium"],
+    termEs: "Seguro de Vida a Término / Seguro de Vida Temporal",
+    definitionEs: "Cobertura de seguro de vida que proporciona protección por un período específico de tiempo (término), como 10, 20 o 30 años."
   },
   {
     term: "Underwriting",
     definition: "The process by which an insurer evaluates the risk of insuring a person or property and determines coverage terms and premium rates.",
     category: "Industry",
-    relatedTerms: ["Risk", "Premium", "Actuary"]
+    relatedTerms: ["Risk", "Premium", "Actuary"],
+    termEs: "Suscripción / Evaluación de Riesgos",
+    definitionEs: "El proceso mediante el cual una aseguradora evalúa el riesgo de asegurar a un cliente potencial y determina la prima y los términos de cobertura."
   },
   {
     term: "Uninsured Motorist Coverage",
     definition: "Insurance that covers you if you're in an accident caused by a driver who doesn't have liability insurance.",
     category: "Auto",
-    relatedTerms: ["Liability Coverage", "Collision Coverage", "Premium"]
+    relatedTerms: ["Liability Coverage", "Collision Coverage", "Premium"],
+    termEs: "Cobertura contra Conductores Sin Seguro",
+    definitionEs: "Cobertura que lo protege si resulta lesionado en un accidente causado por un conductor que no tiene seguro."
   },
   {
     term: "Motorcycle Insurance",
@@ -232,25 +295,33 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Whole Life Insurance",
     definition: "Permanent life insurance that provides coverage for the insured's entire lifetime and includes a cash value component.",
     category: "Life",
-    relatedTerms: ["Term Life Insurance", "Cash Value", "Death Benefit"]
+    relatedTerms: ["Term Life Insurance", "Cash Value", "Death Benefit"],
+    termEs: "Seguro de Vida Entera / Seguro de Vida Permanente",
+    definitionEs: "Seguro de vida permanente que proporciona cobertura de por vida y acumula valor en efectivo con el tiempo."
   },
   {
     term: "Coinsurance",
     definition: "A cost-sharing arrangement where the insured pays a specified percentage of covered expenses after the deductible is met.",
     category: "Health",
-    relatedTerms: ["Copayment", "Deductible", "Out-of-Pocket Maximum"]
+    relatedTerms: ["Copayment", "Deductible", "Out-of-Pocket Maximum"],
+    termEs: "Coseguro",
+    definitionEs: "El porcentaje de los costos que usted paga después de cumplir con su deducible. Por ejemplo, si su coseguro es del 20%, usted paga el 20% y su seguro paga el 80%."
   },
   {
     term: "Out-of-Pocket Maximum",
     definition: "The most you have to pay for covered services in a plan year. After you reach this amount, the insurance pays 100% of covered services.",
     category: "Health",
-    relatedTerms: ["Deductible", "Coinsurance", "Copayment"]
+    relatedTerms: ["Deductible", "Coinsurance", "Copayment"],
+    termEs: "Máximo de Gastos de Bolsillo",
+    definitionEs: "La cantidad máxima que pagará de su bolsillo por servicios cubiertos en un año del plan. Después de alcanzar este límite, su seguro paga el 100% de los servicios cubiertos."
   },
   {
     term: "Pre-existing Condition",
     definition: "A health condition that existed before the start date of a new insurance policy.",
     category: "Health",
-    relatedTerms: ["Coverage", "Exclusion", "Health Insurance"]
+    relatedTerms: ["Coverage", "Exclusion", "Health Insurance"],
+    termEs: "Condición Preexistente",
+    definitionEs: "Un problema de salud que existía antes de la fecha de inicio de una nueva póliza de seguro de salud."
   },
   {
     term: "Umbrella Policy",
@@ -262,13 +333,17 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Homeowners Insurance",
     definition: "Insurance coverage that protects your home and personal property against damage, theft, and liability claims.",
     category: "Property",
-    relatedTerms: ["Property Insurance", "Liability Coverage", "Deductible"]
+    relatedTerms: ["Property Insurance", "Liability Coverage", "Deductible"],
+    termEs: "Seguro de Propietarios de Vivienda",
+    definitionEs: "Cobertura de seguro que protege su hogar y propiedad personal contra daños, robo y responsabilidad civil."
   },
   {
     term: "Renters Insurance",
     definition: "Insurance coverage for tenants that protects personal property and provides liability coverage, but does not cover the building structure.",
     category: "Property",
-    relatedTerms: ["Homeowners Insurance", "Liability Coverage", "Personal Property"]
+    relatedTerms: ["Homeowners Insurance", "Liability Coverage", "Personal Property"],
+    termEs: "Seguro de Inquilinos / Seguro para Arrendatarios",
+    definitionEs: "Cobertura de seguro para inquilinos que protege la propiedad personal y proporciona cobertura de responsabilidad civil, pero no cubre la estructura del edificio."
   },
   {
     term: "Jewelry Insurance",
@@ -280,7 +355,9 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Disability Insurance",
     definition: "Insurance that provides income replacement if you become unable to work due to illness or injury.",
     category: "Health",
-    relatedTerms: ["Health Insurance", "Premium", "Benefit"]
+    relatedTerms: ["Health Insurance", "Premium", "Benefit"],
+    termEs: "Seguro de Incapacidad / Seguro por Discapacidad",
+    definitionEs: "Cobertura que reemplaza una porción de su ingreso si no puede trabajar debido a una enfermedad o lesión."
   },
   {
     term: "Long-Term Care Insurance",
@@ -1337,7 +1414,9 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Flood Insurance",
     definition: "Insurance coverage that protects against losses from flooding, which is specifically excluded from standard homeowners and renters insurance policies. Flood insurance covers direct physical losses caused by flooding, including overflow of inland or tidal waters, unusual accumulation of surface water, mudflow, and collapse of land along a body of water. Available primarily through the National Flood Insurance Program (NFIP) or private insurers, with a typical 30-day waiting period before coverage takes effect. Essential for properties in flood zones but recommended for all properties since 25% of flood claims come from low-risk areas.",
     category: "Property",
-    relatedTerms: ["NFIP","Flood Zone","FEMA","Base Flood Elevation"]
+    relatedTerms: ["NFIP","Flood Zone","FEMA","Base Flood Elevation"],
+    termEs: "Seguro contra Inundaciones",
+    definitionEs: "Cobertura de seguro que protege contra pérdidas por inundación, que está específicamente excluida de las pólizas estándar de propietarios de vivienda."
   },
   {
     term: "Flood Zone",
@@ -1744,12 +1823,12 @@ export const categoryColors: Record<string, string> = {
 };
 
 export const categoryIcons: Record<string, string> = {
-  Auto: "/images/category-auto.png",
-  Health: "/images/category-health.png",
-  Life: "/images/category-life.png",
-  Property: "/images/category-property.png",
-  Business: "/images/category-auto.png",
-  General: "/images/category-auto.png",
-  Claims: "/images/category-auto.png",
-  Industry: "/images/category-auto.png"
+  Auto: "https://files.manuscdn.com/user_upload_by_module/session_file/103860271/UTnWZGQKiFCXSrix.png",
+  Health: "https://files.manuscdn.com/user_upload_by_module/session_file/103860271/nwNyPXGkqnKggHhR.png",
+  Life: "https://files.manuscdn.com/user_upload_by_module/session_file/103860271/rlmPRimXyAXvRvHV.png",
+  Property: "https://files.manuscdn.com/user_upload_by_module/session_file/103860271/niZqJgXhEbsdrVRb.png",
+  Business: "https://files.manuscdn.com/user_upload_by_module/session_file/103860271/UTnWZGQKiFCXSrix.png",
+  General: "https://files.manuscdn.com/user_upload_by_module/session_file/103860271/UTnWZGQKiFCXSrix.png",
+  Claims: "https://files.manuscdn.com/user_upload_by_module/session_file/103860271/UTnWZGQKiFCXSrix.png",
+  Industry: "https://files.manuscdn.com/user_upload_by_module/session_file/103860271/UTnWZGQKiFCXSrix.png"
 };
