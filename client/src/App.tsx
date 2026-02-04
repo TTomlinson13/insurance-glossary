@@ -23,6 +23,9 @@ import LiabilityLimitsPage from "./pages/LiabilityLimitsPage";
 import InsuranceQuizPage from "./pages/InsuranceQuizPage";
 import AdminNewsletterPage from "./pages/AdminNewsletterPage";
 import AdminNewsletterComposerPage from "./pages/AdminNewsletterComposerPage";
+import QueEsDeducible from "./pages/QueEsDeducible";
+import SeguroAutoBarato from "./pages/SeguroAutoBarato";
+import TerminosSeguroEspanol from "./pages/TerminosSeguroEspanol";
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
@@ -44,7 +47,10 @@ function Router() {
       <Route path="/admin/newsletter/compose" component={AdminNewsletterComposerPage} />
       <Route path="/admin/blog-generator" component={AdminBlogGenerator} />
       <Route path={"/blog"} component={BlogPage} />
-      <Route path={"/blog/:slug"} component={BlogPostPage} />
+      <Route path={"blog/:slug"} component={BlogPostPage} />
+      <Route path="/que-es-deducible" component={QueEsDeducible} />
+      <Route path="/seguro-auto-barato" component={SeguroAutoBarato} />
+      <Route path="/terminos-seguro-espanol" component={TerminosSeguroEspanol} />
       <Route path="/404" component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

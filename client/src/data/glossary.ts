@@ -1807,6 +1807,94 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: "New York's insurance regulation (11 NYCRR 52) that governs health insurance practices, including minimum loss ratio requirements (typically 65% for group health), claims payment standards, and preexisting condition provisions. Regulation 62 is one of New York's most important health insurance regulations.",
     category: "Health",
     relatedTerms: ["Loss Ratio","DFS","Claims-Made Policy"]
+  },
+  {
+    term: "Auto Insurance",
+    definition: "Insurance coverage that protects against financial loss from accidents involving automobiles, including liability for bodily injury and property damage, collision, comprehensive, medical payments, and uninsured/underinsured motorist coverage.",
+    category: "Auto",
+    relatedTerms: ["Liability", "Collision Coverage", "Comprehensive Coverage", "Deductible"],
+    termEs: "Seguro de Auto",
+    definitionEs: "Cobertura de seguro que protege contra pérdidas financieras por accidentes que involucran automóviles, incluyendo responsabilidad por lesiones corporales y daños a la propiedad, colisión, cobertura integral, pagos médicos y cobertura de motorista sin seguro/con seguro insuficiente."
+  },
+  {
+    term: "Health Insurance",
+    definition: "Insurance coverage that pays for medical and surgical expenses incurred by the insured, including doctor visits, hospital stays, prescription drugs, preventive care, and other healthcare services.",
+    category: "Health",
+    relatedTerms: ["Premium", "Deductible", "Copayment", "Out-of-Pocket Maximum"],
+    termEs: "Seguro de Salud",
+    definitionEs: "Cobertura de seguro que paga los gastos médicos y quirúrgicos incurridos por el asegurado, incluyendo visitas al médico, estadías hospitalarias, medicamentos recetados, atención preventiva y otros servicios de atención médica."
+  },
+  {
+    term: "Life Insurance",
+    definition: "Insurance coverage that pays a designated beneficiary a sum of money upon the death of the insured person, providing financial protection for dependents and covering final expenses, debts, and income replacement.",
+    category: "Life",
+    relatedTerms: ["Beneficiary", "Death Benefit", "Term Life Insurance", "Whole Life Insurance"],
+    termEs: "Seguro de Vida",
+    definitionEs: "Cobertura de seguro que paga a un beneficiario designado una suma de dinero al fallecer la persona asegurada, proporcionando protección financiera para dependientes y cubriendo gastos finales, deudas y reemplazo de ingresos."
+  },
+  {
+    term: "Underinsured Motorist Coverage",
+    definition: "Auto insurance coverage that protects you when you're in an accident caused by a driver who has insurance, but their coverage limits are insufficient to pay for your injuries or damages.",
+    category: "Auto",
+    relatedTerms: ["Uninsured Motorist Coverage", "Liability", "Bodily Injury"],
+    termEs: "Cobertura de Motorista con Seguro Insuficiente",
+    definitionEs: "Cobertura de seguro de auto que lo protege cuando está en un accidente causado por un conductor que tiene seguro, pero sus límites de cobertura son insuficientes para pagar sus lesiones o daños."
+  },
+  {
+    term: "Personal Injury Protection",
+    definition: "Auto insurance coverage (also called PIP or no-fault insurance) that pays for medical expenses, lost wages, and other costs for you and your passengers after an accident, regardless of who was at fault.",
+    category: "Auto",
+    relatedTerms: ["No-Fault Insurance", "Medical Payments Coverage", "Auto Insurance"],
+    termEs: "Protección contra Lesiones Personales (PIP)",
+    definitionEs: "Cobertura de seguro de auto (también llamada PIP o seguro sin culpa) que paga los gastos médicos, salarios perdidos y otros costos para usted y sus pasajeros después de un accidente, independientemente de quién tuvo la culpa."
+  },
+  {
+    term: "Bodily Injury Liability",
+    definition: "Auto insurance coverage that pays for injuries you cause to other people in an accident, including medical expenses, lost wages, pain and suffering, and legal defense costs if you're sued.",
+    category: "Auto",
+    relatedTerms: ["Liability", "Property Damage Liability", "Third Party"],
+    termEs: "Responsabilidad por Lesiones Corporales",
+    definitionEs: "Cobertura de seguro de auto que paga por las lesiones que usted causa a otras personas en un accidente, incluyendo gastos médicos, salarios perdidos, dolor y sufrimiento, y costos de defensa legal si lo demandan."
+  },
+  {
+    term: "Property Damage Liability",
+    definition: "Auto insurance coverage that pays for damage you cause to another person's property in an accident, including their vehicle, fence, building, or other structures.",
+    category: "Auto",
+    relatedTerms: ["Bodily Injury Liability", "Liability", "Third Party"],
+    termEs: "Responsabilidad por Daños a la Propiedad",
+    definitionEs: "Cobertura de seguro de auto que paga por los daños que usted causa a la propiedad de otra persona en un accidente, incluyendo su vehículo, cerca, edificio u otras estructuras."
+  },
+  {
+    term: "Umbrella Insurance",
+    definition: "Extra liability insurance coverage that goes beyond the limits of your home, auto, or watercraft insurance, providing additional protection against major claims and lawsuits.",
+    category: "General",
+    relatedTerms: ["Liability", "Excess Liability", "Personal Liability"],
+    termEs: "Seguro de Paraguas",
+    definitionEs: "Cobertura de seguro de responsabilidad adicional que va más allá de los límites de su seguro de hogar, auto o embarcación, proporcionando protección adicional contra reclamos importantes y demandas."
+  },
+  {
+    term: "Workers Compensation",
+    definition: "Insurance coverage required by law that provides wage replacement and medical benefits to employees injured in the course of employment, in exchange for mandatory relinquishment of the employee's right to sue the employer for negligence.",
+    category: "Business",
+    relatedTerms: ["Employer's Liability", "Occupational Injury", "Disability Insurance"],
+    termEs: "Compensación de Trabajadores",
+    definitionEs: "Cobertura de seguro requerida por ley que proporciona reemplazo de salario y beneficios médicos a los empleados lesionados en el curso del empleo, a cambio de la renuncia obligatoria del derecho del empleado a demandar al empleador por negligencia."
+  },
+  {
+    term: "COBRA",
+    definition: "The Consolidated Omnibus Budget Reconciliation Act, a federal law that allows employees and their families to temporarily continue their group health insurance coverage after job loss, reduction in hours, or other qualifying events, typically at the employee's expense.",
+    category: "Health",
+    relatedTerms: ["Health Insurance", "Group Insurance", "Continuation Coverage"],
+    termEs: "COBRA (Continuación de Seguro)",
+    definitionEs: "La Ley de Reconciliación del Presupuesto Ómnibus Consolidado, una ley federal que permite a los empleados y sus familias continuar temporalmente su cobertura de seguro de salud grupal después de la pérdida del empleo, reducción de horas u otros eventos calificados, típicamente a expensas del empleado."
+  },
+  {
+    term: "Network",
+    definition: "In health insurance, a group of healthcare providers (doctors, hospitals, pharmacies) that have contracted with an insurance company to provide services at discounted rates to plan members. Using in-network providers typically results in lower out-of-pocket costs.",
+    category: "Health",
+    relatedTerms: ["In-Network", "Out-of-Network", "PPO", "HMO"],
+    termEs: "Red de Proveedores",
+    definitionEs: "En el seguro de salud, un grupo de proveedores de atención médica (médicos, hospitales, farmacias) que han contratado con una compañía de seguros para proporcionar servicios a tarifas con descuento a los miembros del plan. Usar proveedores dentro de la red generalmente resulta en costos de bolsillo más bajos."
   }
 ];
 

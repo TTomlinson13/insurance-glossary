@@ -346,3 +346,28 @@
 - [x] Verify Spanish meta tags and hreflang in browser (confirmed hreflang en/es/x-default tags and inLanguage structured data)
 - [ ] Update sitemap to include language annotations (optional - current sitemap works for bilingual content)
 - [x] Create documentation for adding more Spanish translations in future (created comprehensive SPANISH_TRANSLATION_GUIDE.md)
+
+## Google Search Console Submission
+- [x] Create step-by-step Google Search Console submission guide (created comprehensive GOOGLE_SEARCH_CONSOLE_GUIDE.md)
+- [x] Add sitemap submission instructions (included in guide)
+- [x] Add domain verification instructions (HTML file and meta tag methods)
+- [x] Test sitemap accessibility (verified - sitemap.xml returns valid XML with all URLs)
+
+## Add 11 Missing High-Priority Terms
+- [x] Add Auto Insurance term with Spanish translation
+- [x] Add Health Insurance term with Spanish translation
+- [x] Add Life Insurance term with Spanish translation
+- [x] Add Underinsured Motorist Coverage term with Spanish translation
+- [x] Add Personal Injury Protection (PIP) term with Spanish translation
+- [x] Add Bodily Injury Liability term with Spanish translation
+- [x] Add Property Damage Liability term with Spanish translation
+- [x] Add Umbrella Insurance term with Spanish translation
+- [x] Add Workers Compensation term with Spanish translation
+- [x] Add COBRA term with Spanish translation
+- [x] Add Network (insurance) term with Spanish translation
+- [x] Total glossary terms now: 298 (up from 28## Create Spanish Keyword Landing Pages
+- [x] Create "¿Qué es un deducible?" landing page (comprehensive guide with examples)
+- [x] Create "Seguro de auto barato" landing page (10 money-saving tips)
+- [x] Create "Términos de seguro en español" landing page (directory of all 50 Spanish terms)
+- [x] Add routes for Spanish landing pages in App.tsx (/que-es-deducible, /seguro-auto-barato, /terminos-seguro-espanol)
+- [x] Test Spanish landing pages (verified all 3 pages working perfectly - ¿Qué es un deducible?, Seguro de auto barato, Términos de seguro en español)ay and SEO
