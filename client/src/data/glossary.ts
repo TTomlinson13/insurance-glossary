@@ -1297,6 +1297,120 @@ export const glossaryTerms: GlossaryTerm[] = [
     category: "Property",
     relatedTerms: ["Hurricane Coverage","Reinsurance","State Insurance Pool"]
   },
+  {
+    term: "Coverage A - Dwelling",
+    definition: "The primary coverage in a homeowners insurance policy that protects the physical structure of your home, including walls, roof, floors, built-in appliances, and attached structures like an attached garage. This coverage pays to repair or rebuild your home if it's damaged or destroyed by a covered peril such as fire, wind, hail, or lightning. The coverage limit should reflect the cost to rebuild your home at current construction prices, not the home's market value or purchase price.",
+    category: "Property",
+    relatedTerms: ["Homeowners Insurance","Replacement Cost","Actual Cash Value","Coverage B"]
+  },
+  {
+    term: "Coverage B - Other Structures",
+    definition: "Coverage in a homeowners policy that protects structures on your property that are not attached to your main dwelling, such as detached garages, sheds, fences, gazebos, and guesthouses. This coverage is typically set at 10% of your Coverage A (dwelling) limit, though you can often increase it for an additional premium. The same perils that cover your dwelling also apply to other structures.",
+    category: "Property",
+    relatedTerms: ["Coverage A","Homeowners Insurance","Detached Structure","Property Coverage"]
+  },
+  {
+    term: "Coverage C - Personal Property",
+    definition: "Coverage that protects your personal belongings inside your home and, in many cases, anywhere in the world. This includes furniture, clothing, electronics, appliances, and other personal items. Standard policies typically provide coverage equal to 50-70% of your Coverage A limit. You can choose between actual cash value (which factors in depreciation) or replacement cost coverage (which pays to replace items at current prices). High-value items like jewelry, art, or collectibles may have sub-limits and require additional scheduled coverage.",
+    category: "Property",
+    relatedTerms: ["Personal Property","Replacement Cost","Actual Cash Value","Scheduled Personal Property"]
+  },
+  {
+    term: "Coverage D - Loss of Use",
+    definition: "Also known as Additional Living Expenses (ALE), this coverage pays for increased costs of living if your home becomes uninhabitable due to a covered loss. It covers expenses such as hotel bills, restaurant meals, temporary rental housing, storage fees, and other costs that exceed your normal living expenses while your home is being repaired or rebuilt. Coverage is typically 20-30% of your Coverage A limit and usually has time limits, often 12-24 months.",
+    category: "Property",
+    relatedTerms: ["Additional Living Expenses","ALE","Homeowners Insurance","Temporary Housing"]
+  },
+  {
+    term: "Coverage E - Personal Liability",
+    definition: "Liability protection that covers you if you're found legally responsible for injuring someone or damaging their property. This coverage pays for legal defense costs, court judgments, and settlements up to your policy limit. It covers incidents that occur on your property (like a guest slipping and falling) and many incidents that occur away from home (like your dog biting someone at the park). Standard policies typically offer $100,000 to $500,000 in liability coverage, though higher limits are available and recommended.",
+    category: "Property",
+    relatedTerms: ["Personal Liability","Liability Insurance","Coverage F","Umbrella Insurance"]
+  },
+  {
+    term: "Coverage F - Medical Payments to Others",
+    definition: "Coverage that pays medical expenses for people injured on your property or by your activities, regardless of who is at fault. This is a 'no-fault' coverage that can help avoid liability claims by quickly paying for minor injuries like cuts, sprains, or broken bones. It covers reasonable medical expenses incurred within a specific time period (usually 1-3 years) after the accident. Standard limits range from $1,000 to $5,000 per person. This coverage does not apply to you or regular residents of your household.",
+    category: "Property",
+    relatedTerms: ["Medical Payments","Coverage E","Personal Liability","No-Fault Coverage"]
+  },
+  {
+    term: "Dwelling Coverage",
+    definition: "Insurance protection for the physical structure of your home, including the foundation, walls, roof, and permanently attached fixtures. This is the cornerstone of homeowners insurance (Coverage A) and should be sufficient to rebuild your home at current construction costs. The amount needed is based on the home's square footage, construction quality, local building costs, and special features—not the home's market value or mortgage balance.",
+    category: "Property",
+    relatedTerms: ["Coverage A","Homeowners Insurance","Replacement Cost","Rebuilding Cost"]
+  },
+  {
+    term: "Other Structures Coverage",
+    definition: "Protection for buildings and structures on your property that are separated from your main house, such as detached garages, tool sheds, fences, driveways, and swimming pools. This coverage (Coverage B) typically equals 10% of your dwelling coverage but can be increased. Structures used for business purposes usually have limited or no coverage under a standard homeowners policy.",
+    category: "Property",
+    relatedTerms: ["Coverage B","Detached Garage","Homeowners Insurance","Property Coverage"]
+  },
+  {
+    term: "Personal Property Coverage",
+    definition: "Insurance that protects your belongings from covered losses, whether they're in your home, car, or temporarily elsewhere. This includes furniture, electronics, clothing, appliances, and other personal items. You can typically choose between actual cash value coverage (which deducts depreciation) or replacement cost coverage (which pays current replacement prices). Special limits often apply to certain categories like jewelry, cash, firearms, and silverware.",
+    category: "Property",
+    relatedTerms: ["Coverage C","Replacement Cost","Actual Cash Value","Contents Insurance"]
+  },
+  {
+    term: "Additional Living Expenses (ALE)",
+    definition: "Reimbursement for the increased costs of maintaining your normal standard of living when your home is uninhabitable due to a covered loss. ALE covers the difference between your normal living expenses and temporary living costs, including hotel stays, restaurant meals, laundry services, pet boarding, and temporary rental housing. Coverage continues until your home is repaired, you permanently relocate, or you reach your policy's time or dollar limit.",
+    category: "Property",
+    relatedTerms: ["Coverage D","Loss of Use","Temporary Housing","Homeowners Insurance"]
+  },
+  {
+    term: "Loss of Use Coverage",
+    definition: "Protection that pays for additional expenses when your home becomes uninhabitable due to a covered peril. This coverage (Coverage D) includes both additional living expenses and fair rental value if you rent out part of your home. It ensures you can maintain your standard of living while your home is being repaired or rebuilt, covering costs above your normal expenses for housing, meals, and other necessities.",
+    category: "Property",
+    relatedTerms: ["Coverage D","Additional Living Expenses","ALE","Fair Rental Value"]
+  },
+  {
+    term: "Personal Liability Coverage",
+    definition: "Protection against financial loss if you're held legally responsible for bodily injury to others or damage to their property. This coverage (Coverage E) pays for legal defense costs, court judgments, and settlements within your policy limits. It covers incidents on your property and many incidents away from home, including injuries caused by your pets. It does not cover intentional acts, business activities, or damage to your own property.",
+    category: "Property",
+    relatedTerms: ["Coverage E","Liability Insurance","Legal Defense","Bodily Injury"]
+  },
+  {
+    term: "Medical Payments Coverage",
+    definition: "No-fault coverage (Coverage F) that pays medical expenses for guests injured on your property or by your activities, regardless of legal liability. This goodwill coverage can help avoid lawsuits by quickly paying for minor injuries. It covers reasonable medical expenses such as doctor visits, hospital stays, surgery, X-rays, and ambulance fees incurred within 1-3 years of the accident. It does not cover household members or injuries arising from business activities.",
+    category: "Property",
+    relatedTerms: ["Coverage F","Medical Payments to Others","No-Fault Coverage","Guest Medical"]
+  },
+  {
+    term: "Ordinance or Law Coverage",
+    definition: "Additional coverage that pays for increased costs to rebuild your home to meet current building codes and ordinances that have changed since your home was built. Standard homeowners policies typically don't cover these additional expenses, which can include costs to demolish undamaged portions of your home, upgrade electrical or plumbing systems, or meet new energy efficiency requirements. This coverage is especially important for older homes.",
+    category: "Property",
+    relatedTerms: ["Building Code","Homeowners Insurance","Rebuilding Cost","Code Upgrade"]
+  },
+  {
+    term: "Water Backup Coverage",
+    definition: "Optional coverage that protects against water damage caused by sewers or drains backing up into your home, or water that enters through sump pump failure. Standard homeowners policies typically exclude this type of water damage. This coverage pays for damage to your home's structure and personal property, as well as cleanup costs. It's particularly important for homes with basements or in areas with aging sewer systems.",
+    category: "Property",
+    relatedTerms: ["Sewer Backup","Sump Pump","Water Damage","Homeowners Insurance"]
+  },
+  {
+    term: "Equipment Breakdown Coverage",
+    definition: "Coverage for damage caused by the sudden breakdown of home systems and appliances, including HVAC systems, water heaters, electrical panels, and built-in appliances. This covers mechanical or electrical failure, motor burnout, and power surges. Standard homeowners policies typically only cover these items if damaged by a named peril like fire or lightning, not mechanical failure. This coverage can save thousands in repair or replacement costs.",
+    category: "Property",
+    relatedTerms: ["Mechanical Breakdown","Home Systems","Appliance Coverage","Service Line Coverage"]
+  },
+  {
+    term: "Service Line Coverage",
+    definition: "Protection for underground utility and service lines on your property, including water, sewer, electrical, and communication lines. This coverage pays to repair or replace damaged lines from your home to the connection point with the public system. Standard homeowners policies typically don't cover these repairs, which can cost thousands of dollars. Covered causes of loss usually include tree roots, freezing, wear and tear, and accidental damage.",
+    category: "Property",
+    relatedTerms: ["Utility Lines","Underground Pipes","Water Line","Sewer Line"]
+  },
+  {
+    term: "Scheduled Personal Property",
+    definition: "Additional coverage for high-value items that exceed the standard limits in your homeowners policy, such as jewelry, fine art, collectibles, musical instruments, or cameras. Also called a 'floater' or 'rider,' this coverage requires listing specific items with their appraised values. It typically provides broader protection than standard coverage, including accidental loss and mysterious disappearance, with no deductible.",
+    category: "Property",
+    relatedTerms: ["Valuable Items","Jewelry Insurance","Floater","Personal Articles Policy"]
+  },
+  {
+    term: "Identity Theft Coverage",
+    definition: "Optional coverage that reimburses expenses related to restoring your identity after identity theft, including lost wages, legal fees, document replacement costs, notary fees, and certified mail costs. Some policies also provide access to identity theft resolution specialists who help navigate the recovery process. This coverage typically has a separate limit (often $15,000-$25,000) and may include credit monitoring services.",
+    category: "Property",
+    relatedTerms: ["Identity Theft","Fraud Protection","Credit Monitoring","Homeowners Insurance"]
+  },
 ];
 
 export const categoryColors: Record<string, string> = {

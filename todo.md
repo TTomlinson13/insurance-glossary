@@ -200,3 +200,13 @@
 - [x] Create comprehensive accessibility documentation (ACCESSIBILITY.md)
 - [x] Add focus indicators for keyboard navigation (built into shadcn/ui)
 - [x] Ensure chatbot is keyboard accessible
+
+## Property Insurance Coverage Definitions
+- [x] Add Coverage A - Dwelling definition
+- [x] Add Coverage B - Other Structures definition
+- [x] Add Coverage C - Personal Property definition
+- [x] Add Coverage D - Loss of Use definition
+- [x] Add Coverage E - Personal Liability definition
+- [x] Add Coverage F - Medical Payments to Others definition
+- [x] Add additional property insurance coverage terms (20 total terms added)
+- [x] Verify all terms are properly categorized as Property insurance
