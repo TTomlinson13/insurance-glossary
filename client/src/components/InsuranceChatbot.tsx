@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { MessageCircle, X, Send, Loader2, Sparkles } from "lucide-react";
+import { MessageCircle, X, Send, Loader2, Shield } from "lucide-react";
 import { toast } from "sonner";
 import { Link } from "wouter";
 import { generateSlug } from "@/lib/utils-slug";
@@ -71,7 +71,7 @@ export default function InsuranceChatbot() {
     if (isOpen && messages.length === 0) {
       setMessages([{
         role: "assistant",
-        content: "👋 Hi! I'm your insurance education assistant. I can help you understand insurance terms, explain coverage types, and answer your insurance questions. What would you like to learn about today?",
+        content: "👋 Hi! I'm Polly, your friendly insurance guide. I can help you understand insurance terms, explain coverage types, and answer your insurance questions. What would you like to learn about today?",
       }]);
     }
   }, [isOpen]);
@@ -138,10 +138,13 @@ export default function InsuranceChatbot() {
           }
         }}
         size="lg"
-        className="fixed bottom-6 right-6 rounded-full w-16 h-16 shadow-2xl z-50 hover:scale-110 transition-transform"
+        className="fixed bottom-6 right-6 rounded-full w-16 h-16 shadow-2xl z-50 hover:scale-110 transition-transform polly-float"
+        style={{
+          animation: 'float 3s ease-in-out infinite'
+        }}
         aria-label="Open chat"
       >
-        <MessageCircle className="w-6 h-6" />
+        <Shield className="w-6 h-6" />
       </Button>
     );
   }
@@ -152,12 +155,12 @@ export default function InsuranceChatbot() {
       <CardHeader className="border-b bg-primary/5 rounded-t-3xl">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-              <Sparkles className="w-5 h-5 text-primary" />
+            <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center polly-pulse">
+              <Shield className="w-5 h-5 text-primary" />
             </div>
             <div>
-              <CardTitle className="text-lg">Insurance Advisor</CardTitle>
-              <CardDescription className="text-xs">AI-powered assistance</CardDescription>
+              <CardTitle className="text-lg">Polly</CardTitle>
+              <CardDescription className="text-xs">Your Insurance Guide</CardDescription>
             </div>
           </div>
           <Button

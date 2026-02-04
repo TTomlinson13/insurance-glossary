@@ -213,3 +213,11 @@
 
 ## Fix Duplicate Glossary Terms
 - [x] Remove duplicate entries causing React key errors (removed 13 duplicate terms)
+
+## Polly Chatbot Animation
+- [x] Create Polly mascot icon/avatar (Shield icon representing protection)
+- [x] Implement gentle floating animation with CSS (3s ease-in-out)
+- [x] Add accessibility support (prefers-reduced-motion)
+- [x] Update chatbot branding to "Polly" (welcome message and header)
+- [x] Add pulse animation to Polly avatar in chat header
+- [x] Test animations across devices (verified via dev server preview)
