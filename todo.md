@@ -421,3 +421,12 @@
 - [x] Add Estoppel term with Spanish translation (Impedimento Legal)
 - [x] Total glossary terms now: 338 (up from 318)
 - [x] Test all claims terms in search and autocomplete (verified - autocomplete shows Subrogation with Claims badge, working perfectly)
+
+## Fix Duplicate Term Entries (Round 2)
+- [x] Search for duplicate "Subrogation" entries in glossary (found 2 at lines 251 and 2060)
+- [x] Search for duplicate "Retention" entries in glossary (found 2 at lines 751 and 2012)
+- [x] Search for duplicate "Reinsurance" entries in glossary (found 2 at lines 661 and 1886)
+- [x] Search for duplicate "Aggregate Limit" entries in glossary (found 2 at lines 733 and 2016)
+- [x] Remove duplicate entries while keeping best definitions (removed 4 shorter versions)
+- [x] Verify no other duplicate terms exist
+- [x] Test to confirm React key errors are resolved (verified - no console errors, all duplicates removed successfully)

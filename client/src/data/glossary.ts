@@ -248,14 +248,6 @@ export const glossaryTerms: GlossaryTerm[] = [
     definitionEs: "La posibilidad de pérdida, daño o lesión; en seguros, es la probabilidad de que ocurra un evento asegurado."
   },
   {
-    term: "Subrogation",
-    definition: "The right of an insurer to pursue a third party that caused an insurance loss to the insured, allowing the insurer to recover the amount paid to the insured.",
-    category: "Claims",
-    relatedTerms: ["Claim", "Loss", "Settlement"],
-    termEs: "Subrogación",
-    definitionEs: "El derecho legal de una aseguradora de buscar recuperación de un tercero responsable después de pagar un reclamo al asegurado."
-  },
-  {
     term: "Term Life Insurance",
     definition: "Life insurance coverage for a specified period of time, providing a death benefit if the insured dies during the term.",
     category: "Life",
@@ -666,12 +658,6 @@ export const glossaryTerms: GlossaryTerm[] = [
     relatedTerms: ["Commercial General Liability", "Liquor Liability Insurance", "Cancellation Insurance"]
   },
   {
-    term: "Reinsurance",
-    definition: "Insurance purchased by insurance companies to transfer portions of their risk portfolios to other insurers, reducing the likelihood of large payouts from claims.",
-    category: "Industry",
-    relatedTerms: ["Risk Transfer", "Ceding Company", "Retrocession"]
-  },
-  {
     term: "Loss Ratio",
     definition: "The ratio of losses paid plus loss reserves to premiums earned, used by insurers to measure underwriting profitability and pricing adequacy.",
     category: "Industry",
@@ -744,22 +730,10 @@ export const glossaryTerms: GlossaryTerm[] = [
     relatedTerms: ["Additional Insured", "Insured", "Policyholder"]
   },
   {
-    term: "Aggregate Limit",
-    definition: "The maximum amount an insurance policy will pay for all covered losses during a policy period, regardless of the number of claims.",
-    category: "Industry",
-    relatedTerms: ["Policy Limit", "Per Occurrence Limit", "Liability Limit"]
-  },
-  {
     term: "Per Occurrence Limit",
     definition: "The maximum amount an insurance policy will pay for a single claim or occurrence, separate from the aggregate limit.",
     category: "Industry",
     relatedTerms: ["Aggregate Limit", "Policy Limit", "Liability Limit"]
-  },
-  {
-    term: "Retention",
-    definition: "The amount of risk or loss that an insured retains before insurance coverage applies, similar to a deductible but typically used in commercial insurance.",
-    category: "Industry",
-    relatedTerms: ["Deductible", "Self-Insured Retention", "Risk Retention"]
   },
   {
     term: "Self-Insured Retention",
