@@ -34,7 +34,7 @@ export default function BlogPostPage() {
       if (ogDesc) ogDesc.setAttribute('content', post.excerpt);
       
       const ogUrl = document.querySelector('meta[property="og:url"]');
-      if (ogUrl) ogUrl.setAttribute('content', `https://insurance-glossary.manus.space/blog/${post.slug}`);
+      if (ogUrl) ogUrl.setAttribute('content', `https://theinsuranceglossary.com/blog/${post.slug}`);
       
       // Update Twitter Card meta tags
       const twitterTitle = document.querySelector('meta[property="twitter:title"]');
@@ -44,7 +44,7 @@ export default function BlogPostPage() {
       if (twitterDesc) twitterDesc.setAttribute('content', post.excerpt);
       
       const twitterUrl = document.querySelector('meta[property="twitter:url"]');
-      if (twitterUrl) twitterUrl.setAttribute('content', `https://insurance-glossary.manus.space/blog/${post.slug}`);
+      if (twitterUrl) twitterUrl.setAttribute('content', `https://theinsuranceglossary.com/blog/${post.slug}`);
       
       // Add Schema.org Article and Breadcrumb structured data
       const structuredData = [
@@ -68,19 +68,19 @@ export default function BlogPostPage() {
               "@type": "ListItem",
               "position": 1,
               "name": "Home",
-              "item": "https://insurance-glossary.manus.space/"
+              "item": "https://theinsuranceglossary.com/"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Blog",
-              "item": "https://insurance-glossary.manus.space/blog"
+              "item": "https://theinsuranceglossary.com/blog"
             },
             {
               "@type": "ListItem",
               "position": 3,
               "name": post.title,
-              "item": `https://insurance-glossary.manus.space/blog/${post.slug}`
+              "item": `https://theinsuranceglossary.com/blog/${post.slug}`
             }
           ]
         }

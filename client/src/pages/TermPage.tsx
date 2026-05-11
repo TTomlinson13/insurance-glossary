@@ -46,7 +46,7 @@ export default function TermPage() {
             ...(foundTerm.termEs && foundTerm.definitionEs ? {
               "inLanguage": ["en", "es"],
               "alternateName": foundTerm.termEs,
-              "sameAs": `https://insurance-glossary.manus.space/term/${params.slug}`
+              "sameAs": `https://theinsuranceglossary.com/term/${params.slug}`
             } : {})
           },
           {
@@ -57,19 +57,19 @@ export default function TermPage() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://insurance-glossary.manus.space/"
+                "item": "https://theinsuranceglossary.com/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Glossary",
-                "item": "https://insurance-glossary.manus.space/"
+                "item": "https://theinsuranceglossary.com/"
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": foundTerm.term,
-                "item": `https://insurance-glossary.manus.space/term/${params.slug}`
+                "item": `https://theinsuranceglossary.com/term/${params.slug}`
               }
             ]
           }
@@ -117,7 +117,7 @@ export default function TermPage() {
         if (ogDesc) ogDesc.setAttribute('content', foundTerm.definition);
         
         const ogUrl = document.querySelector('meta[property="og:url"]');
-        if (ogUrl) ogUrl.setAttribute('content', `https://insurance-glossary.manus.space/term/${params.slug}`);
+        if (ogUrl) ogUrl.setAttribute('content', `https://theinsuranceglossary.com/term/${params.slug}`);
         
         // Update Twitter Card meta tags
         const twitterTitle = document.querySelector('meta[property="twitter:title"]');
@@ -127,7 +127,7 @@ export default function TermPage() {
         if (twitterDesc) twitterDesc.setAttribute('content', foundTerm.definition);
         
         const twitterUrl = document.querySelector('meta[property="twitter:url"]');
-        if (twitterUrl) twitterUrl.setAttribute('content', `https://insurance-glossary.manus.space/term/${params.slug}`);
+        if (twitterUrl) twitterUrl.setAttribute('content', `https://theinsuranceglossary.com/term/${params.slug}`);
         
         // Add canonical URL to prevent duplicate content issues
         let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
@@ -136,7 +136,7 @@ export default function TermPage() {
           canonical.rel = 'canonical';
           document.head.appendChild(canonical);
         }
-        canonical.href = `https://insurance-glossary.manus.space/term/${params.slug}`;
+        canonical.href = `https://theinsuranceglossary.com/term/${params.slug}`;
         
         // Add hreflang tags for bilingual content (if Spanish translation exists)
         if (foundTerm.termEs && foundTerm.definitionEs) {
@@ -148,7 +148,7 @@ export default function TermPage() {
             hreflangEn.hreflang = 'en';
             document.head.appendChild(hreflangEn);
           }
-          hreflangEn.href = `https://insurance-glossary.manus.space/term/${params.slug}`;
+          hreflangEn.href = `https://theinsuranceglossary.com/term/${params.slug}`;
           
           // Spanish version (same URL, content is bilingual)
           let hreflangEs = document.querySelector('link[hreflang="es"]') as HTMLLinkElement | null;
@@ -158,7 +158,7 @@ export default function TermPage() {
             hreflangEs.hreflang = 'es';
             document.head.appendChild(hreflangEs);
           }
-          hreflangEs.href = `https://insurance-glossary.manus.space/term/${params.slug}`;
+          hreflangEs.href = `https://theinsuranceglossary.com/term/${params.slug}`;
           
           // x-default for international users
           let hreflangDefault = document.querySelector('link[hreflang="x-default"]') as HTMLLinkElement | null;
@@ -168,7 +168,7 @@ export default function TermPage() {
             hreflangDefault.hreflang = 'x-default';
             document.head.appendChild(hreflangDefault);
           }
-          hreflangDefault.href = `https://insurance-glossary.manus.space/term/${params.slug}`;
+          hreflangDefault.href = `https://theinsuranceglossary.com/term/${params.slug}`;
         }
         
         // Find related terms data - combine manual + automatic suggestions

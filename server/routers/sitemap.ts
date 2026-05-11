@@ -9,7 +9,7 @@ import { generateSlug } from "../../client/src/lib/utils-slug";
  */
 export const sitemapRouter = router({
   generate: publicProcedure.query(() => {
-    const baseUrl = "https://insurance-glossary.manus.space";
+    const baseUrl = "https://theinsuranceglossary.com";
     const currentDate = new Date().toISOString().split('T')[0];
     
     // Static pages

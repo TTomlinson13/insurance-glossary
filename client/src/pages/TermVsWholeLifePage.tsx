@@ -22,7 +22,7 @@ export default function TermVsWholeLifePage() {
     if (ogDesc) ogDesc.setAttribute('content', "Compare Term and Whole Life insurance side-by-side. Understand costs, coverage duration, and cash value.");
     
     const ogUrl = document.querySelector('meta[property="og:url"]');
-    if (ogUrl) ogUrl.setAttribute('content', "https://insurance-glossary.manus.space/compare/term-vs-whole-life");
+    if (ogUrl) ogUrl.setAttribute('content', "https://theinsuranceglossary.com/compare/term-vs-whole-life");
     
     const twitterTitle = document.querySelector('meta[property="twitter:title"]');
     if (twitterTitle) twitterTitle.setAttribute('content', "Term vs Whole Life Insurance: Complete Comparison");
@@ -31,7 +31,7 @@ export default function TermVsWholeLifePage() {
     if (twitterDesc) twitterDesc.setAttribute('content', "Compare Term and Whole Life insurance side-by-side. Understand costs, coverage duration, and cash value.");
     
     const twitterUrl = document.querySelector('meta[property="twitter:url"]');
-    if (twitterUrl) twitterUrl.setAttribute('content', "https://insurance-glossary.manus.space/compare/term-vs-whole-life");
+    if (twitterUrl) twitterUrl.setAttribute('content', "https://theinsuranceglossary.com/compare/term-vs-whole-life");
     
     // Add Schema.org structured data
     const structuredData = {

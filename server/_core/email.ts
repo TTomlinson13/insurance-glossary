@@ -79,7 +79,7 @@ export async function sendWelcomeEmail(email: string) {
               </ul>
               
               <div style="text-align: center; margin: 30px 0;">
-                <a href="https://insurance-glossary.manus.space" style="display: inline-block; padding: 14px 32px; background-color: #d4a574; color: #ffffff; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 16px;">
+                <a href="https://theinsuranceglossary.com" style="display: inline-block; padding: 14px 32px; background-color: #d4a574; color: #ffffff; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 16px;">
                   Explore the Glossary
                 </a>
               </div>
@@ -97,8 +97,8 @@ export async function sendWelcomeEmail(email: string) {
                 Insurance Glossary - Your Complete Guide to Insurance Terms
               </p>
               <p style="margin: 0; font-size: 12px; color: #999999;">
-                <a href="https://insurance-glossary.manus.space" style="color: #d4a574; text-decoration: none;">Visit Website</a> · 
-                <a href="https://insurance-glossary.manus.space/blog" style="color: #d4a574; text-decoration: none;">Read Blog</a>
+                <a href="https://theinsuranceglossary.com" style="color: #d4a574; text-decoration: none;">Visit Website</a> · 
+                <a href="https://theinsuranceglossary.com/blog" style="color: #d4a574; text-decoration: none;">Read Blog</a>
               </p>
               <p style="margin: 15px 0 0; font-size: 11px; color: #bbbbbb;">
                 You're receiving this because you subscribed to our newsletter.<br>
@@ -165,8 +165,8 @@ export async function sendNewsletter(params: {
                 Insurance Glossary - Your Complete Guide to Insurance Terms
               </p>
               <p style="margin: 0; font-size: 12px; color: #999999;">
-                <a href="https://insurance-glossary.manus.space" style="color: #d4a574; text-decoration: none;">Visit Website</a> · 
-                <a href="https://insurance-glossary.manus.space/blog" style="color: #d4a574; text-decoration: none;">Read Blog</a>
+                <a href="https://theinsuranceglossary.com" style="color: #d4a574; text-decoration: none;">Visit Website</a> · 
+                <a href="https://theinsuranceglossary.com/blog" style="color: #d4a574; text-decoration: none;">Read Blog</a>
               </p>
               <p style="margin: 15px 0 0; font-size: 11px; color: #bbbbbb;">
                 You're receiving this because you subscribed to our newsletter.<br>

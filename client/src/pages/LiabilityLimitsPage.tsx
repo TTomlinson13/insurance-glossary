@@ -22,7 +22,7 @@ export default function LiabilityLimitsPage() {
     if (ogDesc) ogDesc.setAttribute('content', "Compare liability insurance limits and understand how much coverage you need to protect your assets.");
     
     const ogUrl = document.querySelector('meta[property="og:url"]');
-    if (ogUrl) ogUrl.setAttribute('content', "https://insurance-glossary.manus.space/compare/liability-limits");
+    if (ogUrl) ogUrl.setAttribute('content', "https://theinsuranceglossary.com/compare/liability-limits");
     
     const twitterTitle = document.querySelector('meta[property="twitter:title"]');
     if (twitterTitle) twitterTitle.setAttribute('content', "Understanding Liability Insurance Limits: Complete Guide");
@@ -31,7 +31,7 @@ export default function LiabilityLimitsPage() {
     if (twitterDesc) twitterDesc.setAttribute('content', "Compare liability insurance limits and understand how much coverage you need.");
     
     const twitterUrl = document.querySelector('meta[property="twitter:url"]');
-    if (twitterUrl) twitterUrl.setAttribute('content', "https://insurance-glossary.manus.space/compare/liability-limits");
+    if (twitterUrl) twitterUrl.setAttribute('content', "https://theinsuranceglossary.com/compare/liability-limits");
     
     // Add Schema.org structured data
     const structuredData = {

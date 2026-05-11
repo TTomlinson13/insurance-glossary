@@ -22,7 +22,7 @@ export default function HmoVsPpoPage() {
     if (ogDesc) ogDesc.setAttribute('content', "Compare HMO and PPO health insurance plans side-by-side. Understand costs, flexibility, and coverage differences.");
     
     const ogUrl = document.querySelector('meta[property="og:url"]');
-    if (ogUrl) ogUrl.setAttribute('content', "https://insurance-glossary.manus.space/compare/hmo-vs-ppo");
+    if (ogUrl) ogUrl.setAttribute('content', "https://theinsuranceglossary.com/compare/hmo-vs-ppo");
     
     const twitterTitle = document.querySelector('meta[property="twitter:title"]');
     if (twitterTitle) twitterTitle.setAttribute('content', "HMO vs PPO: Health Insurance Plan Comparison");
@@ -31,7 +31,7 @@ export default function HmoVsPpoPage() {
     if (twitterDesc) twitterDesc.setAttribute('content', "Compare HMO and PPO health insurance plans side-by-side. Understand costs, flexibility, and coverage differences.");
     
     const twitterUrl = document.querySelector('meta[property="twitter:url"]');
-    if (twitterUrl) twitterUrl.setAttribute('content', "https://insurance-glossary.manus.space/compare/hmo-vs-ppo");
+    if (twitterUrl) twitterUrl.setAttribute('content', "https://theinsuranceglossary.com/compare/hmo-vs-ppo");
     
     // Add Schema.org ComparisonTable structured data
     const structuredData = {

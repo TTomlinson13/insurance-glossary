@@ -51,14 +51,14 @@ export async function generateAndSendWeeklyDigest() {
       ${postsToFeature.map(post => `
         <div style="margin: 0 0 20px; padding: 16px; background-color: #f9f9f9; border-left: 4px solid #d4a574; border-radius: 4px;">
           <h4 style="margin: 0 0 8px; font-size: 18px; color: #333333;">
-            <a href="https://insurance-glossary.manus.space/blog/${post.slug}" style="color: #333333; text-decoration: none;">
+            <a href="https://theinsuranceglossary.com/blog/${post.slug}" style="color: #333333; text-decoration: none;">
               ${post.title}
             </a>
           </h4>
           <p style="margin: 0 0 12px; font-size: 14px; line-height: 1.6; color: #666666;">
             ${post.excerpt}
           </p>
-          <a href="https://insurance-glossary.manus.space/blog/${post.slug}" style="color: #d4a574; text-decoration: none; font-weight: 600; font-size: 14px;">
+          <a href="https://theinsuranceglossary.com/blog/${post.slug}" style="color: #d4a574; text-decoration: none; font-weight: 600; font-size: 14px;">
             Read More →
           </a>
         </div>
@@ -80,7 +80,7 @@ export async function generateAndSendWeeklyDigest() {
       <p style="margin: 0 0 20px; font-size: 16px; color: #ffffff; opacity: 0.95;">
         Browse 215+ insurance terms with clear, easy-to-understand definitions
       </p>
-      <a href="https://insurance-glossary.manus.space" style="display: inline-block; padding: 12px 32px; background-color: #ffffff; color: #d4a574; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 16px;">
+      <a href="https://theinsuranceglossary.com" style="display: inline-block; padding: 12px 32px; background-color: #ffffff; color: #d4a574; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 16px;">
         Browse Glossary
       </a>
     </div>
@@ -88,9 +88,9 @@ export async function generateAndSendWeeklyDigest() {
     <div style="margin: 32px 0;">
       <h3 style="margin: 0 0 16px; font-size: 20px; color: #d4a574;">🎯 Quick Links</h3>
       <ul style="margin: 0; padding-left: 20px; font-size: 16px; line-height: 2; color: #333333;">
-        <li><a href="https://insurance-glossary.manus.space/quiz" style="color: #d4a574; text-decoration: none;">Take Our Insurance Quiz</a></li>
-        <li><a href="https://insurance-glossary.manus.space/calculators" style="color: #d4a574; text-decoration: none;">Try Our Calculators</a></li>
-        <li><a href="https://insurance-glossary.manus.space/blog" style="color: #d4a574; text-decoration: none;">Read All Articles</a></li>
+        <li><a href="https://theinsuranceglossary.com/quiz" style="color: #d4a574; text-decoration: none;">Take Our Insurance Quiz</a></li>
+        <li><a href="https://theinsuranceglossary.com/calculators" style="color: #d4a574; text-decoration: none;">Try Our Calculators</a></li>
+        <li><a href="https://theinsuranceglossary.com/blog" style="color: #d4a574; text-decoration: none;">Read All Articles</a></li>
       </ul>
     </div>
 
