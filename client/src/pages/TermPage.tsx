@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, BookOpen, ExternalLink, ThumbsUp, ThumbsDown } from "lucide-react";
 import { AffiliateCTA } from "@/components/AffiliateCTA";
 import { AdSenseAd } from "@/components/AdSenseAd";
+import { CANOPY_CONNECT_CTA } from "@/config/affiliates";
 import { glossaryTerms, categoryColors, type GlossaryTerm } from "@/data/glossary";
 import { termFAQs } from "@/data/faq-terms";
 import { findTermBySlug, generateSlug } from "@/lib/utils-slug";
@@ -310,8 +311,30 @@ export default function TermPage() {
                     </div>
                   )}
 
-                  {/* Affiliate CTA - Show for relevant categories */}
-                  {(term.category === "Auto" || term.category === "Property" || term.category === "Life" || term.category === "Health") && (
+                  {/* Tomlinson & Co CTA - shown for terms with a learnMoreUrl, otherwise show generic Canopy Connect CTA */}
+                  {term.learnMoreUrl ? (
+                    <div className="pt-6 border-t border-border/50">
+                      <div className="bg-gradient-to-r from-primary/10 via-accent/10 to-secondary/10 rounded-xl p-6 border border-primary/20">
+                        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                          <div className="flex items-start gap-4">
+                            <div className="p-3 bg-primary/10 rounded-lg">
+                              <ExternalLink className="w-6 h-6 text-primary" />
+                            </div>
+                            <div>
+                              <h3 className="text-lg font-semibold mb-1">Ready to get covered?</h3>
+                              <p className="text-sm text-muted-foreground">Tomlinson &amp; Co specializes in this coverage. Get a free quote today.</p>
+                            </div>
+                          </div>
+                          <Button asChild size="lg" className="shrink-0">
+                            <a href={term.learnMoreUrl} target="_blank" rel="noopener noreferrer">
+                              {CANOPY_CONNECT_CTA.text}
+                              <ExternalLink className="w-4 h-4 ml-2" />
+                            </a>
+                          </Button>
+                        </div>
+                      </div>
+                    </div>
+                  ) : (term.category === "Auto" || term.category === "Property" || term.category === "Life" || term.category === "Health") && (
                     <div className="pt-6 border-t border-border/50">
                       <AffiliateCTA 
                         category={

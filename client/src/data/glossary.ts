@@ -6,6 +6,8 @@ export interface GlossaryTerm {
   // Spanish translations (optional - for bilingual support)
   termEs?: string;
   definitionEs?: string;
+  // Tomlinson & Co network CTA link
+  learnMoreUrl?: string;
 }
 
 export const glossaryTerms: GlossaryTerm[] = [
@@ -327,7 +329,8 @@ export const glossaryTerms: GlossaryTerm[] = [
     category: "Property",
     relatedTerms: ["Property Insurance", "Liability Coverage", "Deductible"],
     termEs: "Seguro de Propietarios de Vivienda",
-    definitionEs: "Cobertura de seguro que protege su hogar y propiedad personal contra daños, robo y responsabilidad civil."
+    definitionEs: "Cobertura de seguro que protege su hogar y propiedad personal contra daños, robo y responsabilidad civil.",
+    learnMoreUrl: "https://hoinsurance.com"
   },
   {
     term: "Renters Insurance",
@@ -397,13 +400,15 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Commercial General Liability",
     definition: "Insurance that protects businesses against claims of bodily injury, property damage, personal injury, and advertising injury that occur during normal business operations.",
     category: "Business",
-    relatedTerms: ["Professional Liability", "Product Liability", "Liability Coverage"]
+    relatedTerms: ["Professional Liability", "Product Liability", "Liability Coverage"],
+    learnMoreUrl: "https://easycommercialinsurance.com"
   },
   {
     term: "Workers' Compensation Insurance",
     definition: "Required insurance that provides medical benefits and wage replacement to employees who are injured or become ill in the course of employment.",
     category: "Business",
-    relatedTerms: ["Employer's Liability", "Occupational Injury", "Disability Insurance"]
+    relatedTerms: ["Employer's Liability", "Occupational Injury", "Disability Insurance"],
+    learnMoreUrl: "https://flawc.com"
   },
   {
     term: "Professional Liability Insurance",
@@ -451,7 +456,8 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Commercial Auto Insurance",
     definition: "Insurance coverage for vehicles owned or used by a business, providing liability, collision, and comprehensive coverage for business vehicles and drivers.",
     category: "Business",
-    relatedTerms: ["Auto Insurance", "Fleet Insurance", "Liability Coverage"]
+    relatedTerms: ["Auto Insurance", "Fleet Insurance", "Liability Coverage"],
+    learnMoreUrl: "https://easycommercialauto.com"
   },
   {
     term: "Key Person Insurance",
@@ -920,7 +926,8 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Dwelling Coverage",
     definition: "The part of a homeowners or renters insurance policy that covers damage to the physical structure of your home, including walls, roof, and built-in appliances.",
     category: "Property",
-    relatedTerms: ["Homeowners Insurance","Replacement Cost","Structure"]
+    relatedTerms: ["Homeowners Insurance","Replacement Cost","Structure"],
+    learnMoreUrl: "https://hoinsurance.com"
   },
   {
     term: "Personal Property Coverage",
@@ -1220,7 +1227,8 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "ISO CGL Form",
     definition: "ISO Commercial General Liability form - a standardized liability insurance policy that covers bodily injury, property damage, personal injury, and advertising injury claims. The most common form is CG 00 01.",
     category: "Business",
-    relatedTerms: ["ISO","Commercial General Liability","Liability Insurance","CGL"]
+    relatedTerms: ["ISO","Commercial General Liability","Liability Insurance","CGL"],
+    learnMoreUrl: "https://easycommercialinsurance.com"
   },
   {
     term: "ISO BOP",
@@ -1232,7 +1240,8 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "ISO Workers Compensation Form",
     definition: "Standardized ISO forms for workers compensation coverage, including WC 00 00 01 (basic policy) and various endorsements for modifying coverage terms.",
     category: "Business",
-    relatedTerms: ["ISO","Workers Compensation","Workplace Injury","Employee Benefits"]
+    relatedTerms: ["ISO","Workers Compensation","Workplace Injury","Employee Benefits"],
+    learnMoreUrl: "https://flawc.com"
   },
   {
     term: "ISO Endorsement",
@@ -1310,7 +1319,8 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "New York No-Fault Insurance",
     definition: "New York's mandatory auto insurance system requiring Personal Injury Protection (PIP) coverage of at least $50,000, providing immediate medical and lost wage benefits regardless of who caused the accident.",
     category: "Auto",
-    relatedTerms: ["Personal Injury Protection","PIP","No-Fault Insurance","Auto Insurance"]
+    relatedTerms: ["Personal Injury Protection","PIP","No-Fault Insurance","Auto Insurance"],
+    learnMoreUrl: "https://floridauto.com"
   },
   {
     term: "Louisiana Road Home Program",
@@ -1340,7 +1350,8 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Coverage A - Dwelling",
     definition: "The primary coverage in a homeowners insurance policy that protects the physical structure of your home, including walls, roof, floors, built-in appliances, and attached structures like an attached garage. This coverage pays to repair or rebuild your home if it's damaged or destroyed by a covered peril such as fire, wind, hail, or lightning. The coverage limit should reflect the cost to rebuild your home at current construction prices, not the home's market value or purchase price.",
     category: "Property",
-    relatedTerms: ["Homeowners Insurance","Replacement Cost","Actual Cash Value","Coverage B"]
+    relatedTerms: ["Homeowners Insurance","Replacement Cost","Actual Cash Value","Coverage B"],
+    learnMoreUrl: "https://hoinsurance.com"
   },
   {
     term: "Coverage B - Other Structures",
@@ -1376,13 +1387,15 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "NFIP",
     definition: "The National Flood Insurance Program is a federal program created by Congress in 1968 to provide flood insurance to property owners, renters, and businesses. Managed by FEMA, the NFIP makes flood insurance available in communities that adopt and enforce floodplain management regulations to reduce future flood damage. Standard homeowners insurance does not cover flood damage, making NFIP policies essential for properties in flood-prone areas. The program offers up to $250,000 in building coverage and $100,000 in contents coverage.",
     category: "Property",
-    relatedTerms: ["Flood Insurance","FEMA","Flood Zone","Base Flood Elevation"]
+    relatedTerms: ["Flood Insurance","FEMA","Flood Zone","Base Flood Elevation"],
+    learnMoreUrl: "https://hoinsurance.com"
   },
   {
     term: "National Flood Insurance Program",
     definition: "A federal program administered by FEMA that provides flood insurance to property owners, renters, and businesses in participating communities. Created in 1968 because standard homeowners insurance excludes flood coverage, the NFIP helps reduce the socio-economic impact of floods by providing affordable insurance and encouraging communities to adopt floodplain management regulations. Coverage limits are $250,000 for residential buildings and $100,000 for contents. Properties in high-risk flood zones with federally backed mortgages are required to carry flood insurance.",
     category: "Property",
-    relatedTerms: ["NFIP","Flood Insurance","FEMA","Special Flood Hazard Area"]
+    relatedTerms: ["NFIP","Flood Insurance","FEMA","Special Flood Hazard Area"],
+    learnMoreUrl: "https://hoinsurance.com"
   },
   {
     term: "Flood Insurance",
@@ -1390,25 +1403,29 @@ export const glossaryTerms: GlossaryTerm[] = [
     category: "Property",
     relatedTerms: ["NFIP","Flood Zone","FEMA","Base Flood Elevation"],
     termEs: "Seguro contra Inundaciones",
-    definitionEs: "Cobertura de seguro que protege contra pérdidas por inundación, que está específicamente excluida de las pólizas estándar de propietarios de vivienda."
+    definitionEs: "Cobertura de seguro que protege contra pérdidas por inundación, que está específicamente excluida de las pólizas estándar de propietarios de vivienda.",
+    learnMoreUrl: "https://hoinsurance.com"
   },
   {
     term: "Flood Zone",
     definition: "Geographic areas that FEMA defines according to varying levels of flood risk. These zones are depicted on Flood Insurance Rate Maps (FIRMs) and determine flood insurance requirements and premiums. High-risk zones (Special Flood Hazard Areas) include Zone A (1% annual chance of flooding) and Zone V (coastal high-hazard areas with wave action). Moderate-to-low risk zones include Zone B, C, and X. Properties in high-risk zones with federally backed mortgages must carry flood insurance. Zone designations directly impact insurance costs and building requirements.",
     category: "Property",
-    relatedTerms: ["NFIP","Flood Insurance","FEMA","Special Flood Hazard Area","FIRM"]
+    relatedTerms: ["NFIP","Flood Insurance","FEMA","Special Flood Hazard Area","FIRM"],
+    learnMoreUrl: "https://hoinsurance.com"
   },
   {
     term: "Base Flood Elevation",
     definition: "The computed elevation to which floodwater is anticipated to rise during a base flood (a flood with a 1% chance of occurring in any given year, also called a 100-year flood). Shown on FEMA Flood Insurance Rate Maps (FIRMs), the BFE is used to determine flood insurance premiums and building requirements. Structures built below the BFE face higher insurance costs and greater flood risk. Local building codes typically require new construction in flood zones to have the lowest floor elevated at or above the BFE. Knowing your property's BFE is crucial for flood risk assessment and insurance decisions.",
     category: "Property",
-    relatedTerms: ["Flood Zone","NFIP","FIRM","100-Year Flood","Elevation Certificate"]
+    relatedTerms: ["Flood Zone","NFIP","FIRM","100-Year Flood","Elevation Certificate"],
+    learnMoreUrl: "https://hoinsurance.com"
   },
   {
     term: "Special Flood Hazard Area",
     definition: "High-risk flood zones designated by FEMA where there is at least a 1% chance of flooding in any given year (also known as the 100-year floodplain). Properties located in SFHAs and secured by federally backed mortgages are required by law to carry flood insurance. These areas are shown on Flood Insurance Rate Maps (FIRMs) and include Zone A (riverine flooding) and Zone V (coastal flooding with wave action). Buildings in SFHAs face significantly higher flood insurance premiums than those in moderate or low-risk zones.",
     category: "Property",
-    relatedTerms: ["Flood Zone","NFIP","Base Flood Elevation","100-Year Flood"]
+    relatedTerms: ["Flood Zone","NFIP","Base Flood Elevation","100-Year Flood"],
+    learnMoreUrl: "https://hoinsurance.com"
   },
   {
     term: "FIRM",
@@ -1420,7 +1437,8 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "100-Year Flood",
     definition: "A flood event that has a 1% probability of occurring in any given year, not a flood that happens once every 100 years. This statistical measure defines the Special Flood Hazard Area and base flood elevation used by FEMA and the National Flood Insurance Program. Properties in 100-year floodplains face mandatory flood insurance requirements if they have federally backed mortgages. The term is often misunderstood—a 100-year flood can occur multiple times within 100 years, or not at all. Over a 30-year mortgage, a property in a 100-year floodplain has a 26% chance of experiencing such a flood.",
     category: "Property",
-    relatedTerms: ["Flood Zone","Base Flood Elevation","Special Flood Hazard Area","NFIP"]
+    relatedTerms: ["Flood Zone","Base Flood Elevation","Special Flood Hazard Area","NFIP"],
+    learnMoreUrl: "https://hoinsurance.com"
   },
   {
     term: "Elevation Certificate",
@@ -1708,7 +1726,8 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Unlimited PIP",
     definition: "A unique feature of Michigan's no-fault auto insurance system that provides unlimited lifetime medical coverage for injuries sustained in auto accidents. Policyholders can choose unlimited PIP or select capped amounts ($500,000, $250,000, or $50,000) under Michigan's 2019 auto insurance reform.",
     category: "Auto",
-    relatedTerms: ["Personal Injury Protection","MCCA","No-Fault Insurance"]
+    relatedTerms: ["Personal Injury Protection","MCCA","No-Fault Insurance"],
+    learnMoreUrl: "https://floridauto.com"
   },
   {
     term: "Managed Competition",
@@ -1820,7 +1839,8 @@ export const glossaryTerms: GlossaryTerm[] = [
     category: "Auto",
     relatedTerms: ["No-Fault Insurance", "Medical Payments Coverage", "Auto Insurance"],
     termEs: "Protección contra Lesiones Personales (PIP)",
-    definitionEs: "Cobertura de seguro de auto (también llamada PIP o seguro sin culpa) que paga los gastos médicos, salarios perdidos y otros costos para usted y sus pasajeros después de un accidente, independientemente de quién tuvo la culpa."
+    definitionEs: "Cobertura de seguro de auto (también llamada PIP o seguro sin culpa) que paga los gastos médicos, salarios perdidos y otros costos para usted y sus pasajeros después de un accidente, independientemente de quién tuvo la culpa.",
+    learnMoreUrl: "https://floridauto.com"
   },
   {
     term: "Bodily Injury Liability",
@@ -1852,7 +1872,8 @@ export const glossaryTerms: GlossaryTerm[] = [
     category: "Business",
     relatedTerms: ["Employer's Liability", "Occupational Injury", "Disability Insurance"],
     termEs: "Compensación de Trabajadores",
-    definitionEs: "Cobertura de seguro requerida por ley que proporciona reemplazo de salario y beneficios médicos a los empleados lesionados en el curso del empleo, a cambio de la renuncia obligatoria del derecho del empleado a demandar al empleador por negligencia."
+    definitionEs: "Cobertura de seguro requerida por ley que proporciona reemplazo de salario y beneficios médicos a los empleados lesionados en el curso del empleo, a cambio de la renuncia obligatoria del derecho del empleado a demandar al empleador por negligencia.",
+    learnMoreUrl: "https://flawc.com"
   },
   {
     term: "COBRA",

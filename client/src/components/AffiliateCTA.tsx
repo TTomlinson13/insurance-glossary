@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ExternalLink, TrendingUp, Shield } from "lucide-react";
-import { getAffiliateLink } from "@/config/affiliates";
+import { CANOPY_CONNECT_CTA } from "@/config/affiliates";
 
 interface AffiliateCTAProps {
   category: "auto" | "home" | "life" | "renters" | "disability";
@@ -15,25 +15,27 @@ export function AffiliateCTA({
   category,
   title,
   description,
-  buttonText = "Compare Quotes",
+  buttonText,
   variant = "default",
 }: AffiliateCTAProps) {
-  const affiliateLink = getAffiliateLink(category);
+  // All CTAs now point to Tomlinson & Co's Canopy Connect quote flow
+  const affiliateLink = CANOPY_CONNECT_CTA.url;
+  const defaultButtonText = buttonText || CANOPY_CONNECT_CTA.text;
 
   const defaultTitles = {
-    auto: "Ready to Save on Auto Insurance?",
-    home: "Find the Best Home Insurance Rates",
-    life: "Compare Life Insurance Policies",
-    renters: "Get Renters Insurance Quotes",
-    disability: "Protect Your Income with Disability Insurance",
+    auto: "Get a Free Auto Insurance Quote",
+    home: "Get a Free Home Insurance Quote",
+    life: "Get a Free Life Insurance Quote",
+    renters: "Get a Free Renters Insurance Quote",
+    disability: "Get a Free Disability Insurance Quote",
   };
 
   const defaultDescriptions = {
-    auto: "Compare quotes from top insurers and save up to $500/year on auto insurance.",
-    home: "Get personalized home insurance quotes in minutes from trusted providers.",
-    life: "Find affordable life insurance coverage to protect your family's future.",
-    renters: "Protect your belongings with affordable renters insurance starting at $12/month.",
-    disability: "Secure your income with disability insurance from top-rated carriers.",
+    auto: "Tomlinson & Co shops multiple carriers to find you the best rate — no obligation, no spam.",
+    home: "Tomlinson & Co shops multiple carriers to find you the best rate — no obligation, no spam.",
+    life: "Tomlinson & Co shops multiple carriers to find you the best rate — no obligation, no spam.",
+    renters: "Tomlinson & Co shops multiple carriers to find you the best rate — no obligation, no spam.",
+    disability: "Tomlinson & Co shops multiple carriers to find you the best rate — no obligation, no spam.",
   };
 
   const displayTitle = title || defaultTitles[category];
@@ -52,7 +54,7 @@ export function AffiliateCTA({
           className="shrink-0"
         >
           <a href={affiliateLink} target="_blank" rel="noopener noreferrer sponsored">
-            {buttonText}
+            {defaultButtonText}
             <ExternalLink className="w-3 h-3 ml-1" />
           </a>
         </Button>
@@ -79,7 +81,7 @@ export function AffiliateCTA({
             className="shrink-0"
           >
             <a href={affiliateLink} target="_blank" rel="noopener noreferrer sponsored">
-              {buttonText}
+              {defaultButtonText}
               <ExternalLink className="w-4 h-4 ml-2" />
             </a>
           </Button>
@@ -104,14 +106,14 @@ export function AffiliateCTA({
               className="w-full sm:w-auto"
             >
               <a href={affiliateLink} target="_blank" rel="noopener noreferrer sponsored">
-                {buttonText}
+                {defaultButtonText}
                 <ExternalLink className="w-4 h-4 ml-2" />
               </a>
             </Button>
           </div>
         </div>
         <div className="text-xs text-muted-foreground pt-3 border-t border-border/50">
-          💡 Free comparison • No obligation • Save up to 40%
+          💡 Local independent agency • No obligation • Multiple carriers
         </div>
       </CardContent>
     </Card>

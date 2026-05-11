@@ -7,7 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Shield, TrendingUp, Clock, CheckCircle2, ExternalLink } from "lucide-react";
-import { AFFILIATE_LINKS } from "@/config/affiliates";
+import { CANOPY_CONNECT_CTA } from "@/config/affiliates";
 import { useEffect } from "react";
 
 export default function GetQuotes() {
@@ -99,8 +99,8 @@ export default function GetQuotes() {
                     </div>
                   </div>
                   <Button asChild className="w-full" size="lg">
-                    <a href={AFFILIATE_LINKS.insurify.auto} target="_blank" rel="noopener noreferrer sponsored">
-                      Get Auto Quotes
+                    <a href={CANOPY_CONNECT_CTA.url} target="_blank" rel="noopener noreferrer">
+                      {CANOPY_CONNECT_CTA.text}
                       <ExternalLink className="w-4 h-4 ml-2" />
                     </a>
                   </Button>
@@ -136,8 +136,8 @@ export default function GetQuotes() {
                     </div>
                   </div>
                   <Button asChild className="w-full" size="lg">
-                    <a href={AFFILIATE_LINKS.policygenius.home} target="_blank" rel="noopener noreferrer sponsored">
-                      Get Home Quotes
+                    <a href={CANOPY_CONNECT_CTA.url} target="_blank" rel="noopener noreferrer">
+                      {CANOPY_CONNECT_CTA.text}
                       <ExternalLink className="w-4 h-4 ml-2" />
                     </a>
                   </Button>
@@ -173,8 +173,8 @@ export default function GetQuotes() {
                     </div>
                   </div>
                   <Button asChild className="w-full" size="lg">
-                    <a href={AFFILIATE_LINKS.policygenius.life} target="_blank" rel="noopener noreferrer sponsored">
-                      Get Life Quotes
+                    <a href={CANOPY_CONNECT_CTA.url} target="_blank" rel="noopener noreferrer">
+                      {CANOPY_CONNECT_CTA.text}
                       <ExternalLink className="w-4 h-4 ml-2" />
                     </a>
                   </Button>
@@ -210,8 +210,8 @@ export default function GetQuotes() {
                     </div>
                   </div>
                   <Button asChild className="w-full" size="lg">
-                    <a href={AFFILIATE_LINKS.insurify.renters} target="_blank" rel="noopener noreferrer sponsored">
-                      Get Renters Quotes
+                    <a href={CANOPY_CONNECT_CTA.url} target="_blank" rel="noopener noreferrer">
+                      {CANOPY_CONNECT_CTA.text}
                       <ExternalLink className="w-4 h-4 ml-2" />
                     </a>
                   </Button>

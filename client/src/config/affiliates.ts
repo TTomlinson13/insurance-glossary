@@ -65,3 +65,9 @@ export function getAffiliateLink(category: "auto" | "home" | "life" | "renters" 
 
 // Affiliate disclosure text
 export const AFFILIATE_DISCLOSURE = "We may earn a commission when you click on certain links. This helps us keep the Insurance Glossary free for everyone. Our editorial content is not influenced by affiliate partnerships.";
+
+// Tomlinson & Co primary CTA
+export const CANOPY_CONNECT_CTA = {
+  text: "Get a Free Quote from Tomlinson & Co",
+  url: "https://app.usecanopy.com/c/tomlinson-and-co",
+};

@@ -383,8 +383,19 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="mt-12 pt-8 border-t border-border/50 text-center text-sm text-muted-foreground">
-            <p>© 2026 Insurance Glossary. All rights reserved. | Educational purposes only - not insurance advice.</p>
+          <div className="mt-12 pt-8 border-t border-border/50">
+            <div className="text-center mb-6">
+              <p className="text-xs text-muted-foreground uppercase tracking-widest font-medium mb-3">Powered by Tomlinson &amp; Co Insurance</p>
+              <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
+                <a href="https://tomlinsonandco.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Tomlinson &amp; Co Insurance</a>
+                <a href="https://hoinsurance.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Florida Home Insurance</a>
+                <a href="https://flawc.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Florida Workers' Comp</a>
+                <a href="https://easycommercialinsurance.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Commercial Insurance</a>
+              </div>
+            </div>
+            <div className="text-center text-sm text-muted-foreground">
+              <p>© 2026 Insurance Glossary. All rights reserved. | Educational purposes only - not insurance advice.</p>
+            </div>
           </div>
         </div>
       </footer>

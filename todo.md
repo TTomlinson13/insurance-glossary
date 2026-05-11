@@ -118,7 +118,7 @@
 
 ## Google Analytics 4 Setup
 - [x] Create GA4 account and property
-- [x] Get GA4 Measurement ID (G-T9JG7RDWC8)
+- [x] Get GA4 Measurement ID (G-RY5WQWPPP5)
 - [x] Add Measurement ID to website code
 - [ ] Verify GA4 tracking is working after deployment
 
