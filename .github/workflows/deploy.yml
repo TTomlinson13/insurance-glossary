@@ -1,0 +1,24 @@
+name: Deploy to VPS 2
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to VPS 2
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: 187.77.216.122
+          username: root
+          key: ${{ secrets.VPS2_SSH_KEY }}
+          script: |
+            cd /var/www/insurance-glossary
+            git pull origin main
+            pnpm run build
+            cd /opt/insurance-glossary
+            docker compose restart insurance-glossary
+            echo "✅ Deployed at $(date)"
