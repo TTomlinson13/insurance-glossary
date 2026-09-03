@@ -2,8 +2,7 @@
 # Image for theinsuranceglossary.com (Express+tRPC+Drizzle+Vite client).
 # NOTE: the server bundle imports `vite` at runtime (dev-server integration is
 # bundled as an external import), so the runtime needs the FULL node_modules,
-# not prod-only. Slimming this is a future optimization (make vite a dynamic
-# dev-only import), not a correctness requirement.
+# not prod-only. Slimming this is a future optimization.
 
 FROM node:22-alpine AS build
 WORKDIR /app
@@ -21,6 +20,8 @@ ENV VITE_APP_ID=$VITE_APP_ID \
     VITE_FRONTEND_FORGE_API_URL=$VITE_FRONTEND_FORGE_API_URL \
     VITE_FRONTEND_FORGE_API_KEY=$VITE_FRONTEND_FORGE_API_KEY
 RUN pnpm build
+# Bundle the daily blog generator as a standalone runtime entry
+RUN pnpm exec esbuild scripts/generate-daily.ts --platform=node --packages=external --bundle --format=esm --outfile=dist/generate-daily.js
 
 FROM node:22-alpine AS runtime
 WORKDIR /app
