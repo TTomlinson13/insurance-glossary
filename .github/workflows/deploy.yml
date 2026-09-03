@@ -16,9 +16,9 @@ jobs:
           username: root
           key: ${{ secrets.VPS2_SSH_KEY }}
           script: |
+            set -e
             cd /var/www/insurance-glossary
             git pull origin main
-            pnpm run build
-            cd /opt/insurance-glossary
-            docker compose restart insurance-glossary
+            docker compose build app
+            docker compose up -d app
             echo "✅ Deployed at $(date)"
