@@ -1,0 +1,9 @@
+.git
+node_modules
+dist
+*.bak-*
+*.bak
+.env
+.env.*
+npm-debug.log
+pnpm-debug.log

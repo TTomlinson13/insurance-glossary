@@ -207,6 +207,11 @@ export default function Home() {
       <section className="py-8 border-b border-border/50 sticky top-0 bg-background/95 backdrop-blur-sm z-40">
         <div className="container">
           <div className="flex flex-wrap gap-3 justify-center">
+            <Link href="/blog">
+              <Button variant="ghost" className="rounded-full px-6 ui-text">
+                <BookOpen className="w-4 h-4 mr-2" /> Blog
+              </Button>
+            </Link>
             {categories.map((category) => (
               <Button
                 key={category}

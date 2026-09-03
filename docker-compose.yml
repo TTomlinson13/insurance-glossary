@@ -1,0 +1,54 @@
+name: insurance-glossary
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        VITE_APP_ID: ${VITE_APP_ID}
+        VITE_OAUTH_PORTAL_URL: ${VITE_OAUTH_PORTAL_URL}
+        VITE_FRONTEND_FORGE_API_URL: ${VITE_FRONTEND_FORGE_API_URL}
+        VITE_FRONTEND_FORGE_API_KEY: ${VITE_FRONTEND_FORGE_API_KEY}
+    image: insurance-glossary:latest
+    restart: unless-stopped
+    env_file: .env
+    depends_on:
+      db:
+        condition: service_healthy
+    networks: [web, internal]
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=insurance-glossary_web"
+      - "traefik.http.routers.insurance-glossary.entrypoints=websecure"
+      - "traefik.http.routers.insurance-glossary.rule=Host(`theinsuranceglossary.com`) || Host(`www.theinsuranceglossary.com`)"
+      - "traefik.http.routers.insurance-glossary.tls.certresolver=letsencrypt"
+      - "traefik.http.services.insurance-glossary.loadbalancer.server.port=3000"
+      - "traefik.http.routers.insurance-glossary-http.entrypoints=web"
+      - "traefik.http.routers.insurance-glossary-http.rule=Host(`theinsuranceglossary.com`) || Host(`www.theinsuranceglossary.com`)"
+
+  db:
+    image: mariadb:11.8
+    restart: unless-stopped
+    environment:
+      MARIADB_DATABASE: insurance_glossary
+      MARIADB_USER: glossary
+      MARIADB_PASSWORD: ${DB_PASSWORD}
+      MARIADB_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+    volumes:
+      - glossary_db:/var/lib/mysql
+    networks: [internal]
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+
+networks:
+  web:
+    driver: bridge
+  internal:
+    internal: true
+
+volumes:
+  glossary_db:

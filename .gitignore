@@ -105,3 +105,5 @@ temp/
 *.db
 *.sqlite
 *.sqlite3
+*.bak-*
+.env.orig.keep

@@ -20,7 +20,10 @@ export default function BlogPage() {
                 ← Back to Glossary
               </Button>
             </Link>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-4">
+              <Link href="/blog">
+                <Button variant="ghost" size="sm" className="rounded-full ui-text">Blog</Button>
+              </Link>
               <BookOpen className="w-5 h-5 text-primary" />
               <span className="font-semibold">Insurance Glossary</span>
             </div>
