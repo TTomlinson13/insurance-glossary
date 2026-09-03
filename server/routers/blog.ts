@@ -6,6 +6,34 @@ import { invokeLLM } from "../_core/llm";
 import { eq, desc } from "drizzle-orm";
 
 /**
+ * Tolerant parser for relatedTerms / seoKeywords columns.
+ * These are supposed to be JSON arrays stored as text, but legacy/seed rows
+ * may hold a bare list like "[Business Owner, Liability]" which is NOT valid
+ * JSON. Blindly JSON.parse-ing those throws and takes down the whole list
+ * endpoint, so tolerate every shape and always return a string[].
+ */
+function safeParseArray(value: unknown): string[] {
+  if (Array.isArray(value)) return (value as unknown[]).map(String);
+  if (typeof value !== "string") return [];
+  const s = value.trim();
+  if (!s) return [];
+  try {
+    const parsed = JSON.parse(s);
+    if (Array.isArray(parsed)) return parsed.map(String);
+    if (parsed == null) return [];
+    return [String(parsed)];
+  } catch {
+    // Legacy formats: "[a, b, c]" or "a, b, c"
+    const inner = s.replace(/^\[/, "").replace(/\]$/, "");
+    return inner
+      .split(",")
+      .map((t) => t.trim().replace(/^["']|["']$/g, ""))
+      .filter(Boolean);
+  }
+}
+
+
+/**
  * Blog router for AI-generated insurance articles
  */
 export const blogRouter = router({
@@ -21,8 +49,8 @@ export const blogRouter = router({
     // Parse JSON fields
     return posts.map(post => ({
       ...post,
-      relatedTerms: JSON.parse(post.relatedTerms),
-      seoKeywords: JSON.parse(post.seoKeywords),
+      relatedTerms: safeParseArray(post.relatedTerms),
+      seoKeywords: safeParseArray(post.seoKeywords),
     }));
   }),
 
@@ -42,8 +70,8 @@ export const blogRouter = router({
       const post = result[0];
       return {
         ...post,
-        relatedTerms: JSON.parse(post.relatedTerms),
-        seoKeywords: JSON.parse(post.seoKeywords),
+        relatedTerms: safeParseArray(post.relatedTerms),
+        seoKeywords: safeParseArray(post.seoKeywords),
       };
     }),
 
