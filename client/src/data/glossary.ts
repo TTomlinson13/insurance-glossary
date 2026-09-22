@@ -8,6 +8,8 @@ export interface GlossaryTerm {
   definitionEs?: string;
   // Tomlinson & Co network CTA link
   learnMoreUrl?: string;
+  // Educational "further reading" link to a Tomlinson & Co. blog post
+  relatedReading?: { url: string; label: string };
 }
 
 export const glossaryTerms: GlossaryTerm[] = [
@@ -1411,7 +1413,8 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: "Geographic areas that FEMA defines according to varying levels of flood risk. These zones are depicted on Flood Insurance Rate Maps (FIRMs) and determine flood insurance requirements and premiums. High-risk zones (Special Flood Hazard Areas) include Zone A (1% annual chance of flooding) and Zone V (coastal high-hazard areas with wave action). Moderate-to-low risk zones include Zone B, C, and X. Properties in high-risk zones with federally backed mortgages must carry flood insurance. Zone designations directly impact insurance costs and building requirements.",
     category: "Property",
     relatedTerms: ["NFIP","Flood Insurance","FEMA","Special Flood Hazard Area","FIRM"],
-    learnMoreUrl: "https://hoinsurance.com"
+    learnMoreUrl: "https://hoinsurance.com",
+    relatedReading: { url: "https://www.tomlinsonandco.com/blog/flood-zones-florida-explained", label: "Florida Flood Zones Explained: X, AE & VE" }
   },
   {
     term: "Base Flood Elevation",
@@ -1425,7 +1428,8 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: "High-risk flood zones designated by FEMA where there is at least a 1% chance of flooding in any given year (also known as the 100-year floodplain). Properties located in SFHAs and secured by federally backed mortgages are required by law to carry flood insurance. These areas are shown on Flood Insurance Rate Maps (FIRMs) and include Zone A (riverine flooding) and Zone V (coastal flooding with wave action). Buildings in SFHAs face significantly higher flood insurance premiums than those in moderate or low-risk zones.",
     category: "Property",
     relatedTerms: ["Flood Zone","NFIP","Base Flood Elevation","100-Year Flood"],
-    learnMoreUrl: "https://hoinsurance.com"
+    learnMoreUrl: "https://hoinsurance.com",
+    relatedReading: { url: "https://www.tomlinsonandco.com/blog/flood-zones-florida-explained", label: "Florida Flood Zones Explained: X, AE & VE" }
   },
   {
     term: "FIRM",
@@ -1444,7 +1448,22 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Elevation Certificate",
     definition: "An official FEMA document that provides elevation information about a building's lowest floor and the ground elevation around the structure. Prepared by a licensed surveyor or engineer, this certificate is used to determine accurate flood insurance premium rates under the National Flood Insurance Program. Properties built at or above the Base Flood Elevation typically qualify for lower insurance rates. An Elevation Certificate may be required when purchasing flood insurance, refinancing a mortgage, or applying for a Letter of Map Amendment. The certificate is valid indefinitely unless the property or surrounding area is significantly altered.",
     category: "Property",
-    relatedTerms: ["Base Flood Elevation","NFIP","Flood Insurance","FIRM"]
+    relatedTerms: ["Base Flood Elevation","NFIP","Flood Insurance","FIRM"],
+    relatedReading: { url: "https://www.tomlinsonandco.com/blog/flood-zones-florida-explained", label: "Florida Flood Zones Explained: X, AE & VE" }
+  },
+  {
+    term: "Wind Mitigation",
+    definition: "Construction features that help a home resist windstorm and hurricane damage — including roof-to-wall connections, roof deck attachment, roof geometry, and opening protection. In Florida, documenting these features on a wind mitigation inspection (state form OIR-B1-1802) earns mandatory insurance premium credits that can significantly lower a homeowners premium.",
+    category: "Property",
+    relatedTerms: ["Homeowners Insurance","Hurricane Deductible","Windstorm Coverage"],
+    relatedReading: { url: "https://www.tomlinsonandco.com/blog/wind-mitigation-inspection-florida", label: "Wind Mitigation Inspections in Florida: What They Save" }
+  },
+  {
+    term: "4-Point Inspection",
+    definition: "An inspection of a home's four major systems — roof, electrical, plumbing, and HVAC — that Florida insurers often require on older homes (typically 25+ years) before writing or renewing coverage. It documents the age and condition of each system so the carrier can assess risk.",
+    category: "Property",
+    relatedTerms: ["Homeowners Insurance","Wind Mitigation","Underwriting"],
+    relatedReading: { url: "https://www.tomlinsonandco.com/blog/4-point-inspection-florida", label: "The Florida 4-Point Inspection, Explained" }
   },
   {
     term: "LFE",
@@ -1840,7 +1859,8 @@ export const glossaryTerms: GlossaryTerm[] = [
     relatedTerms: ["No-Fault Insurance", "Medical Payments Coverage", "Auto Insurance"],
     termEs: "Protección contra Lesiones Personales (PIP)",
     definitionEs: "Cobertura de seguro de auto (también llamada PIP o seguro sin culpa) que paga los gastos médicos, salarios perdidos y otros costos para usted y sus pasajeros después de un accidente, independientemente de quién tuvo la culpa.",
-    learnMoreUrl: "https://floridauto.com"
+    learnMoreUrl: "https://floridauto.com",
+    relatedReading: { url: "https://www.tomlinsonandco.com/blog/florida-auto-insurance-requirements", label: "Florida Car & Auto Insurance Requirements" }
   },
   {
     term: "Bodily Injury Liability",

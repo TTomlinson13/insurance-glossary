@@ -314,6 +314,23 @@ export default function TermPage() {
                     </div>
                   )}
 
+                  {/* Related reading from Tomlinson & Co. (educational deep-dive) */}
+                  {term.relatedReading && (
+                    <div className="pt-6 border-t border-border/50">
+                      <h2 className="text-xl font-semibold mb-3">Further reading</h2>
+                      <a
+                        href={term.relatedReading.url}
+                        target="_blank"
+                        rel="noopener"
+                        className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
+                      >
+                        <BookOpen className="w-4 h-4" />
+                        {term.relatedReading.label}
+                        <ExternalLink className="w-4 h-4" />
+                      </a>
+                    </div>
+                  )}
+
                   {/* Tomlinson & Co CTA - shown for terms with a learnMoreUrl, otherwise show generic Canopy Connect CTA */}
                   {term.learnMoreUrl ? (
                     <div className="pt-6 border-t border-border/50">
