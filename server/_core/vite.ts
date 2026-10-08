@@ -5,6 +5,7 @@ import { nanoid } from "nanoid";
 import path from "path";
 import { createServer as createViteServer } from "vite";
 import viteConfig from "../../vite.config";
+import { findTermBySlug, injectTermSeo } from "../termSeo";
 
 export async function setupVite(app: Express, server: Server) {
   const serverOptions = {
@@ -57,6 +58,23 @@ export function serveStatic(app: Express) {
       `Could not find the build directory: ${distPath}, make sure to build the client first`
     );
   }
+
+  // Server-render per-term SEO/schema for /term/:slug so non-JS crawlers
+  // (GPTBot, ClaudeBot, PerplexityBot, etc.) and search see the definition.
+  const indexHtmlPath = path.resolve(distPath, "index.html");
+  app.get("/term/:slug", (req, res, next) => {
+    try {
+      const term = findTermBySlug(req.params.slug);
+      if (!term) return next();
+      const base = fs.readFileSync(indexHtmlPath, "utf-8");
+      res
+        .status(200)
+        .set("Content-Type", "text/html; charset=utf-8")
+        .send(injectTermSeo(base, term, req.params.slug));
+    } catch (e) {
+      next();
+    }
+  });
 
   app.use(express.static(distPath));
 
